@@ -70,12 +70,12 @@
                                         <!-- Patient Info-->
                                         <div class="form-group row">
                                             <div class="col-6">
-                                                <label class="col-2 control-label" for="name">Name</label>
+                                                <label class="col-2 control-label">Name</label>
 
                                                 <p class="form-control-static">John Doe</p>
                                             </div>
                                             <div class="col-6">
-                                                <label class="col-2 control-label" for="case">Case</label>
+                                                <label class="col-2 control-label">Case</label>
 
                                                 <p class="form-control-static">#0000758</p>
                                             </div>
@@ -87,29 +87,29 @@
                                             <div class="form-group row col-centered">
                                                 <div class="col-4">
                                                     <label class="control-label" for="age">Age</label>
-                                                    <input id="age" name="age" type="number" value="20" class="form-control form-control-sm">
+                                                    <input id="age" name="age" type="number" value="20" style="width: 7em" class="form-control form-control-sm">
                                                 </div>
                                                 <div class="col-4">
                                                     <label class="control-label" for="weight">Weight(lbs)</label>
-                                                    <input id="weight" name="weight" type="number" value="150" class="form-control form-control-sm">
+                                                    <input id="weight" name="weight" type="number" value="150" style="width: 7em" class="form-control form-control-sm">
                                                 </div>
                                                 <div class="col-4">
                                                     <label class="control-label" for="temp">Temp(C)</label>
-                                                    <input id="temp" name="temp" type="number" step="0.1" value="91" class="form-control form-control-sm">
+                                                    <input id="temp" name="temp" type="number" step="0.1" value="91" style="width: 7em" class="form-control form-control-sm">
                                                 </div>
                                             </div>
                                             <div class="form-group row col-centered">
                                                 <div class="col-4">
                                                     <label class="control-label" for="bp">BP</label>
-                                                    <input id="bp" name="bp" type="text" placeholder="120/40" class="form-control form-control-sm">
+                                                    <input id="bp" name="bp" type="text" placeholder="120/40" style="width: 7em" class="form-control form-control-sm">
                                                 </div>
                                                 <div class="col-4">
                                                     <label class="control-label" for="hr">Heart Rate)(bpm)</label>
-                                                    <input id="hr" name="hr" type="number" value="80" class="form-control form-control-sm">
+                                                    <input id="hr" name="hr" type="number" value="80" style="width: 7em" class="form-control form-control-sm">
                                                 </div>
                                                 <div class="col-4">
                                                     <label class="control-label" for="glucose">Glucose(mg/dl)</label>
-                                                    <input id="glucose" name="glucose" type="number" value="80" class="form-control form-control-sm">
+                                                    <input id="glucose" name="glucose" type="number" value="80" style="width: 7em" class="form-control form-control-sm">
                                                 </div>
                                             </div>
                                             <div class="form-group row col-centered">
@@ -122,21 +122,41 @@
                                             <div class="form-group row col-centered">
                                                 <div class="col-4">
                                                     <label class="control-label" for="hiv">HIV Test?</label>
-                                                    <input id="hiv" name="hiv" type="date" class="form-control form-control-sm">
+                                                    <select id="hiv" name="hiv" class="form-control form-control-sm">
+                                                        <option value="unknown">Unknown</option>
+                                                        <option value="never">Never</option>
+                                                        <option value="lessThree">&lt; 3 months ago</option>
+                                                        <option value="greaterThree">&gt; 3 months ago</option>
+                                                    </select>
                                                 </div>
                                                 <div class="col-4">
-                                                    <label class="control-label" for="pzq">PZQ TX?)</label>
-                                                    <input id="hpzq" name="pzq" type="date" class="form-control form-control-sm">
+                                                    <label class="control-label" for="pzq">PZQ TX?</label>
+                                                    <select id="pzq" name="pzq" class="form-control form-control-sm">
+                                                            <option value="unknown">Unknown</option>
+                                                            <option value="never">Never</option>
+                                                            <option value="lessSix">&lt; 6 Months ago</option>
+                                                            <option value="greaterSix">&gt; 6 Months ago</option>
+                                                        </select>
                                                 </div>
                                                 <div class="col-4">
                                                     <label class="control-label" for="worm">Worm TX?</label>
-                                                    <input id="worm" name="worm" type="date" class="form-control form-control-sm">
+                                                    <select id="worm" name="worm" class="form-control form-control-sm">
+                                                        <option value="unknown">Unknown</option>
+                                                        <option value="never">Never</option>
+                                                        <option value="lessSix">&lt; 6 Months ago</option>
+                                                        <option value="greaterSix">&gt; 6 Months ago</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                             <div class="form-group row col-centered">
                                                 <div class="col-4">
-                                                    <label class="control-label" for="vita">VIT A?</label>
-                                                    <input id="vita" name="vita" type="date" class="form-control form-control-sm">
+                                                    <label class="control-label" for="vita">VIT A? (6mth-59mth)</label>
+                                                    <select id="vita" name="vita" class="form-control form-control-sm">
+                                                        <option value="unknown">Unknown</option>
+                                                        <option value="never">Never</option>
+                                                        <option value="lessSix">&lt; 6 Months ago</option>
+                                                        <option value="greaterSix">&gt; 6 Months ago</option>
+                                                    </select>
                                                 </div>
                                                 <div class="col-8">
                                                     <label class="control-label" for="preMeds">Prev Meds?</label>
@@ -150,11 +170,34 @@
                                                 </div>
 
                                             </div>
-                                        </fieldset>
-                                        <br>
-                                        <div class="form-group row col-centered">
+                                            <label class="col-4 control-label" for="practitioner">Practitioner</label>
+                                            <div class="form-group row col-centered">
+                                                <div class="col-4">
+                                                    <select id="practitioner" name="practitioner" class="form-control">
+                                                        <option value="Karin Euler">Karin Euler</option>
+                                                        <option value="Chris Nolan">Chris Nolan</option>
+                                                        <option value="Mark Hardy">Mark Hardy</option>
+                                                        <option value="Christa Wilton">Christa Wilton</option>
+                                                        <option value="Jessica Fong">Jessica Fong</option>
+                                                        <option value="Deanna Rumsey">Deanna Rumsey</option>
+                                                        <option value="Wade Mitchell">Wade Mitchell</option>
+                                                        <option value="Tara Andrusiak">Tara Andrusiak</option>
+                                                        <option value="Judy Kyte">Judy Kyte</option>
+                                                        <option value="Nancy Laframboise">Nancy Laframboise</option>
+                                                        <option value="Warren Meek">Warren Meek</option>
+                                                        <option value="Dave Glass">Dave Glass</option>
+                                                        <option value="Erin MacKenzie">Erin MacKenzie</option>
+                                                        <option value="Kelly Crotty">Kelly Crotty</option>
+                                                    </select>
+                                                </div>
+                                            </div>
 
-                                            <button type="button" class="btn">Save!</button>
+                                        </fieldset>
+                                        <div class="form-group row col-centered">
+                                            <!-- This link is not allowed... just for demo -->
+                                            <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                <button type="button" class="btn">Save!</button>
+                                            </a>
                                         </div>
 
                                     </form>
