@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="bin/bootstrap/favicon.ico">
+
+    <title>CACHA - Add</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bin/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="site-wrapper">
+
+        <div class="site-wrapper-inner">
+
+            <div class="cover-container">
+
+                <div class="masthead clearfix">
+                    <div class="inner">
+                        <h3 class="masthead-brand">CACHA</h3>
+                        <nav class="nav nav-masthead">
+                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link" href="registerNew.html">Register</a>
+                            <a class="nav-link active" href="addRecord.html">Add Record</a>
+                            <a class="nav-link" href="tableView.html">Reports</a>
+                            <a class="nav-link" href="#">Search</a>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="inner cover">
+                    <!-- <h1 class="cover-heading">Enter Patient Data:</h1> -->
+                    <br>
+
+                    <div id="accordion" role="tablist">
+                        <div class="card">
+                            <div class="card-header" role="tab" id="headingOne">
+                                <h5 class="mb-0">
+                                    <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Basic Information
+                                </a>
+                                </h5>
+                            </div>
+
+                            <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="card-body">
+                                    <form class="form-inline">
+
+                                        <!-- Patient Search-->
+                                        <div class="form-group row">
+                                            <label class="col-2 control-label" for="appendedtext">Search:</label>
+                                            <div class="col-8">
+                                                <div class="input-group">
+                                                    <input id="appendedtext" name="appendedtext" class="form-control input" placeholder="Patient Search" type="text" required="">
+                                                    <span class="input-group-addon">Go !</span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <!-- Patient Info-->
+                                        <div class="form-group row">
+                                            <div class="col-6">
+                                                <label class="col-2 control-label" for="name">Name</label>
+
+                                                <p class="form-control-static">John Doe</p>
+                                            </div>
+                                            <div class="col-6">
+                                                <label class="col-2 control-label" for="case">Case</label>
+
+                                                <p class="form-control-static">#0000758</p>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <form class="form-inline">
+                                        <fieldset>
+                                            <!-- Age input-->
+                                            <div class="form-group row col-centered">
+                                                <div class="col-4">
+                                                    <label class="control-label" for="age">Age</label>
+                                                    <input id="age" name="age" type="number" value="20" class="form-control form-control-sm">
+                                                </div>
+                                                <div class="col-4">
+                                                    <label class="control-label" for="weight">Weight(lbs)</label>
+                                                    <input id="weight" name="weight" type="number" value="150" class="form-control form-control-sm">
+                                                </div>
+                                                <div class="col-4">
+                                                    <label class="control-label" for="temp">Temp(C)</label>
+                                                    <input id="temp" name="temp" type="number" step="0.1" value="91" class="form-control form-control-sm">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row col-centered">
+                                                <div class="col-4">
+                                                    <label class="control-label" for="bp">BP</label>
+                                                    <input id="bp" name="bp" type="text" placeholder="120/40" class="form-control form-control-sm">
+                                                </div>
+                                                <div class="col-4">
+                                                    <label class="control-label" for="hr">Heart Rate)(bpm)</label>
+                                                    <input id="hr" name="hr" type="number" value="80" class="form-control form-control-sm">
+                                                </div>
+                                                <div class="col-4">
+                                                    <label class="control-label" for="glucose">Glucose(mg/dl)</label>
+                                                    <input id="glucose" name="glucose" type="number" value="80" class="form-control form-control-sm">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row col-centered">
+                                                <div class="col-sm-12">
+                                                    <label class="control-label" for="complaint">Chief Complaint:</label>
+                                                    <textarea class="form-control" rows="4" cols="60" id="complaint" name="complaint"></textarea>
+                                                </div>
+
+                                            </div>
+                                            <div class="form-group row col-centered">
+                                                <div class="col-4">
+                                                    <label class="control-label" for="hiv">HIV Test?</label>
+                                                    <input id="hiv" name="hiv" type="date" class="form-control form-control-sm">
+                                                </div>
+                                                <div class="col-4">
+                                                    <label class="control-label" for="pzq">PZQ TX?)</label>
+                                                    <input id="hpzq" name="pzq" type="date" class="form-control form-control-sm">
+                                                </div>
+                                                <div class="col-4">
+                                                    <label class="control-label" for="worm">Worm TX?</label>
+                                                    <input id="worm" name="worm" type="date" class="form-control form-control-sm">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row col-centered">
+                                                <div class="col-4">
+                                                    <label class="control-label" for="vita">VIT A?</label>
+                                                    <input id="vita" name="vita" type="date" class="form-control form-control-sm">
+                                                </div>
+                                                <div class="col-8">
+                                                    <label class="control-label" for="preMeds">Prev Meds?</label>
+                                                    <input id="preMeds" name="preMeds" type="text" size="45" class="form-control form-control-sm">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row col-centered">
+                                                <div class="col-12">
+                                                    <label class="control-label" for="assessment">Assessment:</label>
+                                                    <textarea class="form-control" rows="4" cols="60" id="assessment" name="assessment"></textarea>
+                                                </div>
+
+                                            </div>
+                                        </fieldset>
+                                        <br>
+                                        <div class="form-group row col-centered">
+
+                                            <button type="button" class="btn">Save!</button>
+                                        </div>
+
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" role="tab" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Testing
+                                </a>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+                                <div class="card-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+                                    on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
+                                    craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" role="tab" id="headingThree">
+                                <h5 class="mb-0">
+                                    <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Diagnosis
+                                </a>
+                                </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+                                <div class="card-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+                                    on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
+                                    craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" role="tab" id="headingFour">
+                                <h5 class="mb-0">
+                                    <a class="collapsed" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Perscription
+                                </a>
+                                </h5>
+                            </div>
+                            <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour" data-parent="#accordion">
+                                <div class="card-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+                                    on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
+                                    craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" role="tab" id="headingFive">
+                                <h5 class="mb-0">
+                                    <a class="collapsed" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                Follow Up
+                                </a>
+                                </h5>
+                            </div>
+                            <div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingFive" data-parent="#accordion">
+                                <div class="card-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+                                    on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
+                                    craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="mastfoot">
+                <div class="inner">
+                    <p>Digital Charts Sample for <a href="http://www.cacha.ca/">CACHA</a>, by <a href="http://mattredmond.ca">Matt</a>.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')
+    </script>
+    <script src="bin/bootstrap/assets/js/vendor/popper.min.js"></script>
+    <script src="bin/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bin/bootstrap/assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+
+</html>
