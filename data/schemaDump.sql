@@ -1,5 +1,5 @@
-CREATE DATABASE  IF NOT EXISTS `cachahlthrec_tables` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `cachahlthrec_tables`;
+/*CREATE DATABASE  IF NOT EXISTS `cachahlthrec_tables` !40100 DEFAULT CHARACTER SET utf8 */;
+/*USE `cachahlthrec_tables`*/;
 -- MySQL dump 10.13  Distrib 5.7.12, for Win32 (AMD64)
 --
 -- Host: localhost    Database: cachahlthrec_tables
