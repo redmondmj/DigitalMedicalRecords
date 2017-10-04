@@ -29,11 +29,14 @@
                     <div class="inner">
                         <h3 class="masthead-brand">CACHA</h3>
                         <nav class="nav nav-masthead">
-                            <a class="nav-link" href="index.html">Home</a>
-                            <a class="nav-link" href="registerNew.html">Register</a>
-                            <a class="nav-link" href="addRecord.html">Add Record</a>
-                            <a class="nav-link active" href="tableView.html">Reports</a>
-                            <a class="nav-link" href="#">Search</a>
+                            <a class="nav-link active" href="index.html">Home</a>
+                            <a class="nav-link" href="register.php">Register</a>
+                            <a class="nav-link" href="test.php">Test</a>
+                            <a class="nav-link" href="clinic.php">Clinic</a>
+                            <a class="nav-link" href="eye.php">Eye</a>
+                            <a class="nav-link" href="dental.php">Dental</a>
+                            <a class="nav-link" href="pharma.php">Rx</a>
+                            <a class="nav-link active" href="tableView.php">Records</a>
                         </nav>
                     </div>
                 </div>

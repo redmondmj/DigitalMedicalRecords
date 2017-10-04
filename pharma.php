@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="bin/bootstrap/favicon.ico">
 
-    <title>CACHA - Home</title>
+    <title>CACHA - Pharmacy</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bin/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -35,19 +35,15 @@
                             <a class="nav-link" href="clinic.php">Clinic</a>
                             <a class="nav-link" href="eye.php">Eye</a>
                             <a class="nav-link" href="dental.php">Dental</a>
-                            <a class="nav-link" href="pharma.php">Rx</a>
+                            <a class="nav-link active" href="pharma.php">Rx</a>
                             <a class="nav-link" href="tableView.php">Records</a>
                         </nav>
                     </div>
                 </div>
 
                 <div class="inner cover">
-                    <h1 class="cover-heading">Welcome!</h1>
-                    <p class="lead">This is a rough draft of the digital forms for CACHA patient records pilot project. This site is intended for offline use only!</p>
-                    <br>
-                    <p class="lead">
-                        <a href="tableView.html" class="btn btn-lg btn-secondary">View Records</a>
-                    </p>
+                    <h1 class="cover-heading">Pharmacy</h1>
+
                 </div>
 
                 <div class="mastfoot">
