@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="bin/bootstrap/favicon.ico">
+
+    <title>CACHA - Home</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bin/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="site-wrapper">
+
+        <div class="site-wrapper-inner">
+
+            <div class="cover-container">
+
+                <div class="masthead clearfix">
+                    <div class="inner">
+                        <h3 class="masthead-brand">CACHA</h3>
+                        <nav class="nav nav-masthead">
+                            <a class="nav-link active" href="index.html">Home</a>
+                            <a class="nav-link" href="registerNew.html">Register</a>
+                            <a class="nav-link" href="addRecord.html">Add Record</a>
+                            <a class="nav-link" href="tableView.html">Reports</a>
+                            <a class="nav-link" href="#">Search</a>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="inner cover">
+					<div class="card">
+                            <div class="card-header" role="tab" id="headingOne">
+                                <h5 class="mb-0">
+                                Basic Information
+                                </h5>
+                            </div>
+
+                            <div id="pageOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#inner cover">
+                                <div class="card-body">
+                                    <form class="form-inline">
+
+                                        <!-- Patient Search-->
+                                        <div class="form-group row">
+                                            <label class="col-2 control-label" for="appendedtext">Search:</label>
+                                            <div class="col-8">
+                                                <div class="input-group">
+                                                    <input id="appendedtext" name="appendedtext" class="form-control input" placeholder="Patient Search" type="text" required="">
+                                                    <span class="input-group-addon">Go !</span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <!-- Patient Info-->
+                                        <div class="form-group row">
+                                            <div class="col-6">
+                                                <label class="col-2 control-label">Name</label>
+
+                                                <p class="form-control-static">John Doe</p>
+                                            </div>
+                                            <div class="col-6">
+                                                <label class="col-2 control-label">Case</label>
+
+                                                <p class="form-control-static">#0000758</p>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <form class="form-inline">
+                                        <fieldset>
+                                            <!-- Age input-->
+                                            <div class="form-group row col-centered">
+                                                <div class="col-4">
+                                                    <label class="control-label" for="age">Age</label>
+                                                    <input id="age" name="age" type="number" value="20" style="width: 7em" class="form-control form-control-sm">
+                                                </div>
+                                                <div class="col-4">
+                                                    <label class="control-label" for="weight">Weight(lbs)</label>
+                                                    <input id="weight" name="weight" type="number" value="150" style="width: 7em" class="form-control form-control-sm">
+                                                </div>
+                                                <div class="col-4">
+                                                    <label class="control-label" for="temp">Temp(C)</label>
+                                                    <input id="temp" name="temp" type="number" step="0.1" value="91" style="width: 7em" class="form-control form-control-sm">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row col-centered">
+                                                <div class="col-4">
+                                                    <label class="control-label" for="bp">BP</label>
+                                                    <input id="bp" name="bp" type="text" placeholder="120/40" style="width: 7em" class="form-control form-control-sm">
+                                                </div>
+                                                <div class="col-4">
+                                                    <label class="control-label" for="hr">Heart Rate)(bpm)</label>
+                                                    <input id="hr" name="hr" type="number" value="80" style="width: 7em" class="form-control form-control-sm">
+                                                </div>
+                                                <div class="col-4">
+                                                    <label class="control-label" for="glucose">Glucose(mg/dl)</label>
+                                                    <input id="glucose" name="glucose" type="number" value="80" style="width: 7em" class="form-control form-control-sm">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row col-centered">
+                                                <div class="col-sm-12">
+                                                    <label class="control-label" for="complaint">Chief Complaint:</label>
+                                                    <textarea class="form-control" rows="4" cols="60" id="complaint" name="complaint"></textarea>
+                                                </div>
+
+                                            </div>
+                                            <div class="form-group row col-centered">
+                                                <div class="col-4">
+                                                    <label class="control-label" for="hiv">HIV Test?</label>
+                                                    <select id="hiv" name="hiv" class="form-control form-control-sm">
+                                                        <option value="unknown">Unknown</option>
+                                                        <option value="never">Never</option>
+                                                        <option value="lessThree">&lt; 3 months ago</option>
+                                                        <option value="greaterThree">&gt; 3 months ago</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-4">
+                                                    <label class="control-label" for="pzq">PZQ TX?</label>
+                                                    <select id="pzq" name="pzq" class="form-control form-control-sm">
+                                                            <option value="unknown">Unknown</option>
+                                                            <option value="never">Never</option>
+                                                            <option value="lessSix">&lt; 6 Months ago</option>
+                                                            <option value="greaterSix">&gt; 6 Months ago</option>
+                                                        </select>
+                                                </div>
+                                                <div class="col-4">
+                                                    <label class="control-label" for="worm">Worm TX?</label>
+                                                    <select id="worm" name="worm" class="form-control form-control-sm">
+                                                        <option value="unknown">Unknown</option>
+                                                        <option value="never">Never</option>
+                                                        <option value="lessSix">&lt; 6 Months ago</option>
+                                                        <option value="greaterSix">&gt; 6 Months ago</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row col-centered">
+                                                <div class="col-4">
+                                                    <label class="control-label" for="vita">VIT A? (6mth-59mth)</label>
+                                                    <select id="vita" name="vita" class="form-control form-control-sm">
+                                                        <option value="unknown">Unknown</option>
+                                                        <option value="never">Never</option>
+                                                        <option value="lessSix">&lt; 6 Months ago</option>
+                                                        <option value="greaterSix">&gt; 6 Months ago</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-8">
+                                                    <label class="control-label" for="preMeds">Prev Meds?</label>
+                                                    <input id="preMeds" name="preMeds" type="text" size="45" class="form-control form-control-sm">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row col-centered">
+                                                <div class="col-12">
+                                                    <label class="control-label" for="assessment">Assessment:</label>
+                                                    <textarea class="form-control" rows="4" cols="60" id="assessment" name="assessment"></textarea>
+                                                </div>
+
+                                            </div>
+                                            <label class="col-4 control-label" for="practitioner">Practitioner</label>
+                                            <div class="form-group row col-centered">
+                                                <div class="col-4">
+                                                    <select id="practitioner" name="practitioner" class="form-control">
+                                                        <option value="Karin Euler">Karin Euler</option>
+                                                        <option value="Chris Nolan">Chris Nolan</option>
+                                                        <option value="Mark Hardy">Mark Hardy</option>
+                                                        <option value="Christa Wilton">Christa Wilton</option>
+                                                        <option value="Jessica Fong">Jessica Fong</option>
+                                                        <option value="Deanna Rumsey">Deanna Rumsey</option>
+                                                        <option value="Wade Mitchell">Wade Mitchell</option>
+                                                        <option value="Tara Andrusiak">Tara Andrusiak</option>
+                                                        <option value="Judy Kyte">Judy Kyte</option>
+                                                        <option value="Nancy Laframboise">Nancy Laframboise</option>
+                                                        <option value="Warren Meek">Warren Meek</option>
+                                                        <option value="Dave Glass">Dave Glass</option>
+                                                        <option value="Erin MacKenzie">Erin MacKenzie</option>
+                                                        <option value="Kelly Crotty">Kelly Crotty</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                        </fieldset>
+                                        <div class="form-group row col-centered">
+                                            <!-- This link is not allowed... just for demo -->
+                                            <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                <button type="button" class="btn">Save!</button>
+                                            </a>
+                                        </div>
+
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                </div>
+
+                <div class="mastfoot">
+                    <div class="inner">
+                        <p>Digital Charts Sample for <a href="http://www.cacha.ca/">CACHA</a>, by <a href="http://mattredmond.ca">Matt</a>.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')
+    </script>
+    <script src="bin/bootstrap/assets/js/vendor/popper.min.js"></script>
+    <script src="bin/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bin/bootstrap/assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+
+</html>
