@@ -87,25 +87,16 @@
 
     $sql .= "WHERE VisitID = $visitID";
 
-    if (!empty($firstName) && !empty($lastName) && !empty($village) && !empty($birth) && !empty($sex)){
-        try{
-            $stmt = mysqli_prepare($connection, $sql);
-            $query = mysqli_query($connection, $stmt) or die(mysqli_error($connection));
-            if(mysqli_stmt_execute($connection, $sql)){
-                echo true;
-            }
-        } catch(Error $e){
-            echo false;
-        } finally {
-            mysqli_stmt_close();
-            mysqli_close();
+    try{
+        $stmt = mysqli_prepare($connection, $sql);
+        $query = mysqli_query($connection, $stmt) or die(mysqli_error($connection));
+        if(mysqli_stmt_execute($connection, $sql)){
+            echo true;
         }
-    }
-
-    function test_input($data) {
-	    $data = trim($data);
-	    $data = stripslashes($data);
-	    $data = htmlspecialchars($data);
-	    return $data;
+    } catch(Error $e){
+        echo false;
+    } finally {
+        mysqli_stmt_close();
+        mysqli_close();
     }
 ?>
