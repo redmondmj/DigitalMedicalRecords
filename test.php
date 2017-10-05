@@ -42,7 +42,8 @@
                 </div>
 
                 <div class="inner cover">
-                    <h1 class="cover-heading">Welcome!</h1>
+                    <h1 class="cover-heading">Testing!</h1>
+                    <p> Is this thing on?</p>
                 <!-- Main Content Area -->
 
 
