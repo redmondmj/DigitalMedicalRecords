@@ -43,7 +43,7 @@
 
                 <div class="inner cover">
                     <h1 class="cover-heading">Welcome!</h1>
-                    <form class="form-horizontal">
+                    <form class="form-horizontal justify-content-center">
                         <fieldset>
 
                             <!-- Form Name -->
@@ -52,7 +52,7 @@
                             <!-- Text input-->
                             <div class="form-group">
                                 <!--<label class="col-md-4 control-label" for="fname">First Name</label>-->
-                                <div class="col-md-4 col-centered">
+                                <div class="col-6 col-centered">
                                     <input id="fname" name="fname" type="text" placeholder="First Name" class="form-control input-md" required="">
 
                                 </div>
@@ -61,7 +61,7 @@
                             <!-- Text input-->
                             <div class="form-group">
                                 <!-- <label class="col-md-4 control-label" for="lname">Last Name</label> -->
-                                <div class="col-md-4 col-centered">
+                                <div class="col-6 col-centered">
                                     <input id="lname" name="lname" type="text" placeholder="Last Name" class="form-control input-md" required="">
 
                                 </div>
