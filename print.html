@@ -15,22 +15,23 @@
       <div class="row">
 
         <div class="col-7" style="border-style: solid; border-color: Black;">
-          Canada-Africa Community Health Alliance <br>
-          Alliance de Sante Communitaire Canada-Afrique <br>
-          Triage: Sample Text &nbsp;&nbsp;&nbsp;<input type="checkbox" name="Test" value="TEST">TESTING<br>
-          Triage: &nbsp;<input type="checkbox" name="Med" value="MED">MED&nbsp;
-          <input type="checkbox" name="Gyn" value="GYN">GYN&nbsp;
-          <input type="checkbox" name="Opht" value="OPHT">OPHT&nbsp;
-          <input type="checkbox" name="Dent" value="DENT">DENT&nbsp;
-          <input type="checkbox" name="V" value="V">V
+          <span style="font-size: 18.5px;">Canada-Africa Community Health Alliance</span><br>
+          <span style="font-size: 18px;">Alliance de Sante Communitaire Canada-Afrique</span><br>
+          Triage: Sample Text <span style="padding-left: 10px;"><input type="checkbox" name="Testing" value="TEST" disabled>TESTING</span><br>
+          Triage: &nbsp;<input type="checkbox" name="Med" value="MED" disabled>MED&nbsp;
+          <input type="checkbox" name="Gyn" value="GYN" disabled>GYN&nbsp;
+          <input type="checkbox" name="Opht" value="OPHT" disabled>OPHT&nbsp;
+          <input type="checkbox" name="Dent" value="DENT" disabled>DENT&nbsp;
+          <input type="checkbox" name="V" value="V" disabled>V
         </div>
 
         <div class="col-5" style="border-style: solid; border-color: Black;">
           CHART#: 2017<br>
           DISPENSARY: Truro N.S.<br><br>
-          <span style="padding-right: 75px;">TIME: 3:32PM</span>
-          DATE: 10/3/2017
+          <span style="font-size: 18.5px;">TIME: 3:32PM
+          DATE: 10/3/2017</span>
         </div>
+
       </div>
 
       <div class="row">
@@ -46,8 +47,8 @@
         </div>
 
         <div class ="col-6" style="border-style: solid; border-color: Black;">
-          <span style="padding-right: 5px;"><input type="checkbox" name="Male" value="MALE">M</span>
-          <span style="padding-right: 5px;"><input type="checkbox" name="Female" value="FEMALE">F</span>
+          <span style="padding-right: 5px;"><input type="checkbox" name="Male" value="MALE" disabled>M</span>
+          <span style="padding-right: 5px;"><input type="checkbox" name="Female" value="FEMALE" disabled>F</span>
           <span style="padding-right: 20px;">AGE: 34</span>
           <span style="padding-right: 5px;">WEIGHT: 97.5</span>KG<br>
           <span style="padding-right: 50px;">TEMP: 98.6 &#8457;</span>
@@ -55,6 +56,7 @@
           <span style="padding-right: 100px;">GLUCOSE: 4.0</span>
           HR: 70
         </div>
+
       </div>
 
       <div class="row">
@@ -65,44 +67,68 @@
         </div>
 
         <div class="col-6" style="border-style: solid; border-color: Black;">
-          <span style="padding-right: 50px;"><input type="checkbox" name="YPreg" value="PREGNANT">Pregnant</span>
-          <span style="padding-right: 5px;"><input type="checkbox" name="Bfeeding" value="BREASTFEEDING">Breastfeeding</span><br>
+
+          <div class="row">
+
+            <div class="col-6" style="text-align: center;">
+              <span style="padding-right: 50px;"><input type="checkbox" name="YPreg" value="PREGNANT" disabled>Pregnant</span>
+            </div>
+
+            <div class="col-6" style="text-align: center;">
+              <span style="padding-right: 5px;"><input type="checkbox" name="Breastfeeding" value="BREASTFEEDING" disabled>Breastfeeding</span><br>
+            </div>
+
+          </div>
 
           <hr style="border-color: #0092D8; border-width: 2px; margin: 0;">
 
-          <div style="padding-right: 5px; float: right;">
-            <input type="checkbox" name="Vresult" value="VRESULT">V<br>
-            RESULT
-          </div>
+          <div class="row">
 
-          <div style="padding-right: 5px; float:right;">
-            <input type="checkbox" name="Malria" value="MALRIA">MALARIA<br>
-            RESULT
-          </div>
-
-          <div style="padding-right: 5px; float:right;">
-            <input type="checkbox" name="Syphilis" value="SYPHILIS">SYPHILIS<br>
-            RESULT
-          </div>
-
-          <div style="padding-right: 5px; float:right;">
-            <input type="checkbox" name="TYPH" value="TYPH">TYPH<br>
-            RESULT
-          </div>
-
-          <div style="padding-right: 5px; float:right;">
-            <input type="checkbox" name="Pregnancy" value="PREGNANCY">PREGNANCY<br>
-            RESULT
-          </div>
-
-
-          <div>
-            <div style="padding-right: 5px;">
-              <input type="checkbox" name="URINE" value="URINE">URINE<br>
+            <div class="col-4" style="text-align: center;">
+              <input type="checkbox" name="Vresult" value="VRESULT" disabled>V<br>
               RESULT
             </div>
 
-            LEUC +/- RBC +/- GLUCLOSE +/- NITRITES +/-
+            <div class="col-4" style="text-align: center;">
+              <input type="checkbox" name="Malria" value="MALRIA" disabled>MALARIA<br>
+              RESULT
+            </div>
+
+            <div class="col-4" style="text-align: center;">
+              <input type="checkbox" name="Syphilis" value="SYPHILIS" disabled>SYPHILIS<br>
+              RESULT
+            </div>
+
+          </div>
+
+          <div class="row">
+
+            <div class="col-6" style="text-align: center;">
+              <input type="checkbox" name="TYPH" value="TYPH" disabled>TYPH<br>
+              RESULT
+            </div>
+
+            <div class="col-6" style="text-align: center;">
+              <input type="checkbox" name="Pregnancy" value="PREGNANCY" disabled>PREGNANCY<br>
+              RESULT
+            </div>
+
+          </div>
+
+          <div class="row">
+
+            <div class="col-12" style="text-align: center;">
+              <input type="checkbox" name="URINE" value="URINE" disabled>URINE<br>
+            </div>
+
+          </div>
+
+          <div class="row">
+
+            <div class="col-12" style="text-align: center;">
+              LEUC +/- RBC +/- GLUCLOSE +/- NITRITES +/-
+            </div>
+
           </div>
 
         </div>
@@ -118,7 +144,7 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat feugiat vestibulum. Etiam augue urna, bibendum sit amet vehicula sed, venenatis tristique ipsum. Praesent vitae lobortis libero. Donec at iaculis ante. Suspendisse euismod ipsum nisi, eu molestie nisl bibendum ac.
           </div>
 
-          <div style="text-align: right; padding-right: 50px; float: Right; border-style: solid; width: 400px;">
+          <div style="text-align: left; padding-right: 10px; padding-left: 10px; float: Right; border-style: solid; width: 400px;">
             LAST HIV TEST? 10/4/2017<br>
             LAST PZQ TX? 10/4/2017<br>
             LAST WORM TX 10/4/2017<br>
@@ -133,13 +159,14 @@
       <div class="row">
 
         <div class="col-6" style="border-style: solid; border-color: Black;">
-          DX:_____(DON'T FORGET +, ++, or +++)<br>
+          DX:_____<br>
+          (DON'T FORGET +, ++, or +++)<br>
           AND NTR (No Treatment)
         </div>
 
         <div class="col-6" style="border-style: solid; border-color: Black;">
-          ADMIN: <input type="checkbox" name="Paracetamol" value="PARACET">PARACETAMOL
-          <input type="checkbox" name="Benz" value="BENZ">BENZ-PEN-G 2.4 MIU<br>  <input type="checkbox" name="Ceftriaxone" value="CEFTRIAXONE">CEFTRIAXONE250MG
+          ADMIN: <span style="font-size: 12px"><input type="checkbox" name="Paracetamol" value="PARACET" disabled>PARACETAMOL
+          <input type="checkbox" name="Benz" value="BENZ" disabled>BENZ-PEN-G 2.4 MIU<br>  <input type="checkbox" name="Ceftriaxone" value="CEFTRIAXONE" disabled>CEFTRIAXONE250MG</span>
         </div>
 
       </div>
@@ -147,39 +174,45 @@
       <div class="row">
 
         <div class="col-6" style="border-style: solid; border-color: Black;">
-          <input type="checkbox" name="Healthy" value="HEALTHY">HEALTHY
-          <input type="checkbox" name="Ntr" value="NTR">NTR
-          <input type="checkbox" name="Msk" value="MSK">MSK<br>
-          <input type="checkbox" name="+" value="+">+
-          <input type="checkbox" name="++" value="++">++
-          <input type="checkbox" name="+++" value="+++">+++
-          <input type="checkbox" name="Worms" value="WORMS">WORMS<br>
-          <input type="checkbox" name="Asthma" value="ASTHMA">ASTHMA
-          <input type="checkbox" name="Bronchitus" value="BRONCHITUS">BRONCHITUS<br>
-          <input type="checkbox" name="Pneumonia" value="PNEUMONIA">PNEUMONIA
-          <input type="checkbox" name="Cough" value="COUGH">COUGH<br>
-          <input type="checkbox" name="Malaria" value="MALARIA">MALARIA
-          <input type="checkbox" name="Schisto" value="SCHISTO">SCHISTO
-          <input type="checkbox" name="Typhod" value="TYPHOD">TYPHOD<br>
-          <input type="checkbox" name="Gerd" value="GERD">GERD
-          <input type="checkbox" name="Pud" value="PUD">PUD
-          <input type="checkbox" name="Constipation" value="CONSTIPATION">CONSTIPATION<br>
-          <input type="checkbox" name="Diarrhea" value="DIARRHEA">DIARRHEA
-          <input type="checkbox" name="Bloody" value="BLOODY">BLOODY OR
-          <input type="checkbox" name="Watery" value="WATERY">WATERY<br>
-          <input type="checkbox" name="Hypertension" value="HYPERTENSION">HYPERTENSION <input type="checkbox" name="Diabetes" value="DIABETES">DIABETES<br>
-          <input type="checkbox" name="Pid" value="PID">PID
-          <input type="checkbox" name="Sti" value="STI">STI
-          <input type="checkbox" name="Syphilis" value="SYPHILIS">SYPHILIS<br>
-          <input type="checkbox" name="Topical" value="TOPICAL">TOPICAL:<br>
-          <input type="checkbox" name="??" value="??">
+          <input type="checkbox" name="Healthy" value="HEALTHY" disabled>HEALTHY
+          <input type="checkbox" name="Ntr" value="NTR" disabled>NTR
+          <input type="checkbox" name="Msk" value="MSK" disabled>MSK<br>
+          <input type="checkbox" name="+" value="+" disabled>+
+          <input type="checkbox" name="++" value="++" disabled>++
+          <input type="checkbox" name="+++" value="+++" disabled>+++
+          <input type="checkbox" name="Worms" value="WORMS" disabled>WORMS<br>
+          <input type="checkbox" name="Asthma" value="ASTHMA" disabled>ASTHMA
+          <input type="checkbox" name="Bronchitus" value="BRONCHITUS" disabled>BRONCHITUS<br>
+          <input type="checkbox" name="Pneumonia" value="PNEUMONIA" disabled>PNEUMONIA
+          <input type="checkbox" name="Cough" value="COUGH" disabled>COUGH<br>
+          <input type="checkbox" name="Malaria" value="MALARIA" disabled>MALARIA
+          <input type="checkbox" name="Schisto" value="SCHISTO" disabled>SCHISTO
+          <input type="checkbox" name="Typhod" value="TYPHOD" disabled>TYPHOD<br>
+          <input type="checkbox" name="Gerd" value="GERD" disabled>GERD
+          <input type="checkbox" name="Pud" value="PUD" disabled>PUD
+          <input type="checkbox" name="Constipation" value="CONSTIPATION" disabled>CONSTIPATION<br>
+          <input type="checkbox" name="Diarrhea" value="DIARRHEA" disabled>DIARRHEA
+          <input type="checkbox" name="Bloody" value="BLOODY" disabled>BLOODY OR
+          <input type="checkbox" name="Watery" value="WATERY" disabled>WATERY<br>
+          <input type="checkbox" name="Hypertension" value="HYPERTENSION" disabled>HYPERTENSION <input type="checkbox" name="Diabetes" value="DIABETES" disabled>DIABETES<br>
+          <input type="checkbox" name="Pid" value="PID" disabled>PID
+          <input type="checkbox" name="Sti" value="STI" disabled>STI
+          <input type="checkbox" name="Syphilis" value="SYPHILIS" disabled>SYPHILIS<br>
+          <input type="checkbox" name="Topical" value="TOPICAL" disabled>TOPICAL:<br>
+          <input type="checkbox" name="??" value="??" disabled>
         </div>
 
         <div class="col-6" style="border-style: solid; border-color: Black;">
-          KIT: (PCM-ALB/MEB) PREGNANCY KIT(VITS+FE)<br>
-          ALU 3/7 1x2 2x2 3x2 4x2<br>
-          PUD: 7/7 AMOX250 3X2 + OMEP20 1X2+ MTZ200MG 3X2<br>
-          PZQ600mg #TABS STAT:_________
+          KIT: <span style="font-size: 12px;"><input type="checkbox" name="Pcm" value="PCM" disabled>(PCM-ALB/MEB)
+          <input type="checkbox" name="Pkit" value="PREGKIT" disabled>PREGNANCY KIT(VITS+FE)</span><br>
+          <input type="checkbox" name="Alu" value="ALU" disabled>ALU
+          <input type="checkbox" name="3/7" value="3/7" disabled>3/7
+          <input type="checkbox" name="1x2" value="1x2" disabled>1x2
+          <input type="checkbox" name="2x2" value="2x2" disabled>2x2
+          <input type="checkbox" name="3x2" value="3x2" disabled>3x2
+          <input type="checkbox" name="4x2" value="4x2" disabled>4x2<br>
+          <span style="font-size: 12px;"><input type="checkbox" name="PUD" value="PUD" disabled>PUD: 7/7 AMOX250 3X2 + OMEP20 1X2+ MTZ200MG 3X2</span><br>
+          <input type="checkbox" name="PZQ" value="PZQ" disabled>PZQ600mg #TABS STAT:_________
           <br>
           <br>
           <br>
@@ -191,25 +224,96 @@
       </div>
 
       <div class="row">
-        <div class="col-6" style="border-style: solid; border-color: Black;">
+
+        <div class="col-5" style="border-style: solid; border-color: Black;">
           PREGNANT: 25 WEEKS<br>
-          REGULAR ANC: <input type="checkbox" name="Yanc" value="ANCY">YES <input type="checkbox" name="Nanc" value="NANC">NO<br>
-          PREVIOUS IPTp:____<input type="checkbox" name="YPiptp" value="YPIPTP">YES <input type="checkbox" name="Npiptp" value="NPIPTP">NEVER<br>
+          REGULAR ANC: <input type="checkbox" name="Yanc" value="ANCY" disabled>YES <input type="checkbox" name="Nanc" value="NANC" disabled>NO<br>
+          PREVIOUS IPTp:____<br>
+          <input type="checkbox" name="YPiptp" value="YPIPTP" disabled>YES <input type="checkbox" name="Npiptp" value="NPIPTP" disabled>NEVER<br>
           LAST  IPTp:<br>
-          >1 MONTH AGO <input type="checkbox" name="YLiptp" value="YLIPTP">YES <input type="checkbox" name="Nliptp" value="NLIPTP">NO<br>
-          CLINICAL ANEMIA <input type="checkbox" name="YClinicalAnemia" value="YCANEMIA">YES <input type="checkbox" name="NClinicalAnemia" value="NCANEMIA">NO<br>
-          SULFAAR SP500/25: TABS <input type="checkbox" name="3" value="3">3
-          <input type="checkbox" name="6" value="6">6
-          <input type="checkbox" name="9" value="9">9
+          >1 MONTH AGO <input type="checkbox" name="YLiptp" value="YLIPTP" disabled>YES <input type="checkbox" name="Nliptp" value="NLIPTP" disabled>NO<br>
+          CLINICAL ANEMIA <input type="checkbox" name="YClinicalAnemia" value="YCANEMIA" disabled>YES <input type="checkbox" name="NClinicalAnemia" value="NCANEMIA" disabled>NO<br>
+          SULFAAR SP500/25:<br>
+          TABS <input type="checkbox" name="3" value="3" disabled>3
+          <input type="checkbox" name="6" value="6" disabled>6
+          <input type="checkbox" name="9" value="9" disabled>9
         </div>
 
-        <div class="col-6" style="border-style: solid; border-color: Black;">
-          STI OR PID # 200MG 100MG 250MG<br>
-          INITIALS SEX PREG MTH B.F. MTZ DOXY AMOX<br>
-          PT F-M Y-N Y-N<br>
-          P1 F-M Y-N Y-N<br>
-          P2 F-M Y-N Y-N<br>
-          P3 F-M Y-N Y-N
+        <div class="col-7" style="border-style: solid; border-color: Black;">
+
+          <div class="row">
+
+            <div class="col-12">
+              STI OR PID # 200MG 100MG 250MG
+            </div>
+
+          </div>
+
+
+          <table style="width:100%; font-size: 15px;">
+
+            <tr>
+              <th style="width: 12%"></th>
+              <th style="width: 13.5%">INITIALS</th>
+              <th style="width: 12%">SEX</th>
+              <th style="width: 12.5%">PREG</th>
+              <th style="width: 12.5%">MTH</th>
+              <th style="width: 12.5%">B.F.</th>
+              <th style="width: 12.5%">MTZ</th>
+              <th style="width: 12.5%">DOXY</th>
+              <th style="width: 12.5%">AMOX</th>
+            </tr>
+
+            <tr>
+              <td style="width: 12%; text-align: center;">PT</td>
+              <td style="width: 13.5%; text-align: center;">16</td>
+              <td style="width: 12.5%; text-align: center;">M</td>
+              <td style="width: 12.5%; text-align: center;">Y</td>
+              <td style="width: 12.5%; text-align: center;">25</td>
+              <td style="width: 12.5%; text-align: center;">Y</td>
+              <td style="width: 12.5%; text-align: center;">14</td>
+              <td style="width: 12.5%; text-align: center;">15</td>
+              <td style="width: 12.5%; text-align: center;">16</td>
+            </tr>
+
+            <tr>
+              <td style="width: 12%; text-align: center;">P1</td>
+              <td style="width: 13.5%; text-align: center;">16</td>
+              <td style="width: 12.5%; text-align: center;">M</td>
+              <td style="width: 12.5%; text-align: center;">Y</td>
+              <td style="width: 12.5%; text-align: center;">25</td>
+              <td style="width: 12.5%; text-align: center;">Y</td>
+              <td style="width: 12.5%; text-align: center;">14</td>
+              <td style="width: 12.5%; text-align: center;">15</td>
+              <td style="width: 12.5%; text-align: center;">16</td>
+            </tr>
+
+            <tr>
+              <td style="width: 12%; text-align: center;">P2</td>
+              <td style="width: 13.5%; text-align: center;">16</td>
+              <td style="width: 12.5%; text-align: center;">M</td>
+              <td style="width: 12.5%; text-align: center;">Y</td>
+              <td style="width: 12.5%; text-align: center;">25</td>
+              <td style="width: 12.5%; text-align: center;">Y</td>
+              <td style="width: 12.5%; text-align: center;">14</td>
+              <td style="width: 12.5%; text-align: center;">15</td>
+              <td style="width: 12.5%; text-align: center;">16</td>
+            </tr>
+
+            <tr>
+              <td style="width: 12%; text-align: center;">P3</td>
+              <td style="width: 13.5%; text-align: center;">16</td>
+              <td style="width: 12.5%; text-align: center;">M</td>
+              <td style="width: 12.5%; text-align: center;">Y</td>
+              <td style="width: 12.5%; text-align: center;">25</td>
+              <td style="width: 12.5%; text-align: center;">Y</td>
+              <td style="width: 12.5%; text-align: center;">14</td>
+              <td style="width: 12.5%; text-align: center;">15</td>
+              <td style="width: 12.5%; text-align: center;">16</td>
+            </tr>
+
+          </table>
+
         </div>
 
       </div>
@@ -219,7 +323,7 @@
         <div class="col-12" style="border-style: solid; border-color: Black;">
           FOLLOW-UP: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat feugiat vestibulum. Etiam augue urna, bibendum sit amet vehicula sed, venenatis tristique ipsum.<br>
           <br>
-          <span style="padding-right: 10px;">RETURN DURING MISSION:</span><input type="checkbox" name="ReturnMission" value="RETURNMISSION">YES OR TO DISPENSARY>_____DAYS
+          <span style="padding-right: 10px;">RETURN DURING MISSION:</span><input type="checkbox" name="ReturnDuringMission" value="RETURNMISSION" disabled>YES OR TO DISPENSARY>_____DAYS
         </div>
 
       </div>
@@ -233,9 +337,9 @@
           <hr style="border-color: #0092D8; border-width: 2px; margin: 0;">
 
           REFERRAL:
-          <span style="padding-right: 20px; padding-left: 10px"><input type="checkbox" name="TB" value="TB">TB</span>
-          <span style="padding-right: 20px;"><input type="checkbox" name="SURGERY" value="SURGERY">SURGERY</span>
-          <span style="padding-right: 200px;"><input type="checkbox" name="HOSPITAL" value="HOSPITAL">HOSPITAL</span>
+          <span style="padding-right: 20px; padding-left: 10px"><input type="checkbox" name="TB" value="TB" disabled>TB</span>
+          <span style="padding-right: 20px;"><input type="checkbox" name="SURGERY" value="SURGERY" disabled>SURGERY</span>
+          <span style="padding-right: 200px;"><input type="checkbox" name="HOSPITAL" value="HOSPITAL" disabled>HOSPITAL</span>
           RX #: 987
         </div>
 
@@ -254,3 +358,4 @@
     <script src="bin/bootstrap/assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
+
