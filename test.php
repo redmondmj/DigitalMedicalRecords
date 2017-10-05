@@ -29,30 +29,35 @@
                     <div class="inner">
                         <h3 class="masthead-brand">CACHA</h3>
                         <nav class="nav nav-masthead">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link" href="index.php">Home</a>
                             <a class="nav-link" href="register.php">Register</a>
                             <a class="nav-link active" href="test.php">Test</a>
                             <a class="nav-link" href="clinic.php">Clinic</a>
                             <a class="nav-link" href="eye.php">Eye</a>
                             <a class="nav-link" href="dental.php">Dental</a>
                             <a class="nav-link" href="pharma.php">Rx</a>
-                            <a class="nav-link" href="tableView.php">Records</a>
+                            <a class="nav-link" href="records.php">Records</a>
                         </nav>
                     </div>
                 </div>
 
                 <div class="inner cover">
                     <h1 class="cover-heading">Welcome!</h1>
-                    <p class="lead">This is a rough draft of the digital forms for CACHA patient records pilot project. This site is intended for offline use only!</p>
-                    <br>
-                    <p class="lead">
-                        <a href="tableView.html" class="btn btn-lg btn-secondary">View Records</a>
-                    </p>
+                <!-- Main Content Area -->
+
+
+
+
+
+                </div>
+
+                <div class="col-4 col-centered">
+                        <a href="print.html">View Complete Chart</a>
                 </div>
 
                 <div class="mastfoot">
                     <div class="inner">
-                        <p>Digital Charts Sample for <a href="http://www.cacha.ca/">CACHA</a>, by <a href="http://mattredmond.ca">Matt</a>.</p>
+                        <p>Digital Charts Sample for <a href="http://www.cacha.ca/">CACHA</a>, by A BUNCH OF AWESOME PEOPLE.</p>
                     </div>
                 </div>
 
