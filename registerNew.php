@@ -11,12 +11,7 @@
     $lastName = $decoded[0]->last;
     $village = $decoded[0]->village;
     $birth = $decoded[0]->age;
-    
-    if(!empty($_POST['gender-0'])){
-        $sex = "male";
-    } elseif (!empty($_POST['gender-1'])){
-        $sex = "female";
-    }
+    $sex = $decoded[0]->sex;
 
     $sql = "INSERT INTO patient (";
     $values = ") VALUES (";
@@ -61,7 +56,6 @@
         mysqli_close();
     }
     
-
     function test_input($data) {
 	    $data = trim($data);
 	    $data = stripslashes($data);
