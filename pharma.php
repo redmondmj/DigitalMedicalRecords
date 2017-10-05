@@ -7,7 +7,21 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="bin/bootstrap/favicon.ico">
-
+    <script src="bin/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        function fetch_select(val) {
+            $.ajax({
+                type: 'post',
+                url: 'loadVisit.php',
+                data: {
+                    patientName: val
+                },
+                success: function(response) {
+                    document.getElementById("visit").innerHTML = response;
+                }
+            });
+        }
+    </script>
     <title>CACHA - Pharmacy</title>
 
     <!-- Bootstrap core CSS -->
@@ -43,8 +57,34 @@
 
                 <div class="inner cover">
                     <h1 class="cover-heading">Pharmacy</h1>
-                <!-- Main Content Area -->
+                    <!-- Main Content Area -->
+                    <form class="form-horizontal" method="POST">
 
+                        <div class="form-row justify-content-center">
+                            <!-- Select Patient -->
+                            <div class="form-group">
+                                <label class="col-12 control-label" for="patientName">Choose Patient:</label>
+                                <div class="col-12">
+                                    <select id="patientName" name="patientName" class="form-control" onchange="fetch_select(this.value);">
+                                            <option disabled selected>Choose Patient</option>
+                                            <?php include 'loadPatient.php'; ?>
+                                        </select>
+                                </div>
+                            </div>
+
+                            <!-- Select Visit -->
+                            <div class="form-group">
+                                <label class="col-12 control-label" for="visit">Choose Visit:</label>
+                                <div class="col-12">
+                                    <select id="visit" name="visit" class="form-control">
+                                            <option value="newVisit">New Visit</option>
+                                            
+                                        </select>
+                                </div>
+                            </div>
+                        </div>
+                        </fieldset>
+                    </form>
 
 
 
@@ -56,7 +96,7 @@
 
 
                 <div class="col-4 col-centered">
-                        <a href="print.html">View Complete Chart</a>
+                    <a href="print.html">View Complete Chart</a>
                 </div>
 
 
@@ -75,7 +115,9 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <!-- slim jquery does not include ajax 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    -->
     <script>
         window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')
     </script>
