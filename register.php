@@ -48,7 +48,7 @@
 
 
                     <div class="col-4 col-centered">
-                        <a href="print.html">View Complete Chart</a>
+                        <a href="print.php">View Complete Chart</a>
                     </div>
                 </div>
                 <br>

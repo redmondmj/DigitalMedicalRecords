@@ -17,7 +17,7 @@
         <div class="col-7" style="border-style: solid; border-color: Black;">
           <span style="font-size: 18.5px;">Canada-Africa Community Health Alliance</span><br>
           <span style="font-size: 18px;">Alliance de Sante Communitaire Canada-Afrique</span><br>
-          Triage: <input type="text" id="txtTriage" name="Triage" value="Sample Text" style="width: 200px"><span style="padding-left: 10px;"><input type="checkbox" id="chkTesting" name="Testing" value="TEST" disabled>TESTING</span><br>
+          Triage: <input disabled type="text" id="txtTriage" name="Triage" value="Sample Text" style="width: 200px"><span style="padding-left: 10px;"><input type="checkbox" id="chkTesting" name="Testing" value="TEST" disabled>TESTING</span><br>
           Triage: &nbsp;<input type="checkbox" id="chkMed" name="Med" value="MED" disabled>MED&nbsp;
           <input type="checkbox" id="chkGyn" name="Gyn" value="GYN" disabled>GYN&nbsp;
           <input type="checkbox" id="chkOpht" name="Opht" value="OPHT" disabled>OPHT&nbsp;
@@ -26,11 +26,11 @@
         </div>
 
         <div class="col-5" style="border-style: solid; border-color: Black;">
-          CHART#: <input type="text" id="txtChart" name="Chart" value="189" style="width: 50px"><br>
-          DISPENSARY: <input type="text" id="txtDispensary" name="Dispensary" value="Truro N.S." style="width: 150px"><br>
+          CHART#: <input disabled type="text" id="txtChart" name="Chart" value="189" style="width: 50px"><br>
+          DISPENSARY: <input disabled type="text" id="txtDispensary" name="Dispensary" value="Truro N.S." style="width: 150px"><br>
           <br>
-          <span style="font-size: 18.5px;">TIME:<input type="text" id="txtTime" name="Time" value="3:32PM" style="width: 75px">
-          DATE: <input type="text" id="txtDate" name="Date" value="10/03/17" style="width: 85px"></span>
+          <span style="font-size: 18.5px;">TIME:<input disabled type="text" id="txtTime" name="Time" value="3:32PM" style="width: 75px">
+          DATE: <input disabled type="text" id="txtDate" name="Date" value="10/03/17" style="width: 85px"></span>
         </div>
 
       </div>
@@ -38,24 +38,24 @@
       <div class="row">
 
         <div class ="col-6" style="border-style: solid; border-color: Black;">
-          Name: <input type="text" id="txtName" name="Name" value="Ryan Oakley" style="width: 200px"><br>
-          Village: <input type="text" id="txtVillage" name="Village" value="Cole Harbour" style="width: 200px"><br>
-          <span style="padding-right: 65px;">G: <input type="text" id="txtG" name="G" value="10" style="width: 30px"></span>
-          <span style="padding-right: 65px;">P: <input type="text" id="txtP" name="P" value="10" style="width: 30px"></span>
-          <span style="padding-right: 65x;">A: <input type="text" id="txtA" name="A" value="10" style="width: 30px"></span><br>
-          <span style="padding-right: 5px;">#Living Children: <input type="text" id="txtLiving" name="Living" value="0" style="width: 30px"></span>
-          LNMP: <input type="text" id="txtLnmp" name="Lnmp" value="8W" style="width: 50px">
+          Name: <input disabled type="text" id="txtName" name="Name" value="Ryan Oakley" style="width: 200px"><br>
+          Village: <input disabled type="text" id="txtVillage" name="Village" value="Cole Harbour" style="width: 200px"><br>
+          <span style="padding-right: 65px;">G: <input disabled type="text" id="txtG" name="G" value="10" style="width: 30px"></span>
+          <span style="padding-right: 65px;">P: <input disabled type="text" id="txtP" name="P" value="10" style="width: 30px"></span>
+          <span style="padding-right: 65x;">A: <input disabled type="text" id="txtA" name="A" value="10" style="width: 30px"></span><br>
+          <span style="padding-right: 5px;">#Living Children: <input disabled type="text" id="txtLiving" name="Living" value="0" style="width: 30px"></span>
+          LNMP: <input disabled type="text" id="txtLnmp" name="Lnmp" value="8W" style="width: 50px">
         </div>
 
         <div class ="col-6" style="border-style: solid; border-color: Black;">
           <span style="padding-right: 5px;"><input type="checkbox" id="chkMale" name="Male" value="MALE" disabled>M</span>
           <span style="padding-right: 5px;"><input type="checkbox" id="chkFemale" name="Female" value="FEMALE" disabled>F</span>
-          <span style="padding-right: 20px;">AGE: <input type="text" id="txtAge" name="Age" value="34" style="width: 30px"></span>
-          <span style="padding-right: 5px;">WEIGHT: <input type="text" id="txtWeight" name="Weight" value="97.5" style="width: 50px"></span>KG<br>
-          <span style="padding-right: 50px;">TEMP: <input type="text" id="txtTemp" name="Temp" value="98.6" style="width: 50px">&#8457;</span>
-          BP: <input type="text" id="txtBP" name="BP" value="120/70" style="width: 70px"><br><br>
-          <span style="padding-right: 50px;">GLUCOSE: <input type="text" id="txtGlucose" name="Glucose" value="4.0" style="width: 50px"></span>
-          HR: <input type="text" id="txtHr" name="HR" value="70" style="width: 50px">
+          <span style="padding-right: 20px;">AGE: <input disabled type="text" id="txtAge" name="Age" value="34" style="width: 30px"></span>
+          <span style="padding-right: 5px;">WEIGHT: <input disabled type="text" id="txtWeight" name="Weight" value="97.5" style="width: 50px"></span>KG<br>
+          <span style="padding-right: 50px;">TEMP: <input disabled type="text" id="txtTemp" name="Temp" value="98.6" style="width: 50px">&#8457;</span>
+          BP: <input disabled type="text" id="txtBP" name="BP" value="120/70" style="width: 70px"><br><br>
+          <span style="padding-right: 50px;">GLUCOSE: <input disabled type="text" id="txtGlucose" name="Glucose" value="4.0" style="width: 50px"></span>
+          HR: <input disabled type="text" id="txtHr" name="HR" value="70" style="width: 50px">
         </div>
 
       </div>
@@ -64,7 +64,7 @@
 
         <div class="col-6" style="border-style: solid; border-color: Black; height: 300px;">
           Chief Complaint:<br>
-          <textarea id="txtComplaint" name="Complaint" wrap="soft">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat feugiat vestibulum. Etiam augue urna, bibendum sit amet vehicula sed, venenatis tristique ipsum. Praesent vitae lobortis libero.
+          <textarea disabled id="txtComplaint" name="Complaint" wrap="soft">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat feugiat vestibulum. Etiam augue urna, bibendum sit amet vehicula sed, venenatis tristique ipsum.
           </textarea>
         </div>
 
@@ -88,17 +88,17 @@
 
             <div class="col-4" style="text-align: center;">
               <input type="checkbox" id="chkVresult" name="Vresult1" value="VRESULT" disabled>V<br>
-              <input type="text" id="txtVresult" name="Vresuult2" value="Result" style="width: 80px">
+              <input disabled type="text" id="txtVresult" name="Vresuult2" value="Result" style="width: 80px">
             </div>
 
             <div class="col-4" style="text-align: center;">
               <input type="checkbox" id="chkMalaria" name="Malria1" value="MALRIA" disabled>MALARIA<br>
-              <input type="text" id="txtMalaria" name="Malria2" value="Result" style="width: 80px">
+              <input disabled type="text" id="txtMalaria" name="Malria2" value="Result" style="width: 80px">
             </div>
 
             <div class="col-4" style="text-align: center;">
               <input type="checkbox" id="chkSyphilis" name="Syphilis1" value="SYPHILIS" disabled>SYPHILIS<br>
-              <input type="text" id="txtSyphilis" name="Syphilis2" value="Result" style="width: 80px">
+              <input disabled type="text" id="txtSyphilis" name="Syphilis2" value="Result" style="width: 80px">
             </div>
 
           </div>
@@ -107,12 +107,12 @@
 
             <div class="col-6" style="text-align: center;">
               <input type="checkbox" id="chkTyph" name="TYPH1" value="TYPH" disabled>TYPH<br>
-              <input type="text" id="txtTyph" name="Typh2" value="Result" style="width: 80px">
+              <input disabled type="text" id="txtTyph" name="Typh2" value="Result" style="width: 80px">
             </div>
 
             <div class="col-6" style="text-align: center;">
               <input type="checkbox" id="chkPregnancy" name="Pregnancy1" value="PREGNANCY" disabled>PREGNANCY<br>
-              <input type="text" id="txtPregnancy" name="Pregnancy2" value="Result" style="width: 80px">
+              <input disabled type="text" id="txtPregnancy" name="Pregnancy2" value="Result" style="width: 80px">
             </div>
 
           </div>
@@ -128,10 +128,10 @@
           <div class="row">
 
             <div class="col-12" style="text-align: center;">
-              LEUC: <input type="text" id="txtLeuc" name="Leuc" value="+" style="width: 30px">
-              RBC: <input type="text" id="txtRBC" name="RBC" value="+" style="width: 30px">
-              GLUCLOSE: <input type="text" id="txtUrineglucose" name="Urineglucose" value="4.0" style="width: 30px">
-              NITRITES: <input type="text" id="txtNitrites" name="Nitrites" value="+" style="width: 30px">
+              LEUC: <input disabled type="text" id="txtLeuc" name="Leuc" value="+" style="width: 30px">
+              RBC: <input disabled type="text" id="txtRBC" name="RBC" value="+" style="width: 30px">
+              GLUCLOSE: <input disabled type="text" id="txtUrineglucose" name="Urineglucose" value="4.0" style="width: 30px">
+              NITRITES: <input disabled type="text" id="txtNitrites" name="Nitrites" value="+" style="width: 30px">
             </div>
 
           </div>
@@ -144,16 +144,17 @@
 
         <div class="col-7" style="border-style: solid; border-color: Black;">
           ASSESSMENT:<br>
-          <textarea id="txtAssessment" name="Assessment" wrap="soft">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat feugiat vestibulum. Etiam augue urna, bibendum sit amet vehicula sed, venenatis tristique ipsum. Praesent vitae lobortis libero. Donec at iaculis ante. Suspendisse euismod ipsum nisi, eu molestie nisl bibendum ac.</textarea>
+          <textarea disabled id="txtAssessment" name="Assessment" wrap="soft">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat feugiat vestibulum. Etiam augue urna, bibendum sit amet vehicula sed, venenatis tristique ipsum. Praesent vitae lobortis libero.
+          </textarea>
         </div>
 
         <div class="col-5" style="border-style: solid; border-color: Black; font-size: 17px;">
-          LAST HIV TEST? <input type="text" id="txtLasthiv" name="Lasthiv" value="Unknown" style="width: 100px"><br>
-          LAST PZQ TX? <input type="text" id="txtLastpzq" name="Lastpzq" value="Unknown" style="width: 100px"><br>
-          LAST WORM TX? <input type="text" id="txtLastworm" name="Lastworm" value="Unknown" style="width: 100px"><br>
-          LAST VIT A? <input type="text" id="txtLastvita" name="Lastvita" value="Unknown" style="width: 100px"><br>
+          LAST HIV TEST? <input disabled type="text" id="txtLasthiv" name="Lasthiv" value="Unknown" style="width: 100px"><br>
+          LAST PZQ TX? <input disabled type="text" id="txtLastpzq" name="Lastpzq" value="Unknown" style="width: 100px"><br>
+          LAST WORM TX? <input disabled type="text" id="txtLastworm" name="Lastworm" value="Unknown" style="width: 100px"><br>
+          LAST VIT A? <input disabled type="text" id="txtLastvita" name="Lastvita" value="Unknown" style="width: 100px"><br>
           PREV MEDS?<br>
-          <textarea id="txtPrevmeds" name="Prevmeds" wrap="soft">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea>
+          <textarea disabled id="txtPrevmeds" name="Prevmeds" wrap="soft">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea>
         </div>
 
       </div>
@@ -215,7 +216,7 @@
           <input type="checkbox" id="chk3x2" name="3x2" value="3x2" disabled>3x2
           <input type="checkbox" id="chk4x2" name="4x2" value="4x2" disabled>4x2<br>
           <span style="font-size: 12px;"><input type="checkbox" id="chkPudkit" name="Pudkit" value="PUD" disabled>PUD: 7/7 AMOX250 3X2 + OMEP20 1X2+ MTZ200MG 3X2</span><br>
-          <input type="checkbox" name="PZQ" value="PZQ" disabled>PZQ600mg #TABS STAT: <input type="text" id="txtPzqtab" name="PzqTab" value="15" style="width: 30px">
+          <input type="checkbox" name="PZQ" value="PZQ" disabled>PZQ600mg #TABS STAT: <input disabled type="text" id="txtPzqtab" name="PzqTab" value="15" style="width: 30px">
         </div>
 
       </div>
@@ -223,7 +224,7 @@
       <div class="row">
 
         <div class="col-5" style="border-style: solid; border-color: Black;">
-          PREGNANT: <input type="text" id="txtPregnant" name="Pregweeks" value="25" style="width: 30px">WEEKS<br>
+          PREGNANT: <input disabled type="text" id="txtPregnant" name="Pregweeks" value="25" style="width: 30px">WEEKS<br>
           REGULAR ANC: <input type="checkbox" id="chkYanc" name="Yanc" value="ANCY" disabled>YES <input type="checkbox" id="chkNanc" name="Nanc" value="NANC" disabled>NO<br>
           PREVIOUS IPTp:<br>
           <input type="checkbox" id="chkYpiptp" name="YPiptp" value="YPIPTP" disabled>YES <input type="checkbox" id="chkNpiptp" name="Npiptp" value="NPIPTP" disabled>NEVER<br>
@@ -248,7 +249,7 @@
               <th style="width: 7%">or</th>
               <th style="width: 19%; text-align: center"><input type="checkbox" id="chkPidpt" name="Pidpt" value="Pidpt" disabled>PID</th>
               <th style="width: 12.5%">#</th>
-              <th style="width: 12.5%"><input type="text" id="txt#pt" name="pt#" value="15" style="width: 30px"></th>
+              <th style="width: 12.5%"><input disabled type="text" id="txt#pt" name="pt#" value="15" style="width: 30px"></th>
               <th style="width: 12.5%">200MG</th>
               <th style="width: 12.5%">100MG</th>
               <th style="width: 12.5%">250MG</th>
@@ -272,50 +273,50 @@
 
             <tr>
               <td style="width: 12%; text-align: center;">PT</td>
-              <td style="width: 13.5%; text-align: center;"><input type="text" id="txtPtinit" name="Ptinit" value="RO" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input type="text" id="txtPtsex" name="Ptsex" value="M" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input type="text" id="txtPtpreg" name="PtPreg" value="Y" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input type="text" id="txtPtmth" name="Ptmth" value="9" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input type="text" id="txtPtbf" name="Ptbf" value="Y" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input type="text" id="txtPtmtz" name="Ptmtz" value="14" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input type="text" id="txtPtdoxy" name="Ptdoxy" value="15" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input type="text" id="txtPtAmox" name="Ptamox" value="16" style="width: 30px"></td>
+              <td style="width: 13.5%; text-align: center;"><input disabled type="text" id="txtPtinit" name="Ptinit" value="RO" style="width: 30px"></td>
+              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtPtsex" name="Ptsex" value="M" style="width: 30px"></td>
+              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtPtpreg" name="PtPreg" value="Y" style="width: 30px"></td>
+              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtPtmth" name="Ptmth" value="9" style="width: 30px"></td>
+              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtPtbf" name="Ptbf" value="Y" style="width: 30px"></td>
+              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtPtmtz" name="Ptmtz" value="14" style="width: 30px"></td>
+              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtPtdoxy" name="Ptdoxy" value="15" style="width: 30px"></td>
+              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtPtAmox" name="Ptamox" value="16" style="width: 30px"></td>
             </tr>
 
             <tr>
               <td style="width: 12%; text-align: center;">P1</td>
-              <td style="width: 13.5%; text-align: center;"><input type="text" id="txtP1init" name="P1init" value="RO" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input type="text" id="txtP1sex" name="P1sex" value="M" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input type="text" id="txtP1preg" name="P1Preg" value="Y" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input type="text" id="txtP1mth" name="P1mth" value="9" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input type="text" id="txtP1bf" name="P1bf" value="Y" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input type="text" id="txtP1mtz" name="P1mtz" value="14" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input type="text" id="txtP1doxy" name="P1doxy" value="15" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input type="text" id="txtP1Amox" name="P1amox" value="16" style="width: 30px"></td>
+              <td style="width: 13.5%; text-align: center;"><input disabled type="text" id="txtP1init" name="P1init" value="RO" style="width: 30px"></td>
+              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP1sex" name="P1sex" value="M" style="width: 30px"></td>
+              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP1preg" name="P1Preg" value="Y" style="width: 30px"></td>
+              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP1mth" name="P1mth" value="9" style="width: 30px"></td>
+              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP1bf" name="P1bf" value="Y" style="width: 30px"></td>
+              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP1mtz" name="P1mtz" value="14" style="width: 30px"></td>
+              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP1doxy" name="P1doxy" value="15" style="width: 30px"></td>
+              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP1Amox" name="P1amox" value="16" style="width: 30px"></td>
             </tr>
 
             <tr>
               <td style="width: 12%; text-align: center;">P2</td>
-              <td style="width: 13.5%; text-align: center;"><input type="text" id="txtP2init" name="P2init" value="RO" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input type="text" id="txtP2sex" name="P2sex" value="M" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input type="text" id="txtP2preg" name="P2Preg" value="Y" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input type="text" id="txtP2mth" name="P2mth" value="9" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input type="text" id="txtP2bf" name="P2bf" value="Y" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input type="text" id="txtP2mtz" name="P2mtz" value="14" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input type="text" id="txtP2doxy" name="P2doxy" value="15" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input type="text" id="txtP2Amox" name="P2amox" value="16" style="width: 30px"></td>
+              <td style="width: 13.5%; text-align: center;"><input disabled type="text" id="txtP2init" name="P2init" value="RO" style="width: 30px"></td>
+              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP2sex" name="P2sex" value="M" style="width: 30px"></td>
+              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP2preg" name="P2Preg" value="Y" style="width: 30px"></td>
+              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP2mth" name="P2mth" value="9" style="width: 30px"></td>
+              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP2bf" name="P2bf" value="Y" style="width: 30px"></td>
+              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP2mtz" name="P2mtz" value="14" style="width: 30px"></td>
+              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP2doxy" name="P2doxy" value="15" style="width: 30px"></td>
+              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP2Amox" name="P2amox" value="16" style="width: 30px"></td>
             </tr>
 
             <tr>
               <td style="width: 12%; text-align: center;">P3</td>
-              <td style="width: 13.5%; text-align: center;"><input type="text" id="txtP3init" name="P3init" value="RO" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input type="text" id="txtP3sex" name="P3sex" value="M" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input type="text" id="txtP3preg" name="P3Preg" value="Y" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input type="text" id="txtP3mth" name="P3mth" value="9" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input type="text" id="txtP3bf" name="P3bf" value="Y" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input type="text" id="txtP3mtz" name="P3mtz" value="14" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input type="text" id="txtP3doxy" name="P3doxy" value="15" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input type="text" id="txtP3Amox" name="P3amox" value="16" style="width: 30px"></td>
+              <td style="width: 13.5%; text-align: center;"><input disabled type="text" id="txtP3init" name="P3init" value="RO" style="width: 30px"></td>
+              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP3sex" name="P3sex" value="M" style="width: 30px"></td>
+              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP3preg" name="P3Preg" value="Y" style="width: 30px"></td>
+              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP3mth" name="P3mth" value="9" style="width: 30px"></td>
+              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP3bf" name="P3bf" value="Y" style="width: 30px"></td>
+              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP3mtz" name="P3mtz" value="14" style="width: 30px"></td>
+              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP3doxy" name="P3doxy" value="15" style="width: 30px"></td>
+              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP3Amox" name="P3amox" value="16" style="width: 30px"></td>
             </tr>
 
           </table>
@@ -328,11 +329,11 @@
 
         <div class="col-12" style="border-style: solid; border-color: Black; height: 280px;">
           FOLLOW-UP:<br>
-          <textarea id="txtFollowup" name="Followup" wrap="soft">
+          <textarea disabled id="txtFollowup" name="Followup" wrap="soft">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat feugiat vestibulum. Etiam augue urna, bibendum sit amet vehicula sed, venenatis tristique ipsum.
           </textarea><br>
           <br>
-          <span style="padding-right: 10px;">RETURN DURING MISSION:</span><input type="checkbox" id="chkReturnmission" name="ReturnDuringMission" value="RETURNMISSION" disabled>YES OR TO DISPENSARY> <input type="text" id="txtReturnmission" name="Returnmission" value="80" style="width: 30px">DAYS
+          <span style="padding-right: 10px;">RETURN DURING MISSION:</span><input type="checkbox" id="chkReturnmission" name="ReturnDuringMission" value="RETURNMISSION" disabled>YES OR TO DISPENSARY> <input disabled type="text" id="txtReturnmission" name="Returnmission" value="80" style="width: 30px">DAYS
         </div>
 
       </div>
@@ -340,9 +341,9 @@
       <div class="row">
 
         <div class="col-12" style="border-style: solid; border-color: Black; height: 200px;">
-          EDUCATION: <input type="text" id="txtEducation" name="Education" value="NSCC Graduate" style="width: 200px"><br>
+          EDUCATION: <input disabled type="text" id="txtEducation" name="Education" value="NSCC Graduate" style="width: 200px"><br>
           <br>
-          PRACTITIONERS: <textarea id="txtPractitioners" name="Pratitioners" wrap="soft"> Dr. Matt Redmond</textarea><br>
+          PRACTITIONERS: <textarea disabled id="txtPractitioners" name="Pratitioners" wrap="soft"> Dr. Matt Redmond</textarea><br>
           <br>
 
           <hr style="border-color: Black; border-width: 2px; margin: 0;">
@@ -351,7 +352,7 @@
           <span style="padding-right: 20px; padding-left: 10px"><input type="checkbox" id="chkTB" name="TB" value="TB" disabled>TB</span>
           <span style="padding-right: 20px;"><input type="checkbox" id="chkSurgery" name="SURGERY" value="SURGERY" disabled>SURGERY</span>
           <span style="padding-right: 200px;"><input type="checkbox" id="chkHospital" name="HOSPITAL" value="HOSPITAL" disabled>HOSPITAL</span>
-          RX #: <input type="text" id="txtRX" name="RX" value="15" style="width: 30px">
+          RX #: <input disabled type="text" id="txtRX" name="RX" value="15" style="width: 30px">
         </div>
 
       </div>
