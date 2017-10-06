@@ -43,6 +43,7 @@ textarea {
   color: white;
   background-color: #333;
   border: none;
+  resize: none;
 }
 
 @media print {
