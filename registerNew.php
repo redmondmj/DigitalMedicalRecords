@@ -17,23 +17,23 @@
     $values = ") VALUES (";
     if (!empty($firstName)){
         $sql .= "FirstName,";
-        $values .= "$firstName,";
+        $values .= "'$firstName',";
     }
     if (!empty($lastName)) {
         $sql .= "LastName,";
-        $values .= "$lastName,";
+        $values .= "'$lastName',";
     }
     if (!empty($village)) {
         $sql .= "Village,";
-        $values .= "$village,";
+        $values .= "'$village',";
     }
     if (!empty($birth)){
         $sql .= "Birthday,";
-        $values .= "$birth,";
+        $values .= "'$birth',";
     }
     if (!empty($sex)){
         $sql .= "Sex,";
-        $values .= "$sex,";
+        $values .= "'$sex',";
     }
 
     if(substr_compare($sql, ",", -1, 1)){

@@ -35,94 +35,92 @@
     $values = ") VALUES (";
     if (!empty($patientID)){
         $sql .= "PatientID,";
-        $values .= "$patientID,";
+        $values .= "'$patientID',";
     }
     if (!empty($visitDate)) {
         $sql .= "VisitDate,";
-        $values .= "$visitDate,";
+        $values .= "'$visitDate',";
     }
     if (!empty($visitTime)) {
         $sql .= "VisitTime,";
-        $values .= "$visitTime,";
+        $values .= "'$visitTime',";
     }
     if (!empty($dispensery)){
         $sql .= "VisitedDispensary,";
-        $values .= "$dispensery,";
+        $values .= "'$dispensery',";
     }
     if (!empty($test)){
         $sql .= "TriageTesting,";
-        $values .= "$test,";
+        $values .= "'$test',";
     }
     if (!empty($med)){
         $sql .= "TriageMedical,";
-        $values .= "$med,";
+        $values .= "'$med',";
     }
     if (!empty($gyn)){
         $sql .= "TriageGYN,";
-        $values .= "$gyn,";
+        $values .= "'$gyn',";
     }
     if (!empty($opht)){
         $sql .= "TriageOPHT,";
-        $values .= "$opht,";
+        $values .= "'$opht',";
     }
     if (!empty($dent)){
         $sql .= "TriageDENT,";
-        $values .= "$dent,";
+        $values .= "'$dent',";
     }
     if (!empty($v)){
         $sql .= "TriageVenDis,";
-        $values .= "$v,";
+        $values .= "'$v',";
     }
     if (!empty($weight)){
         $sql .= "Weight,";
-        $values .= "$weight,";
+        $values .= "'$weight',";
     }
     if (!empty($temp)){
         $sql .= "Temperature,";
-        $values .= "$temp,";
+        $values .= "'$temp',";
     }
     if (!empty($bp)){
         $sql .= "BloodPressure,";
-        $values .= "$bp,";
+        $values .= "'$bp',";
     }
     if (!empty($glucose)){
         $sql .= "Glucose,";
-        $values .= "$glucose,";
+        $values .= "'$glucose',";
     }
     if (!empty($hr)){
         $sql .= "HeartRate,";
-        $values .= "$hr,";
+        $values .= "'$hr',";
     }
     if (!empty($lnmp)){
         $sql .= "LastPeriod,";
-        $values .= "$lnmp,";
+        $values .= "'$lnmp',";
     }
     if (!empty($pregnant)){
         $sql .= "Pregnant,";
-        $values .= "$pregnant,";
+        $values .= "'$pregnant',";
     }
     if (!empty($breastfeed)){
         $sql .= "Breastfeed,";
-        $values .= "$breastfeed,";
+        $values .= "'$breastfeed',";
     }
     if (!empty($gravida)){
         $sql .= "NumOfPreg,";
-        $values .= "$gravida,";
+        $values .= "'$gravida',";
     }
     if (!empty($abortions)){
         $sql .= "NumAbortions,";
-        $values .= "$abortions,";
+        $values .= "'$abortions',";
     }
     if (!empty($para)){
         $sql .= "NumLivingChildren,";
-        $values .= "$para,";
+        $values .= "'$para',";
     }
-
     if(substr_compare($sql, ",", -1, 1)){
         substr_replace($sql ,")",-1);
         substr_replace($values ,")",-1);
     }
-
     $sql .= $values;
     	
     try{

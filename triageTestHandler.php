@@ -27,58 +27,58 @@
     
     $sql = "UPDATE patient (";
     if (!empty($visitTime)) {
-        $sql .= "VisitTime = $visitTime,";
+        $sql .= "VisitTime = '$visitTime',";
     }
     if (!empty($malaria)){
-        $sql .= "MalariaTest = $malaria,";
+        $sql .= "MalariaTest = '$malaria',";
     }
     if (!empty($syph)){
-        $sql .= "SyphilisTest =$syph,";
+        $sql .= "SyphilisTest = '$syph',";
     }
     if (!empty($typh)){
-        $sql .= "TyphTest = $typh,";
+        $sql .= "TyphTest = '$typh',";
     }
     if (!empty($leuc)){
-        $sql .= "UrineLeucTest = $leuc,";
+        $sql .= "UrineLeucTest = '$leuc',";
     }
     if (!empty($rbc)){
-        $sql .= "UrineRBCTest = $rbc,";
+        $sql .= "UrineRBCTest = '$rbc',";
     }
     if (!empty($glucose)){
-        $sql .= "UrineGlucoseTest = $glucose,";
+        $sql .= "UrineGlucoseTest = '$glucose',";
     }
     if (!empty($nitrates)){
-        $sql .= "UrineNitritesTest = $nitrates,";
+        $sql .= "UrineNitritesTest = '$nitrates',";
     }
     if (!empty($pregnancy)){
-        $sql .= "PregnancyTest = $pregnancy,";
+        $sql .= "PregnancyTest = '$pregnancy',";
     }
     if (!empty($temp)){
-        $sql .= "Temperature = $temp,";
+        $sql .= "Temperature = '$temp',";
     }
     if (!empty($bp)){
-        $sql .= "BloodPressure = $bp,";
+        $sql .= "BloodPressure = '$bp',";
     }
     if (!empty($glucose)){
-        $sql .= "Glucose = $glucose,";
+        $sql .= "Glucose = '$glucose',";
     }
     if (!empty($hr)){
-        $sql .= "HeartRate = $hr,";
+        $sql .= "HeartRate = '$hr',";
     }
     if (!empty($lnmp)){
-        $sql .= "LastPeriod = $lnmp,";
+        $sql .= "LastPeriod = '$lnmp',";
     }
     if (!empty($breastfeed)){
-        $sql .= "Breastfeed = $breastfeed,";
+        $sql .= "Breastfeed = '$breastfeed',";
     }
     if (!empty($gravida)){
-        $sql .= "NumOfPreg = $gravida,";
+        $sql .= "NumOfPreg = '$gravida',";
     }
     if (!empty($abortions)){
-        $sql .= "NumAbortions = $abortions,";
+        $sql .= "NumAbortions = '$abortions',";
     }
     if (!empty($para)){
-        $sql .= "NumLivingChildren = $para,";
+        $sql .= "NumLivingChildren = '$para',";
     }
 
     if(substr_compare($sql, ",", -1, 1)){
