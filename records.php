@@ -12,7 +12,7 @@
         $village = $row['Village'];
         
         $display_block .= "
-        <tr><td>$fname</td><td>$lname</td><td>$village</td><td><a href=\"print.html?id=$id\">$id</a></td></tr>
+        <tr><td>$fname</td><td>$lname</td><td>$village</td><td><a href=\"print.php?id=$id\">$id</a></td></tr>
         ";
     }
     mysqli_close($connection);
