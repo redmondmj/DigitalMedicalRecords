@@ -2,7 +2,7 @@
 	$db_name = "cachahlthrec_tables";
 	$table_name = "tbl_visit";
     $display_block = "";
-	$connection = @mysqli_connect("localhost", "root", "0p3nsource_9PG") 
+	$connection = @mysqli_connect("localhost", "root", "") 
 	     or die(mysql_error());
 	$db = @mysqli_select_db($connection, $db_name) or die(mysqli_error($connection));
 	$sql = "SELECT trim(concat(tbl_demog.PatientFirstName,' ',tbl_demog.PatientLastName)) AS fullname, tbl_visit.ChartNum, tbl_demog.PtVillage FROM tbl_demog LEFT JOIN tbl_visit ON tbl_demog.DemogLineNum=tbl_visit.DemogLineNum ORDER BY tbl_demog.PatientFirstName;";
