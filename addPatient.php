@@ -13,6 +13,8 @@
     $birth = $decoded[0]->age;
     $sex = $decoded[0]->sex;
 
+    $practicioner = $decoded[0]->practicioner;
+
     $sql = "INSERT INTO patient (";
     $values = ") VALUES (";
     if (!empty($firstName)){
@@ -35,6 +37,9 @@
         $sql .= "Sex,";
         $values .= "'$sex',";
     }
+    if (!empty($practicioner)){
+        $sql .= "Practicioners = '$practicioner',";
+    }
 
     if(substr_compare($sql, ",", -1, 1)){
         substr_replace($sql ,")",-1);
@@ -45,7 +50,6 @@
     
     try{
         $stmt = mysqli_prepare($connection, $sql);
-        $query = mysqli_query($connection, $stmt) or die(mysqli_error($connection));
         if(mysqli_stmt_execute($connection, $sql)){
             echo true;
         }

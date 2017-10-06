@@ -33,6 +33,8 @@
     $dent = $decoded[0]->dent;
     $v = $decoded[0]->v;
 
+    $practicioner = $decoded[0]->practicioner;
+
     /*
     $pregnant = $decoded[0]->pregnant;
     $breastfeed = $decoded[0]->breastfeed;
@@ -126,6 +128,9 @@
         $sql .= "NumLivingChildren,";
         $values .= "'$para',";
     }
+    if (!empty($practicioner)){
+        $sql .= "Practicioners = '$practicioner',";
+    }
     if(substr_compare($sql, ",", -1, 1)){
         substr_replace($sql ,")",-1);
         substr_replace($values ,")",-1);
@@ -134,7 +139,6 @@
     	
     try{
         $stmt = mysqli_prepare($connection, $sql);
-        $query = mysqli_query($connection, $stmt) or die(mysqli_error($connection));
         if(mysqli_stmt_execute($connection, $sql)){
             echo true;
         }

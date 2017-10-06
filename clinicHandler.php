@@ -16,70 +16,125 @@
     $healthy = $decoded[0]->healthy;
     $ntr = $decoded[0]->ntr;
     $worms = $decoded[0]->worms;
-    $leuc = $decoded[0]->leuc;
-    $rbc = $decoded[0]->rbc;
-    $glucose = $decoded[0]->glucose;
-    $nitrates = $decoded[0]->nitrates;
+    $asthma = $decoded[0]->asthma;
+    $bronchitis = $decoded[0]->bronchitis;
+    $msk = $decoded[0]->msk;
+    $pneumonia = $decoded[0]->pneumonia;
+    $cough = $decoded[0]->cough;
+    $malaria = $decoded[0]->malaria;
+    $schisto = $decoded[0]->schisto;
+    $typhoid = $decoded[0]->typhoid;
+    $gerd = $decoded[0]->gerd;
+    $pud = $decoded[0]->pud;
+    $diarreha = $decoded[0]->diarrhea;
+    $bloody = $decoded[0]->bloody;
+    $watery = $decoded[0]->watery;
+    $hypertension = $decoded[0]->hypertension;
+    $diabetes = $decoded[0]->diabetes;
+    $constipation = $decoded[0]->constipation;
+    $pid = $decoded[0]->pid;
+    $sti = $decoded[0]->sti;
+    $syphilis = $decoded[0]->syphilis;
+    $topical = $decoded[0]->topical;
+
     $lastHIV = $decoded[0]->lastHIV;
     $lastPZQ = $decoded[0]->lastPZQ;
     $lastWORM = $decoded[0]->lastWORM;
     $lastVitA = $decoded[0]->lastVitA;
-    $prevMeds = $decoded[0]->meds
+    $prevMeds = $decoded[0]->meds;
+
+    $practicioner = $decoded[0]->practicioner;
     
     $sql = "UPDATE patient (";
     if (!empty($visitTime)) {
         $sql .= "VisitTime = '$visitTime',";
     }
+    if (!empty($healthy)){
+        $sql .= "DX_Healthy = '$healthy',";
+    }
+    if (!empty($ntr)){
+        $sql .= "DX_NoTreatment = '$ntr',";
+    }
+    if (!empty($worms)){
+        $sql .= "DX_Worms = '$worms',";
+    }
+    if (!empty($asthma)){
+        $sql .= "DX_Asthma = '$asthma',";
+    }
+    if (!empty($bronchitis)){
+        $sql .= "DX_Bronchitis = '$bronchitis',";
+    }
+    if (!empty($msk)){
+        $sql .= "DX_MSK = '$msk',";
+    }
+    if (!empty($pneumonia)){
+        $sql .= "DX_Pneumonia = '$pneumonia',";
+    }
+    if (!empty($cough)){
+        $sql .= "DX_Cough = '$cough',";
+    }
     if (!empty($malaria)){
-        $sql .= "MalariaTest = '$malaria',";
+        $sql .= "DX_Malaria = '$malaria',";
     }
-    if (!empty($syph)){
-        $sql .= "SyphilisTest = '$syph',";
+    if (!empty($schisto)){
+        $sql .= "DX_Schisto = '$schisto,";
     }
-    if (!empty($typh)){
-        $sql .= "TyphTest = '$typh',";
+    if (!empty($typhoid)){
+        $sql .= "DX_Typhoid = '$typhoid',";
     }
-    if (!empty($leuc)){
-        $sql .= "UrineLeucTest = '$leuc',";
+    if (!empty($gerd)){
+        $sql .= "DX_Gerd = '$gerd',";
     }
-    if (!empty($rbc)){
-        $sql .= "UrineRBCTest = '$rbc',";
+    if (!empty($pud)){
+        $sql .= "DX_PUD = '$pud',";
     }
-    if (!empty($glucose)){
-        $sql .= "UrineGlucoseTest = '$glucose',";
+    if (!empty($diarrhea)){
+        $sql .= "DX_Diarrhea = '$diarreha',";
     }
-    if (!empty($nitrates)){
-        $sql .= "UrineNitritesTest = '$nitrates',";
+    if (!empty($bloody)){
+        $sql .= "DX_DiarrehaBloody = '$bloody',";
     }
-    if (!empty($pregnancy)){
-        $sql .= "PregnancyTest = '$pregnancy',";
+    if (!empty($watery)){
+        $sql .= "DX_DiarrehaWatery = '$watery',";
     }
-    if (!empty($temp)){
-        $sql .= "Temperature = '$temp',";
+    if (!empty($hypertension)){
+        $sql .= "DX_Hypertension = '$hypertension',";
     }
-    if (!empty($bp)){
-        $sql .= "BloodPressure = '$bp',";
+    if (!empty($diabetes)){
+        $sql .= "DX_Diabetes = '$diabetes',";
     }
-    if (!empty($glucose)){
-        $sql .= "Glucose = '$glucose',";
+    if (!empty($constipation)){
+        $sql .= "DX_Constipation = '$constipation',";
     }
-    if (!empty($hr)){
-        $sql .= "HeartRate = '$hr',";
+    if (!empty($pid)){
+        $sql .= "DX_PID = '$pid',";
     }
-    if (!empty($lnmp)){
-        $sql .= "LastPeriod = '$lnmp',";
+    if (!empty($sti)){
+        $sql .= "DX_STI = '$sti',";
     }
-    if (!empty($breastfeed)){
-        $sql .= "Breastfeed = '$breastfeed',";
+    if (!empty($syphilis)){
+        $sql .= "DX_Syphilis = '$syphilis',";
     }
-    if (!empty($gravida)){
-        $sql .= "NumOfPreg = '$gravida',";
+    if (!empty($topical)){
+        $sql .= "DX_Topical = '$topical',";
     }
-    if (!empty($abortions)){
-        $sql .= "NumAbortions = '$abortions',";
+    if (!empty($lastHIV)){
+        $sql .= "LastHIVTest = '$lastHIV',";
     }
-    if (!empty($para)){
-        $sql .= "NumLivingChildren = '$para',";
+    if (!empty($lastPZQ)){
+        $sql .= "LastPZQTx = '$lastPZQ',";
+    }
+    if (!empty($lastWorm)){
+        $sql .= "LastWormTx = '$lastWorm',";
+    }
+    if (!empty($lastVitA)){
+        $sql .= "LastVitA = '$lastVitA',";
+    }
+    if (!empty($prevMeds)){
+        $sql .= "PrevMeds = '$prevMeds',";
+    }
+    if (!empty($practicioner)){
+        $sql .= "Practicioners = '$practicioner',";
     }
 
     if(substr_compare($sql, ",", -1, 1)){
@@ -90,7 +145,6 @@
 
     try{
         $stmt = mysqli_prepare($connection, $sql);
-        $query = mysqli_query($connection, $stmt) or die(mysqli_error($connection));
         if(mysqli_stmt_execute($connection, $sql)){
             echo true;
         }
