@@ -8,30 +8,37 @@
     $decoded = json_decode($content, true); 
 
     $patientID = $decoded[0]->patientID;
-    $dispensery = $decoded[0]->dispensery;
     $visitDate = date("Y-m-d");
     $visitTime = date("h:i:s");
+
+    $dispensery = $decoded[0]->dispensery;
     $weight = $decoded[0]->weight;
     $hr = $decoded[0]->hr;
     $temp = $decoded[0]->temp;
     $bp = $decoded[0]->bp;
     $glucose = $decoded[0]->glucose;
+
     $gravida = $decoded[0]->gravida;
     $para = $decoded[0]->para;
     $abortions = $decoded[0]->abortions;
     $lnmp = $decoded[0]->lnmp;
     $livingChildren = $decoded[0]->livingChildren;
+
     $chiefComplaint = $decoded[0]->cheifComplaint;
+
     $test = $decoded[0]->test;
     $med = $decoded[0]->med;
     $gyn = $decoded[0]->gyn;
     $opht = $decoded[0]->opht;
     $dent = $decoded[0]->dent;
     $v = $decoded[0]->v;
+
+    /*
     $pregnant = $decoded[0]->pregnant;
     $breastfeed = $decoded[0]->breastfeed;
-    
-    $sql = "INSERT INTO patient (";
+    */
+
+    $sql = "INSERT INTO visit (";
     $values = ") VALUES (";
     if (!empty($patientID)){
         $sql .= "PatientID,";
@@ -97,6 +104,7 @@
         $sql .= "LastPeriod,";
         $values .= "'$lnmp',";
     }
+    /*
     if (!empty($pregnant)){
         $sql .= "Pregnant,";
         $values .= "'$pregnant',";
@@ -105,6 +113,7 @@
         $sql .= "Breastfeed,";
         $values .= "'$breastfeed',";
     }
+    */
     if (!empty($gravida)){
         $sql .= "NumOfPreg,";
         $values .= "'$gravida',";

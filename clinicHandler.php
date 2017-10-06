@@ -8,13 +8,14 @@
     $decoded = json_decode($content, true); 
 
     $visitID = $decoded[0]->visitID;
-    $malaria = $decoded[0]->malaria;
     $visitDate = date("Y-m-d");
     $visitTime = date("h:i:s");
-    $v = $decoded[0]->v;
-    $typh = $decoded[0]->hr;
-    $syph = $decoded[0]->syhilis;
-    $pregnancy = $decoded[0]->pregnancy;
+
+    $notes = $decoded[0]->notes;
+    
+    $healthy = $decoded[0]->healthy;
+    $ntr = $decoded[0]->ntr;
+    $worms = $decoded[0]->worms;
     $leuc = $decoded[0]->leuc;
     $rbc = $decoded[0]->rbc;
     $glucose = $decoded[0]->glucose;
@@ -23,7 +24,7 @@
     $lastPZQ = $decoded[0]->lastPZQ;
     $lastWORM = $decoded[0]->lastWORM;
     $lastVitA = $decoded[0]->lastVitA;
-    $prevMeds = $decoded[0]->paracetamol . ", " . $decoded[0]->benz . ", " . $decoded[0]->cerf . ", " . $decoded[0]->otherMeds; // or = $decoded[0]->meds
+    $prevMeds = $decoded[0]->meds
     
     $sql = "UPDATE patient (";
     if (!empty($visitTime)) {
