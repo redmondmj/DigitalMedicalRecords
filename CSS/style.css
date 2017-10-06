@@ -52,14 +52,22 @@ textarea {
 }
 
 @media print {
+
   div {
-    color: black;
+    color: Black;
+    border-color: Black;
   }
+
   input {
-    color: black;
+    color: Black;
   }
 
   textarea {
-    color: black;
+    color: Black;
   }
+
+  hr {
+    border-color: Black;
+  }
+
 }
