@@ -52,7 +52,7 @@
     } catch(Error $e){
         echo false;
     } finally {
-        mysqli_stmt_close();
-        mysqli_close();
+        mysqli_stmt_close($connection, $sql);
+        mysqli_close($connection);
     }
 ?>
