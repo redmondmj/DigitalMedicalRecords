@@ -8,20 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="bin/bootstrap/favicon.ico">
     <script src="bin/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript">
-        function fetch_select(val) {
-            $.ajax({
-                type: 'post',
-                url: 'loadVisit.php',
-                data: {
-                    patientName: val
-                },
-                success: function(response) {
-                    document.getElementById("visit").innerHTML = response;
-                }
-            });
-        }
-    </script>
+    
     <title>CACHA - Pharmacy</title>
 
     <!-- Bootstrap core CSS -->
@@ -67,7 +54,7 @@
                                 <div class="col-12">
                                     <select id="patientName" name="patientName" class="form-control" onchange="fetch_select(this.value);">
                                             <option disabled selected>Choose Patient</option>
-                                            <?php include 'loadPatient.php'; ?>
+                                            <?php include 'top.php'; ?>
                                         </select>
                                 </div>
                             </div>
