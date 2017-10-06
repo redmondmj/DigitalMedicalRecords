@@ -32,3 +32,28 @@ div {
   width: 30%;
   height: 30%;
 }
+
+input {
+  color: white;
+  background-color: #333;
+  border: none;
+}
+
+textarea {
+  color: white;
+  background-color: #333;
+  border: none;
+}
+
+@media print {
+  div {
+    color: black;
+  }
+  input {
+    color: black;
+  }
+
+  textarea {
+    color: black;
+  }
+}
