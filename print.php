@@ -88,17 +88,17 @@
 
             <div class="col-4" style="text-align: center;">
               <input type="checkbox" id="chkVresult" name="Vresult1" value="VRESULT" disabled>V<br>
-              <input disabled type="text" id="txtVresult" name="Vresuult2" value="Result" style="width: 80px">
+              <input disabled type="text" id="txtVresult" name="Vresuult2" value="Negative" style="width: 80px">
             </div>
 
             <div class="col-4" style="text-align: center;">
               <input type="checkbox" id="chkMalaria" name="Malria1" value="MALRIA" disabled>MALARIA<br>
-              <input disabled type="text" id="txtMalaria" name="Malria2" value="Result" style="width: 80px">
+              <input disabled type="text" id="txtMalaria" name="Malria2" value="Negative" style="width: 80px">
             </div>
 
             <div class="col-4" style="text-align: center;">
               <input type="checkbox" id="chkSyphilis" name="Syphilis1" value="SYPHILIS" disabled>SYPHILIS<br>
-              <input disabled type="text" id="txtSyphilis" name="Syphilis2" value="Result" style="width: 80px">
+              <input disabled type="text" id="txtSyphilis" name="Syphilis2" value="Negative" style="width: 80px">
             </div>
 
           </div>
@@ -107,12 +107,12 @@
 
             <div class="col-6" style="text-align: center;">
               <input type="checkbox" id="chkTyph" name="TYPH1" value="TYPH" disabled>TYPH<br>
-              <input disabled type="text" id="txtTyph" name="Typh2" value="Result" style="width: 80px">
+              <input disabled type="text" id="txtTyph" name="Typh2" value="Negative" style="width: 80px">
             </div>
 
             <div class="col-6" style="text-align: center;">
               <input type="checkbox" id="chkPregnancy" name="Pregnancy1" value="PREGNANCY" disabled>PREGNANCY<br>
-              <input disabled type="text" id="txtPregnancy" name="Pregnancy2" value="Result" style="width: 80px">
+              <input disabled type="text" id="txtPregnancy" name="Pregnancy2" value="Negative" style="width: 80px">
             </div>
 
           </div>
@@ -127,11 +127,11 @@
 
           <div class="row">
 
-            <div class="col-12" style="text-align: center;">
-              LEUC: <input disabled type="text" id="txtLeuc" name="Leuc" value="+" style="width: 30px">
-              RBC: <input disabled type="text" id="txtRBC" name="RBC" value="+" style="width: 30px">
-              GLUCLOSE: <input disabled type="text" id="txtUrineglucose" name="Urineglucose" value="4.0" style="width: 30px">
-              NITRITES: <input disabled type="text" id="txtNitrites" name="Nitrites" value="+" style="width: 30px">
+            <div class="col-12" style="text-align: center; font-size: 16px;">
+              LEUC: <input disabled type="text" id="txtLeuc" name="Leuc" value="Negative" style="width: 65px">
+              RBC: <input disabled type="text" id="txtRBC" name="RBC" value="Negative" style="width: 65px"><br>
+              GLUCLOSE: <input disabled type="text" id="txtUrineglucose" name="Urineglucose" value="Negative" style="width: 65px">
+              NITRITES: <input disabled type="text" id="txtNitrites" name="Nitrites" value="Negative" style="width: 65px">
             </div>
 
           </div>
@@ -149,10 +149,10 @@
         </div>
 
         <div class="col-5" style="border-style: solid; font-size: 17px;">
-          LAST HIV TEST? <input disabled type="text" id="txtLasthiv" name="Lasthiv" value="Unknown" style="width: 100px"><br>
-          LAST PZQ TX? <input disabled type="text" id="txtLastpzq" name="Lastpzq" value="Unknown" style="width: 100px"><br>
-          LAST WORM TX? <input disabled type="text" id="txtLastworm" name="Lastworm" value="Unknown" style="width: 100px"><br>
-          LAST VIT A? <input disabled type="text" id="txtLastvita" name="Lastvita" value="Unknown" style="width: 100px"><br>
+          LAST HIV TEST? <input disabled type="text" id="txtLasthiv" name="Lasthiv" value="Under 3 Months" style="width: 130px"><br>
+          LAST PZQ TX? <input disabled type="text" id="txtLastpzq" name="Lastpzq" value="Under 3 Months" style="width: 130px"><br>
+          LAST WORM TX? <input disabled type="text" id="txtLastworm" name="Lastworm" value="Under 3 months" style="width: 130px"><br>
+          LAST VIT A? <input disabled type="text" id="txtLastvita" name="Lastvita" value="Under 3 Months" style="width: 130px"><br>
           PREV MEDS?<br>
           <textarea disabled id="txtPrevmeds" name="Prevmeds" wrap="soft">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea>
         </div>
@@ -169,7 +169,7 @@
 
         <div class="col-6" style="border-style: solid;">
           ADMIN: <span style="font-size: 12px"><input type="checkbox" id="chkParacetamol" name="Paracetamol" value="PARACET" disabled>PARACETAMOL
-          <input type="checkbox" id="chkBenz" name="Benz" value="BENZ" disabled>BENZ-PEN-G 2.4 MIU<br>  <input type="checkbox" id="chkCeftriaxone" name="Ceftriaxone" value="CEFTRIAXONE" disabled>CEFTRIAXONE250MG</span>
+          <input type="checkbox" id="chkBenz" name="Benz" value="BENZ" disabled>BENZ-PEN-G 2.4 MIU<br>  <input type="checkbox" id="chkCeftriaxone" name="Ceftriaxone" value="CEFTRIAXONE" disabled>CEFTRIAXONE 250MG</span>
         </div>
 
       </div>
