@@ -19,7 +19,7 @@
             <label class="col-12 control-label" for="patientName">Choose Patient:</label>
             <div class="col-12">
                 <select id="patientName" name="patientName" class="form-control" onchange="fetch_select(this.value);">
-                    <?php include 'loadpatient.php' ?>
+                    <?php include 'loadPatient.php' ?>
                 </select>
             </div>
         </div>
@@ -29,7 +29,7 @@
             <label class="col-12 control-label" for="visit">Choose Visit:</label>
             <div class="col-12">
                 <select id="visit" name="visit" class="form-control">
-                <?php include 'loadvisit.php' ?>
+                <?php include 'loadVisit.php' ?>
                 </select>
             </div>
         </div>

@@ -8,7 +8,20 @@
     <meta name="author" content="">
     <link rel="icon" href="bin/bootstrap/favicon.ico">
     <script src="bin/jquery-3.2.1.min.js"></script>
-    
+    <script type="text/javascript">
+        function fetch_select(val) {
+            $.ajax({
+                type: 'post',
+                url: 'loadVisit.php',
+                data: {
+                    patientName: val
+                },
+                success: function(response) {
+                    document.getElementById("visit").innerHTML = response;
+                }
+            });
+        }
+    </script>
     <title>CACHA - Pharmacy</title>
 
     <!-- Bootstrap core CSS -->
@@ -45,53 +58,76 @@
                 <div class="inner cover">
                     <h1 class="cover-heading">Pharmacy</h1>
                     <!-- Main Content Area -->
-                    <form class="form-horizontal" method="POST">
-
-                        <div class="form-row justify-content-center">
-                            <!-- Select Patient -->
-                            <div class="form-group">
-                                <label class="col-12 control-label" for="patientName">Choose Patient:</label>
-                                <div class="col-12">
-                                    <select id="patientName" name="patientName" class="form-control" onchange="fetch_select(this.value);">
-                                            <option disabled selected>Choose Patient</option>
-                                            <?php include 'top.php'; ?>
-                                        </select>
+                    <div class="form-horizontal border"
+                        <form class="form-horizontal" method="POST">
+                            <!-- load the visit -->
+                            <?php include "top.php"; ?>
+                            <!-- FORM LAYOUT BEGINS -->
+                            <div class="form-horizontal border" >
+                            <button data-toggle="collapse" data-target="#msk" class="btn btn-default">MSK (click for drugs)</button>
+                            <div class="row collapse" id="msk">
+                                <h4>MSK</h4>
+                                <div class="row">
+                                    <div class="col-4">
+                                            <label class="control-label" for="1">Sample 1</label>
+                                            <input type="checkbox" value="1">
+                                    </div>
+                                    <div class="col-4">
+                                            <label class="control-label" for="2">Sample 2</label>
+                                            <input type="checkbox" value="2">
+                                    </div>
+                                    <div class="col-4">
+                                            <label class="control-label" for="3">Sample 3</label>
+                                            <input type="checkbox" value="3">
+                                    </div>
                                 </div>
-                            </div>
-
-                            <!-- Select Visit -->
-                            <div class="form-group">
-                                <label class="col-12 control-label" for="visit">Choose Visit:</label>
-                                <div class="col-12">
-                                    <select id="visit" name="visit" class="form-control">
-                                            <option value="newVisit">New Visit</option>
-                                            
-                                        </select>
+                                <div class="row">
+                                    <div class="col-4">
+                                            <label class="control-label" for="4">Sample 4</label>
+                                            <input type="checkbox" value="5">
+                                    </div>
+                                    <div class="col-4">
+                                            <label class="control-label" for="5">Sample 5</label>
+                                            <input type="checkbox" value="5">
+                                    </div>
+                                    <div class="col-4">
+                                            <label class="control-label" for="6">Sample 6</label>
+                                            <input type="checkbox" value="6">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4">
+                                            <label class="control-label" for="7">Sample 7</label>
+                                            <input type="checkbox" value="7">
+                                    </div>
+                                    <div class="col-4">
+                                            <label class="control-label" for="8">Sample 8</label>
+                                            <input type="checkbox" value="8">
+                                    </div>
+                                    <div class="col-4">
+                                            <label class="control-label" for="9">Sample 9</label>
+                                            <input type="checkbox" value="9">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        </fieldset>
-                    </form>
+                                <!-- FORM LAYOUT ENDS -->
+                            <!--Submit Form-->
+                            <?php include "bottom.php"; ?>  
 
 
-
-
-
-
-
-                </div>
-
-
-                <div class="col-4 col-centered">
-                    <a href="print.php">View Complete Chart</a>
-                </div>
-
-
-                <div class="mastfoot">
-                    <div class="inner">
-                        <p>Digital Charts Sample for <a href="http://www.cacha.ca/">CACHA</a>, by A BUNCH OF AWESOME PEOPLE.</p>
+                        </form>
                     </div>
+
+
+
+
+
+
                 </div>
+
+
+
 
             </div>
 

@@ -42,26 +42,80 @@
                 </div>
 
                 <div class="inner cover">
-                    <h1 class="cover-heading">EYE</h1>
                     <!-- Main Content Area -->
                     <div class="form-horizontal border">
                         <form>
                             <?php include "top.php"; ?>
+                            <div class="row">
+                        <div class="form-group col-4">
+                            <label for="diagnoses">Diagnoses:</label>
+                            <select class="form-control" id="diagnoses"></select>
+                        </div>
+                    </div>
+                    <!--abondend attempt !-->
+                    <!-- <div class="row form-horizontal">
+                        <div class="row">
+                            <div class="col-4">
+                                <input type="checkbox" id="val1" value="">
+                            </div>
+                            <div class="col-4">
+                                <!-- <p style="font-size:10em">V</p>
+                                V
+                            </div>
+                            <div class="col-4">
+                                <input type="checkbox" id="val2" value="">
+                            </div>
+                        </div>
+                    </div> !-->
+                    <!-- This is greeeasy! :S -->
+                    <table>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>
+                                <p style="font-size:15em">V</p>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr><td>&nbsp;</td></tr>
+                                    <tr><td>val 1</td></tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" id="val1" value="">
+                                        </td>
+                                    </tr>
+                                    <tr><td>&nbsp;</td></tr>
+                                    <tr><td>&nbsp;</td></tr>
+                                    <tr><td>&nbsp;</td></tr>
+                                    <tr><td>val 2</td></tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" id="val2" value="">
+                                        </td>
+                                    </tr>
+                                    <tr><td>&nbsp;</td></tr>
+                                </table>
+                            </td>
+                            <td>
+                                <span style="text-align:center;">val 3</span>
+                                </br>
+                                <input type="text" id="val3" value="">
+                            </td>
+                        </tr>
+                    </table>
+                    <!--Submit Form-->
+                    <?php include "bottom.php"; ?>  
+                    <!-- FormBottom-->
+
                         </form>
                     </div>
-                </div>
-                
-                <div class="col-4 col-centered">
-
-                    <a href="print.html">View Complete Chart</a>
-
-                </div>
-
-                <div class="mastfoot">
-                    <div class="inner">
-                        <p>Digital Charts Sample for <a href="http://www.cacha.ca/">CACHA</a>, by A BUNCH OF AWESOME PEOPLE.</p>
-                    </div>
-                </div>
+                </div>              
 
             </div>
 

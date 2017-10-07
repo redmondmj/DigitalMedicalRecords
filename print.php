@@ -197,7 +197,7 @@
         </div>
 
         <div class ="col-6" style="border-style: solid; border-color: Black;">
-          <?php if (@sex == male): ?>
+          <?php if (@sex == "male"): ?>
             <span style="padding-right: 5px;"><input type="checkbox" id="chkMale" name="Male" value="MALE" disabled checked>M</span>
             <span style="padding-right: 5px;"><input type="checkbox" id="chkFemale" name="Female" value="FEMALE" disabled>F</span>
           <?php else: ?>
