@@ -13,6 +13,19 @@ hr {
   border-color: #FFF;
 }
 
+input {
+  color: white;
+  background-color: #333;
+  border: none;
+}
+
+textarea {
+  color: white;
+  background-color: #333;
+  border: none;
+  resize: none;
+}
+
 #txtComplaint {
   width: 95%;
   height: 75%;
@@ -33,23 +46,21 @@ hr {
   height: 50%;
 }
 
+#txtTopical {
+  width: 95%;
+  height: 40%;
+}
+
+#txtEducation {
+  width: 75%;
+  height: 40%;
+}
+
 #txtPractitioners {
-  width: 30%;
+  width: 75%;
   height: 30%;
 }
 
-input {
-  color: white;
-  background-color: #333;
-  border: none;
-}
-
-textarea {
-  color: white;
-  background-color: #333;
-  border: none;
-  resize: none;
-}
 
 @media print {
 
