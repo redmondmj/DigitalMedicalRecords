@@ -43,8 +43,26 @@
 
                 <div class="inner cover">
                     <h1 class="cover-heading">Dental</h1>
-                <!-- Main Content Area -->
-
+                    <!-- Main Content Area -->
+                    <div class="form-horizontal border">
+                        <form>
+                            <!-- load visit info -->   
+                            <?php include "top.php"; ?>
+                            <div style="padding:1em; border-style: solid; border-width: 3px; border-color: white; border-radius: 15px;">
+                                
+                                <div class="row">
+                                    <div class="form-group col-12">
+                                        <label for="dentalIndo">Dental Info:</label>
+                                        <input type="textArea" class="form-control" id="dentalInfo" style="height:20em;" placeholder="APPEND to ASSESSMENT">
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        <!-- Buttons !-->
+                        <!--Submit Form-->
+                        <?php include "bottom.php"; ?>  
+                    </form>
+                </div>
 
 
 
@@ -54,18 +72,6 @@
 
 
                 </div>
-
-                <div class="col-4 col-centered">
-                        <a href="print.php">View Complete Chart</a>
-                </div>
-
-                
-                <div class="mastfoot">
-                    <div class="inner">
-                        <p>Digital Charts Sample for <a href="http://www.cacha.ca/">CACHA</a>, by A BUNCH OF AWESOME PEOPLE.</p>
-                    </div>
-                </div>
-
             </div>
 
         </div>
