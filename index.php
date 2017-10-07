@@ -70,15 +70,33 @@
                             <!-- Select Basic -->
                             <div class="form-group">
                                 <!--<label class="col-md-4 control-label" for="village">Village</label>-->
-                                <div class="col-md-4 col-centered">
-                                    <select id="village" name="village" class="form-control">
-                                            <?php include "loadVillages.php" ?>
+                                <div class="col-6 col-centered">
+                                    <select id="village" name="village" class="form-control input-md">
+                                            <option value="1">Bugola</option>
+                                            <option value="2">Bugorola</option>
+                                            <option value="3">Bukondo</option>
+                                            <option value="4">Buzegwe</option>
+                                            <option value="5">Gallu</option>
+                                            <option value="6">Hamukoko</option>
+                                            <option value="7">Hamuyebe</option>
+                                            <option value="8">Igalla</option>
+                                            <option value="9">Kabuhinzi</option>
+                                            <option value="10">Kagunguli</option>
+                                            <option value="11">Kaseni</option>
+                                            <option value="12">Kazilankanda</option>
+                                            <option value="13">Kigara</option>
+                                            <option value="14">Muhula</option>
+                                            <option value="15">Mukunu</option>
+                                            <option value="16">Muluseni</option>
+                                            <option value="17">Muriti</option>
+                                            <option value="18">Murutilima</option>
+                                            <option value="19">Ukara</option>
                                         </select>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <!--<label class="col-md-4 control-label" for="fname">D.O.B.</label>-->
-                                <div class="col-md-4 col-centered">
+                                <div class="col-6 col-centered">
                                     <input id="dob" name="dob" type="date" placeholder="" class="form-control input-md">
 
                                 </div>
@@ -86,22 +104,22 @@
                             <!-- Multiple Radios (inline) -->
                             <div class="form-group">
                                 <!-- <label class="col-md-4 control-label" for="gender">Gender</label> -->
-                                <div class="col-md-4 col-centered">
+                                <div class="col-6 col-centered">
                                     <label class="radio-inline" for="gender-0">
                                         <input type="radio" name="gender" id="gender-0" value="male" checked="checked">
-                                        male
+                                        Male
                                         <!-- yeah I feel dirty -->
                                         </label>&nbsp; &nbsp; &nbsp;
                                     <label class="radio-inline" for="gender-1">
                                         <input type="radio" name="gender" id="gender-1" value="female">
-                                        female
+                                        Female
                                         </label>
                                 </div>
                             </div>
                             <!-- Button -->
                             <div class="form-group">
                                 <!--<label class="col-md-4 control-label" for="submit">Submit</label>-->
-                                <div class="col-4 col-centered">
+                                <div class="col-6 col-centered">
                                     <button id="submit" name="submit" class="btn btn-success">Submit</button>
                                 </div>
                             </div>
