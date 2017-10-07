@@ -1,3 +1,152 @@
+<?php
+    require 'db.php';
+    
+    //Receive the RAW post data.
+    $content = trim(file_get_contents("php://input"));
+    
+    //Attempt to decode the incoming RAW post data from JSON.
+    $decoded = json_decode($content, true);
+
+    $visitID = decoded[0]->visitID;
+    
+    $sql = "SELECT * FROM tbl_patient INNER JOIN tbl_visit ON tbl_patient.PatientID = tbl_visit.PatientID WHERE tbl_visit.VisitID = $visitID";
+
+    try{
+      $row = mysqli_fetch_assoc($connection, $sql);
+      
+      $patientID = $row['PatientID'];
+      $visitDate = $row['VisitDate'];
+      $visitTime = $row['VisitTime'];
+      $visitedDispensary = $row['VisitedDispensary'];
+      $triageTesting = $row['TriageTesting'];
+      $triageMedical = $row['TriageMedical'];
+      $triageGYN = $row['TriageGYN'];
+      $triageOPHT = $row['TriageOPHT'];
+      $triageDENT = $row['TriageDENT'];
+      $triageVenDis = $row['TriageVenDis'];
+      $weight = $row['Weight'];
+      $temperature = $row['Temperature'];
+      $bloodPressure = $row['BloodPressure'];
+      $glucose = $row['Glucose'];
+      $heartRate = $row['HeartRate'];
+      $lastPeriod = $row['LastPeriod'];
+      $pregnant = $row['Pregnant'];
+      $breastfeed = $row['Breastfeed'];
+      $numOfPreg = $row['NumOfPreg'];
+      $numLiveBirth = $row['NumLiveBirth'];
+      $numAbortions = $row['NumAbortions'];
+      $numLivingChildren = $row['NumLivingChildren'];
+      $vTest = $row['VTest'];
+      $malariaTest = $row['MalariaTest'];
+      $syphilisTest = $row['SyphilisTest'];
+      $typhTest = $row['TyphTest'];
+      $urineLeucTest = $row['UrineLeucTest'];
+      $urineRBCTest = $row['UrineRBCTest'];
+      $urineGlucoseTest = $row['UrineGlucoseTest'];
+      $urineNitritesTest = $row['UrineNitritesTest'];
+      $pregnancyTest = $row['PregnancyTest'];
+      $chiefComplaint = $row['ChiefComplaint'];
+      $assessment = $row['Assessment'];
+      $lastHIVTest = $row['LastHIVTest'];
+      $lastPZQTx = $row['LastPZQTx'];
+      $lastWormTx = $row['LastWormTx'];
+      $lastVitA = $row['LastVitA'];
+      $prevMeds = $row['PrevMeds'];
+      $dx_Healthy = $row['DX_Healthy'];
+      $dx_NoTreatment = $row['DX_NoTreatment'];
+      $dx_MXK = $row['DX_MXK'];
+      $dx_Worms = $row['DX_Worms'];
+      $dx_Asthma = $row['DX_Asthma'];
+      $dx_Bronchitis = $row['DX_Bronchitis'];
+      $dx_Pneumonia = $row['DX_Pneumonia'];
+      $dx_Cough = $row['DX_Cough'];
+      $dx_Malaria = $row['DX_Malaria'];
+      $dx_Schisto = $row['DX_Schisto'];
+      $dx_Typhoid = $row['DX_Typhoid'];
+      $dx_Gerd = $row['DX_Gerd'];
+      $dx_PUD = $row['DX_PUD'];
+      $dx_Diarrhea = $row['DX_Diarrhea'];
+      $dx_DiarrheaBloody = $row['DX_DiarrheaBloody'];
+      $dx_Hypertension = $row['DX_Hypertension'];
+      $dx_Diabetes = $row['DX_Diabetes'];
+      $dx_Constipation = $row['DX_Constipation'];
+      $dx_PID = $row['DX_PID'];
+      $dx_STI = $row['DX_STI'];
+      $dx_Syphilis = $row['DX_Syphilis'];
+      $dx_Topical = $row['DX_Topical'];
+      $dx_TopicalDescrip = $row['DX_TopicalDescrip'];
+      $dx_Other = $row['DX_Other'];
+      $dx_OtherDescrip = $row['DX_OtherDescrip'];
+      $regANC = $row['RegANC'];
+      $prevIPTpYes = $row['PrevIPTpYes'];
+      $lastIPTpG1MonYes = $row['LastIPTpGT1MonYes'];
+      $clinicalAnemia = $row['ClinicalAnemia'];
+      $sulfadar = $row['Sulfadar'];
+      $rx_Paracetamol = $row['Rx_Paracetamol'];
+      $rx_BenzPen = $row['Rx_BenzPen'];
+      $rx_Ceftriaxone = $row['Rx_Ceftriaxone'];
+      $rx_Kit_PCM = $row['Rx_Kit_PCM'];
+      $rx_Kit_Pregnancy = $row['Rx_Kit_Pregnancy'];
+      $rx_ALU = $row['Rx_ALU'];
+      $rx_PUD = $row['Rx_PUD'];
+      $rx_PZQ_Tabs = $row['Rx_PZQ_Tabs'];
+      $rx_PZQ_Dose = $row['Rx_PZQ_Dose'];
+      $rx_Eye = $row['RX_Eye'];
+      $rx_Other = $row['RX_Other'];
+      $sp_PatInit = $row['SP_PatInit'];
+      $sp_PatGender = $row['SP_PatGender'];
+      $sp_PatPreg = $row['SP_PatPreg'];
+      $sp_PatNumMonths = $row['SP_PatNumMonths'];
+      $sp_PatBF = $row['SP_PatBF'];
+      $sp_PatMTZ = $row['SP_PatMTZ'];
+      $sp_PatDoxy = $row['SP_PatDoxy'];
+      $sp_PatAmox = $row['SP_PatAmox'];
+      $sp_Par1Init = $row['SP_Par1Init'];
+      $sp_Par1Gender = $row['SP_Par1Gender'];
+      $sp_Par1Preg = $row['SP_Par1Preg'];
+      $sp_Par1NumMonths = $row['SP_Par1NumMonths'];
+      $sp_Par1BF = $row['SP_Par1BF'];
+      $sp_Par1MTZ = $row['SP_Par1MTZ'];
+      $sp_Par1Doxy = $row['SP_Par1Doxy'];
+      $sp_Par1Amox = $row['SP_Par1Amox'];
+      $sp_Par2Init = $row['SP_Par2Init'];
+      $sp_Par2Gender = $row['SP_Par2Gender'];
+      $sp_Par2Preg = $row['SP_Par2Preg'];
+      $sp_Par2NumMonths = $row['SP_Par2NumMonths'];
+      $sp_Par2BF = $row['SP_Par2BF'];
+      $sp_Par2MTZ = $row['SP_Par2MTZ'];
+      $sp_Par2Doxy = $row['SP_Par2Doxy'];
+      $sp_Par2Amox = $row['SP_Par2Amox'];
+      $sp_Par3Init = $row['SP_Par3Init'];
+      $sp_Par3Gender = $row['SP_Par3Gender'];
+      $sp_Par3Preg = $row['SP_Par3Preg'];
+      $sp_Par3NumMonths = $row['SP_Par3NumMonths'];
+      $sp_Par3BF = $row['SP_Par3BF'];
+      $sp_Par3MTZ = $row['SP_Par3MTZ'];
+      $sp_Par3Doxy = $row['SP_Par3Doxy'];
+      $sp_Par3Amox = $row['SP_Par3Amox'];
+      $followUp = $row['FollowUp'];
+      $returnTo = $row['ReturnTo'];
+      $education = $row['Education'];
+      $practitioners = $row['Practitioners'];
+      $referral = $row['Referral'];
+      $rxNum = $row['RXNum'];
+      $firstName = $row['FirstName'];
+      $lastName = $row['LastName'];
+      $village = $row['village'];
+      $birthday = $row['Birthday'];
+      $sex = $row['sex'];
+
+
+      
+    } catch(Error $e){
+        echo false;
+    } finally {
+        mysqli_stmt_close();
+        mysqli_close();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -38,24 +187,29 @@
       <div class="row">
 
         <div class ="col-6" style="border-style: solid; border-color: Black;">
-          Name: <input disabled type="text" id="txtName" name="Name" value="Ryan Oakley" style="width: 200px"><br>
-          Village: <input disabled type="text" id="txtVillage" name="Village" value="Cole Harbour" style="width: 200px"><br>
-          <span style="padding-right: 65px;">G: <input disabled type="text" id="txtG" name="G" value="10" style="width: 30px"></span>
-          <span style="padding-right: 65px;">P: <input disabled type="text" id="txtP" name="P" value="10" style="width: 30px"></span>
-          <span style="padding-right: 65x;">A: <input disabled type="text" id="txtA" name="A" value="10" style="width: 30px"></span><br>
-          <span style="padding-right: 5px;">#Living Children: <input disabled type="text" id="txtLiving" name="Living" value="0" style="width: 30px"></span>
-          LNMP: <input disabled type="text" id="txtLnmp" name="Lnmp" value="8W" style="width: 50px">
+          Name: <input disabled type="text" id="txtName" name="Name" value="<?php echo @firstName . ' ' . @lastName ?>" style="width: 200px"><br>
+          Village: <input disabled type="text" id="txtVillage" name="Village" value="<?php echo @village ?>" style="width: 200px"><br>
+          <span style="padding-right: 65px;">G: <input disabled type="text" id="txtG" name="G" value="<?php echo @numOfPreg ?>" style="width: 30px"></span>
+          <span style="padding-right: 65px;">P: <input disabled type="text" id="txtP" name="P" value="<?php echo @numBirth ?>" style="width: 30px"></span>
+          <span style="padding-right: 65x;">A: <input disabled type="text" id="txtA" name="A" value="<?php echo @numAbortions ?>" style="width: 30px"></span><br>
+          <span style="padding-right: 5px;">#Living Children: <input disabled type="text" id="txtLiving" name="Living" value="<?php echo @numLivingChildern ?>" style="width: 30px"></span>
+          LNMP: <input disabled type="text" id="txtLnmp" name="Lnmp" value="<?php echo @lastPeriod ?>" style="width: 50px">
         </div>
 
         <div class ="col-6" style="border-style: solid; border-color: Black;">
-          <span style="padding-right: 5px;"><input type="checkbox" id="chkMale" name="Male" value="MALE" disabled>M</span>
-          <span style="padding-right: 5px;"><input type="checkbox" id="chkFemale" name="Female" value="FEMALE" disabled>F</span>
-          <span style="padding-right: 20px;">AGE: <input disabled type="text" id="txtAge" name="Age" value="34" style="width: 30px"></span>
-          <span style="padding-right: 5px;">WEIGHT: <input disabled type="text" id="txtWeight" name="Weight" value="97.5" style="width: 50px"></span>KG<br>
-          <span style="padding-right: 50px;">TEMP: <input disabled type="text" id="txtTemp" name="Temp" value="98.6" style="width: 50px">&#8457;</span>
-          BP: <input disabled type="text" id="txtBP" name="BP" value="120/70" style="width: 70px"><br><br>
-          <span style="padding-right: 50px;">GLUCOSE: <input disabled type="text" id="txtGlucose" name="Glucose" value="4.0" style="width: 50px"></span>
-          HR: <input disabled type="text" id="txtHr" name="HR" value="70" style="width: 50px">
+          <?php if (@sex == male): ?>
+            <span style="padding-right: 5px;"><input type="checkbox" id="chkMale" name="Male" value="MALE" disabled checked>M</span>
+            <span style="padding-right: 5px;"><input type="checkbox" id="chkFemale" name="Female" value="FEMALE" disabled>F</span>
+          <?php else: ?>
+            <span style="padding-right: 5px;"><input type="checkbox" id="chkMale" name="Male" value="MALE" disabled>M</span>
+            <span style="padding-right: 5px;"><input type="checkbox" id="chkFemale" name="Female" value="FEMALE" disabled checked>F</span>
+          <? endif ?>
+          <span style="padding-right: 20px;">AGE: <input disabled type="text" id="txtAge" name="Age" value="<?php echo @birthday ?>" style="width: 30px"></span>
+          <span style="padding-right: 5px;">WEIGHT: <input disabled type="text" id="txtWeight" name="Weight" value="<?php echo @weight ?>" style="width: 50px"></span>KG<br>
+          <span style="padding-right: 50px;">TEMP: <input disabled type="text" id="txtTemp" name="Temp" value="<?php echo @temperature ?>" style="width: 50px">&#8457;</span>
+          BP: <input disabled type="text" id="txtBP" name="BP" value="<?php echo @bloodPressure ?>" style="width: 70px"><br><br>
+          <span style="padding-right: 50px;">GLUCOSE: <input disabled type="text" id="txtGlucose" name="Glucose" value="<?php echo @glucose ?>" style="width: 50px"></span>
+          HR: <input disabled type="text" id="txtHr" name="HR" value="<?php echo @heartRate ?>" style="width: 50px">
         </div>
 
       </div>
@@ -64,8 +218,7 @@
 
         <div class="col-6" style="border-style: solid; border-color: Black; height: 300px;">
           Chief Complaint:<br>
-          <textarea disabled id="txtComplaint" name="Complaint" wrap="soft">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat feugiat vestibulum. Etiam augue urna, bibendum sit amet vehicula sed, venenatis tristique ipsum.
-          </textarea>
+          <textarea disabled id="txtComplaint" name="Complaint" wrap="soft"><?php echo @chiefComplaint ?></textarea>
         </div>
 
         <div class="col-6" style="border-style: solid; border-color: Black;">
@@ -73,11 +226,20 @@
           <div class="row">
 
             <div class="col-6" style="text-align: center;">
-              <span style="padding-right: 50px;"><input type="checkbox" id="chkPregnant" name="YPreg" value="PREGNANT" disabled>Pregnant</span>
+              <?php if(@pregnant == 1): ?>
+                <span style="padding-right: 50px;"><input type="checkbox" id="chkPregnant" name="YPreg" value="PREGNANT" disabled>Pregnant</span>
+              <?php else: ?>
+                <span style="padding-right: 50px;"><input type="checkbox" id="chkPregnant" name="YPreg" value="PREGNANT" disabled>Pregnant</span>
+              <?php endif ?>
             </div>
 
             <div class="col-6" style="text-align: center;">
-              <span style="padding-right: 5px;"><input type="checkbox" id="chkBreastfeeding" name="Breastfeeding" value="BREASTFEEDING" disabled>Breastfeeding</span><br>
+              <?php if(@breastfeeding == 1): ?>
+                <span style="padding-right: 5px;"><input type="checkbox" id="chkBreastfeeding" name="Breastfeeding" value="BREASTFEEDING" disabled checked>Breastfeeding</span><br>
+              <?php else: ?>
+                <span style="padding-right: 5px;"><input type="checkbox" id="chkBreastfeeding" name="Breastfeeding" value="BREASTFEEDING" disabled>Breastfeeding</span><br>
+              <?php endif ?>
+              
             </div>
 
           </div>
@@ -87,8 +249,15 @@
           <div class="row">
 
             <div class="col-4" style="text-align: center;">
-              <input type="checkbox" id="chkVresult" name="Vresult1" value="VRESULT" disabled>V<br>
-              <input disabled type="text" id="txtVresult" name="Vresuult2" value="Result" style="width: 80px">
+              
+              <?php if(@vTest != "no"): ?>
+                <input type="checkbox" id="chkVresult" name="Vresult1" value="VRESULT" disabled checked>V<br>
+                <input disabled type="text" id="txtVresult" name="Vresuult2" value="<?php echo @vTest ?>" style="width: 80px">
+              <?php else: ?>
+                <input type="checkbox" id="chkVresult" name="Vresult1" value="VRESULT" disabled>V<br>
+                <input disabled type="text" id="txtVresult" name="Vresuult2" value="" style="width: 80px">
+              <?php endif ?>
+              
             </div>
 
             <div class="col-4" style="text-align: center;">

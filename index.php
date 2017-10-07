@@ -72,25 +72,7 @@
                                 <!--<label class="col-md-4 control-label" for="village">Village</label>-->
                                 <div class="col-md-4 col-centered">
                                     <select id="village" name="village" class="form-control">
-                                            <option value="1">Bugola</option>
-                                            <option value="2">Bugorola</option>
-                                            <option value="3">Bukondo</option>
-                                            <option value="4">Buzegwe</option>
-                                            <option value="5">Gallu</option>
-                                            <option value="6">Hamukoko</option>
-                                            <option value="7">Hamuyebe</option>
-                                            <option value="8">Igalla</option>
-                                            <option value="9">Kabuhinzi</option>
-                                            <option value="10">Kagunguli</option>
-                                            <option value="11">Kaseni</option>
-                                            <option value="12">Kazilankanda</option>
-                                            <option value="13">Kigara</option>
-                                            <option value="14">Muhula</option>
-                                            <option value="15">Mukunu</option>
-                                            <option value="16">Muluseni</option>
-                                            <option value="17">Muriti</option>
-                                            <option value="18">Murutilima</option>
-                                            <option value="19">Ukara</option>
+                                            <?php include "loadVillages.php" ?>
                                         </select>
                                 </div>
                             </div>
