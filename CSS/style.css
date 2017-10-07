@@ -1,3 +1,5 @@
+/* MAIN */
+
 body {
   background-color: #333;
   font-size: 20px;
@@ -14,17 +16,19 @@ hr {
 }
 
 input {
-  color: white;
+  color: #FFF;
   background-color: #333;
   border: none;
 }
 
 textarea {
-  color: white;
+  color: #FFF;
   background-color: #333;
   border: none;
   resize: none;
 }
+
+/* SPECIFIC TEXT AREAS */
 
 #txtComplaint {
   width: 95%;
@@ -61,6 +65,7 @@ textarea {
   height: 30%;
 }
 
+/* MEDIA STUFF */
 
 @media print {
 
