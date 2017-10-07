@@ -4,14 +4,9 @@
 
     // the user, password, host, and name for the database
     $mysql_user = "cacha";
-    $mysql_pass = "cacha";
-    $mysql_host = "localhost";
+    $mysql_pass = "p2DaavTC03Vr";
+    $mysql_host = "localhost:3306";
     $db_name = "cacha_medrec";
-
-    //$mysql_user = "cacha";
-    //$mysql_pass = "p2DaavTC03Vr";
-    //$mysql_host = "cacha.nscctruro.ca";
-    //$db_name = "cacha_medrec";
 
     // build the response object
     class ResponseObject {
