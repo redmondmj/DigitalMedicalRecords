@@ -25,6 +25,21 @@ a:hover {
 }
 
 
+/* Formatting form divs */
+
+.border {
+    border-style: solid;
+    border-width: 3px;
+    border-color: white;
+    border-radius: 15px;
+    padding: 1em;
+}
+
+.borderDiv {
+    border-bottom: thin solid white;
+}
+
+
 /*
  * Base structure
  */
