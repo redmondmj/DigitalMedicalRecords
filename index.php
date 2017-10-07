@@ -70,8 +70,8 @@
                             <!-- Select Basic -->
                             <div class="form-group">
                                 <!--<label class="col-md-4 control-label" for="village">Village</label>-->
-                                <div class="col-md-4 col-centered">
-                                    <select id="village" name="village" class="form-control">
+                                <div class="col-6 col-centered">
+                                    <select id="village" name="village" class="form-control input-md">
                                             <option value="1">Bugola</option>
                                             <option value="2">Bugorola</option>
                                             <option value="3">Bukondo</option>
@@ -96,7 +96,7 @@
                             </div>
                             <div class="form-group">
                                 <!--<label class="col-md-4 control-label" for="fname">D.O.B.</label>-->
-                                <div class="col-md-4 col-centered">
+                                <div class="col-6 col-centered">
                                     <input id="dob" name="dob" type="date" placeholder="" class="form-control input-md">
 
                                 </div>
@@ -104,22 +104,22 @@
                             <!-- Multiple Radios (inline) -->
                             <div class="form-group">
                                 <!-- <label class="col-md-4 control-label" for="gender">Gender</label> -->
-                                <div class="col-md-4 col-centered">
+                                <div class="col-6 col-centered">
                                     <label class="radio-inline" for="gender-0">
                                         <input type="radio" name="gender" id="gender-0" value="male" checked="checked">
-                                        male
+                                        Male
                                         <!-- yeah I feel dirty -->
                                         </label>&nbsp; &nbsp; &nbsp;
                                     <label class="radio-inline" for="gender-1">
                                         <input type="radio" name="gender" id="gender-1" value="female">
-                                        female
+                                        Female
                                         </label>
                                 </div>
                             </div>
                             <!-- Button -->
                             <div class="form-group">
                                 <!--<label class="col-md-4 control-label" for="submit">Submit</label>-->
-                                <div class="col-4 col-centered">
+                                <div class="col-6 col-centered">
                                     <button id="submit" name="submit" class="btn btn-success">Submit</button>
                                 </div>
                             </div>

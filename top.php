@@ -1,4 +1,17 @@
-
+    <script type="text/javascript">
+        function fetch_select(val) {
+            $.ajax({
+                type: 'post',
+                url: 'loadVisit.php',
+                data: {
+                    patientName: val
+                },
+                success: function(response) {
+                    document.getElementById("visit").innerHTML = response;
+                }
+            });
+        }
+    </script>
     <!-- Patient/Visit -->
     <div class="form-row justify-content-center">
         <!-- Select Patient -->
@@ -6,14 +19,7 @@
             <label class="col-12 control-label" for="patientName">Choose Patient:</label>
             <div class="col-12">
                 <select id="patientName" name="patientName" class="form-control" onchange="fetch_select(this.value);">
-                    <option disabled selected>Choose Patient</option>
-                    <option value="1">Asriel Dreemurr</option>
-                    <option value="2">Pokey Minch</option>
-                    <option value="3">Morrigan Flemeth</option>
-                    <option value="4">Copernicus Qwark</option>
-                    <option value="5">Albert Wily</option>
-                    <option value="6">Betty Kane</option>
-                    <option value="7">Jessica Ford</option>
+                    <?php include 'loadpatient.php' ?>
                 </select>
             </div>
         </div>
@@ -23,7 +29,7 @@
             <label class="col-12 control-label" for="visit">Choose Visit:</label>
             <div class="col-12">
                 <select id="visit" name="visit" class="form-control">
-                    <option value="newVisit">New Visit</option>
+                <?php include 'loadvisit.php' ?>
                 </select>
             </div>
         </div>
