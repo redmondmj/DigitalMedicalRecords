@@ -163,7 +163,7 @@
 
       <div class="row">
 
-        <div class="col-7" style="border-style: solid; border-color: Black;">
+        <div class="col-7" style="border-style: solid;">
           <span style="font-size: 18.5px;">Canada-Africa Community Health Alliance</span><br>
           <span style="font-size: 18px;">Alliance de Sante Communitaire Canada-Afrique</span><br>
           Triage: <input disabled type="text" id="txtTriage" name="Triage" value="Sample Text" style="width: 200px"><span style="padding-left: 10px;"><input type="checkbox" id="chkTesting" name="Testing" value="TEST" disabled>TESTING</span><br>
@@ -174,7 +174,7 @@
           <input type="checkbox" id="chkV" name="V" value="V" disabled>V
         </div>
 
-        <div class="col-5" style="border-style: solid; border-color: Black;">
+        <div class="col-5" style="border-style: solid;">
           CHART#: <input disabled type="text" id="txtChart" name="Chart" value="189" style="width: 50px"><br>
           DISPENSARY: <input disabled type="text" id="txtDispensary" name="Dispensary" value="Truro N.S." style="width: 150px"><br>
           <br>
@@ -210,18 +210,19 @@
           BP: <input disabled type="text" id="txtBP" name="BP" value="<?php echo @bloodPressure ?>" style="width: 70px"><br><br>
           <span style="padding-right: 50px;">GLUCOSE: <input disabled type="text" id="txtGlucose" name="Glucose" value="<?php echo @glucose ?>" style="width: 50px"></span>
           HR: <input disabled type="text" id="txtHr" name="HR" value="<?php echo @heartRate ?>" style="width: 50px">
+
         </div>
 
       </div>
 
       <div class="row">
 
-        <div class="col-6" style="border-style: solid; border-color: Black; height: 300px;">
+        <div class="col-6" style="border-style: solid; height: 300px;">
           Chief Complaint:<br>
           <textarea disabled id="txtComplaint" name="Complaint" wrap="soft"><?php echo @chiefComplaint ?></textarea>
         </div>
 
-        <div class="col-6" style="border-style: solid; border-color: Black;">
+        <div class="col-6" style="border-style: solid;">
 
           <div class="row">
 
@@ -244,12 +245,12 @@
 
           </div>
 
-          <hr style="border-color: Black; border-width: 2px; margin: 0;">
+          <hr style="border-width: 2px; margin: 0;">
 
           <div class="row">
 
             <div class="col-4" style="text-align: center;">
-              
+
               <?php if(@vTest != "no"): ?>
                 <input type="checkbox" id="chkVresult" name="Vresult1" value="VRESULT" disabled checked>V<br>
                 <input disabled type="text" id="txtVresult" name="Vresuult2" value="<?php echo @vTest ?>" style="width: 80px">
@@ -257,17 +258,17 @@
                 <input type="checkbox" id="chkVresult" name="Vresult1" value="VRESULT" disabled>V<br>
                 <input disabled type="text" id="txtVresult" name="Vresuult2" value="" style="width: 80px">
               <?php endif ?>
-              
+
             </div>
 
             <div class="col-4" style="text-align: center;">
               <input type="checkbox" id="chkMalaria" name="Malria1" value="MALRIA" disabled>MALARIA<br>
-              <input disabled type="text" id="txtMalaria" name="Malria2" value="Result" style="width: 80px">
+              <input disabled type="text" id="txtMalaria" name="Malria2" value="Negative" style="width: 80px">
             </div>
 
             <div class="col-4" style="text-align: center;">
               <input type="checkbox" id="chkSyphilis" name="Syphilis1" value="SYPHILIS" disabled>SYPHILIS<br>
-              <input disabled type="text" id="txtSyphilis" name="Syphilis2" value="Result" style="width: 80px">
+              <input disabled type="text" id="txtSyphilis" name="Syphilis2" value="Negative" style="width: 80px">
             </div>
 
           </div>
@@ -276,12 +277,12 @@
 
             <div class="col-6" style="text-align: center;">
               <input type="checkbox" id="chkTyph" name="TYPH1" value="TYPH" disabled>TYPH<br>
-              <input disabled type="text" id="txtTyph" name="Typh2" value="Result" style="width: 80px">
+              <input disabled type="text" id="txtTyph" name="Typh2" value="Negative" style="width: 80px">
             </div>
 
             <div class="col-6" style="text-align: center;">
               <input type="checkbox" id="chkPregnancy" name="Pregnancy1" value="PREGNANCY" disabled>PREGNANCY<br>
-              <input disabled type="text" id="txtPregnancy" name="Pregnancy2" value="Result" style="width: 80px">
+              <input disabled type="text" id="txtPregnancy" name="Pregnancy2" value="Negative" style="width: 80px">
             </div>
 
           </div>
@@ -296,11 +297,11 @@
 
           <div class="row">
 
-            <div class="col-12" style="text-align: center;">
-              LEUC: <input disabled type="text" id="txtLeuc" name="Leuc" value="+" style="width: 30px">
-              RBC: <input disabled type="text" id="txtRBC" name="RBC" value="+" style="width: 30px">
-              GLUCLOSE: <input disabled type="text" id="txtUrineglucose" name="Urineglucose" value="4.0" style="width: 30px">
-              NITRITES: <input disabled type="text" id="txtNitrites" name="Nitrites" value="+" style="width: 30px">
+            <div class="col-12" style="text-align: center; font-size: 16px;">
+              LEUC: <input disabled type="text" id="txtLeuc" name="Leuc" value="Negative" style="width: 65px">
+              RBC: <input disabled type="text" id="txtRBC" name="RBC" value="Negative" style="width: 65px"><br>
+              GLUCLOSE: <input disabled type="text" id="txtUrineglucose" name="Urineglucose" value="Negative" style="width: 65px">
+              NITRITES: <input disabled type="text" id="txtNitrites" name="Nitrites" value="Negative" style="width: 65px">
             </div>
 
           </div>
@@ -311,17 +312,17 @@
 
       <div class="row" style="height: 330px">
 
-        <div class="col-7" style="border-style: solid; border-color: Black;">
+        <div class="col-7" style="border-style: solid;">
           ASSESSMENT:<br>
           <textarea disabled id="txtAssessment" name="Assessment" wrap="soft">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat feugiat vestibulum. Etiam augue urna, bibendum sit amet vehicula sed, venenatis tristique ipsum. Praesent vitae lobortis libero.
           </textarea>
         </div>
 
-        <div class="col-5" style="border-style: solid; border-color: Black; font-size: 17px;">
-          LAST HIV TEST? <input disabled type="text" id="txtLasthiv" name="Lasthiv" value="Unknown" style="width: 100px"><br>
-          LAST PZQ TX? <input disabled type="text" id="txtLastpzq" name="Lastpzq" value="Unknown" style="width: 100px"><br>
-          LAST WORM TX? <input disabled type="text" id="txtLastworm" name="Lastworm" value="Unknown" style="width: 100px"><br>
-          LAST VIT A? <input disabled type="text" id="txtLastvita" name="Lastvita" value="Unknown" style="width: 100px"><br>
+        <div class="col-5" style="border-style: solid; font-size: 17px;">
+          LAST HIV TEST? <input disabled type="text" id="txtLasthiv" name="Lasthiv" value="Under 3 Months" style="width: 130px"><br>
+          LAST PZQ TX? <input disabled type="text" id="txtLastpzq" name="Lastpzq" value="Under 3 Months" style="width: 130px"><br>
+          LAST WORM TX? <input disabled type="text" id="txtLastworm" name="Lastworm" value="Under 3 months" style="width: 130px"><br>
+          LAST VIT A? <input disabled type="text" id="txtLastvita" name="Lastvita" value="Under 3 Months" style="width: 130px"><br>
           PREV MEDS?<br>
           <textarea disabled id="txtPrevmeds" name="Prevmeds" wrap="soft">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea>
         </div>
@@ -330,22 +331,22 @@
 
       <div class="row">
 
-        <div class="col-6" style="border-style: solid; border-color: Black;">
+        <div class="col-6" style="border-style: solid;">
           DX:<br>
           (DON'T FORGET +, ++, or +++)<br>
           AND NTR (No Treatment)
         </div>
 
-        <div class="col-6" style="border-style: solid; border-color: Black;">
+        <div class="col-6" style="border-style: solid;">
           ADMIN: <span style="font-size: 12px"><input type="checkbox" id="chkParacetamol" name="Paracetamol" value="PARACET" disabled>PARACETAMOL
-          <input type="checkbox" id="chkBenz" name="Benz" value="BENZ" disabled>BENZ-PEN-G 2.4 MIU<br>  <input type="checkbox" id="chkCeftriaxone" name="Ceftriaxone" value="CEFTRIAXONE" disabled>CEFTRIAXONE250MG</span>
+          <input type="checkbox" id="chkBenz" name="Benz" value="BENZ" disabled>BENZ-PEN-G 2.4 MIU<br>  <input type="checkbox" id="chkCeftriaxone" name="Ceftriaxone" value="CEFTRIAXONE" disabled>CEFTRIAXONE 250MG</span>
         </div>
 
       </div>
 
       <div class="row">
 
-        <div class="col-6" style="border-style: solid; border-color: Black;">
+        <div class="col-6" style="border-style: solid;">
           <input type="checkbox" id="chkHealthy" name="Healthy" value="HEALTHY" disabled>HEALTHY
           <input type="checkbox" id="chkNtr" name="Ntr" value="NTR" disabled>NTR
           <input type="checkbox" id="chkMsk" name="Msk" value="MSK" disabled>MSK<br>
@@ -375,7 +376,7 @@
           <input type="checkbox" id="chk??" name="??" value="??" disabled>
         </div>
 
-        <div class="col-6" style="border-style: solid; border-color: Black;">
+        <div class="col-6" style="border-style: solid;">
           KIT: <span style="font-size: 12px;"><input type="checkbox" id="chkPcm" name="Pcm" value="PCM" disabled>(PCM-ALB/MEB)
           <input type="checkbox" id="chkPkit" name="Pkit" value="PREGKIT" disabled>PREGNANCY KIT(VITS+FE)</span><br>
           <input type="checkbox" id="chkAlu" name="Alu" value="ALU" disabled>ALU
@@ -392,7 +393,7 @@
 
       <div class="row">
 
-        <div class="col-5" style="border-style: solid; border-color: Black;">
+        <div class="col-5" style="border-style: solid;">
           PREGNANT: <input disabled type="text" id="txtPregnant" name="Pregweeks" value="25" style="width: 30px">WEEKS<br>
           REGULAR ANC: <input type="checkbox" id="chkYanc" name="Yanc" value="ANCY" disabled>YES <input type="checkbox" id="chkNanc" name="Nanc" value="NANC" disabled>NO<br>
           PREVIOUS IPTp:<br>
@@ -406,7 +407,7 @@
           <input type="checkbox" id="chk9" name="9" value="9" disabled>9
         </div>
 
-        <div class="col-7" style="border-style: solid; border-color: Black;">
+        <div class="col-7" style="border-style: solid;">
 
 
 
@@ -496,7 +497,7 @@
 
       <div class="row">
 
-        <div class="col-12" style="border-style: solid; border-color: Black; height: 280px;">
+        <div class="col-12" style="border-style: solid; height: 280px;">
           FOLLOW-UP:<br>
           <textarea disabled id="txtFollowup" name="Followup" wrap="soft">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat feugiat vestibulum. Etiam augue urna, bibendum sit amet vehicula sed, venenatis tristique ipsum.
@@ -509,13 +510,13 @@
 
       <div class="row">
 
-        <div class="col-12" style="border-style: solid; border-color: Black; height: 200px;">
+        <div class="col-12" style="border-style: solid; height: 200px;">
           EDUCATION: <input disabled type="text" id="txtEducation" name="Education" value="NSCC Graduate" style="width: 200px"><br>
           <br>
           PRACTITIONERS: <textarea disabled id="txtPractitioners" name="Pratitioners" wrap="soft"> Dr. Matt Redmond</textarea><br>
           <br>
 
-          <hr style="border-color: Black; border-width: 2px; margin: 0;">
+          <hr style="border-width: 2px; margin: 0;">
 
           REFERRAL:
           <span style="padding-right: 20px; padding-left: 10px"><input type="checkbox" id="chkTB" name="TB" value="TB" disabled>TB</span>
