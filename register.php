@@ -42,20 +42,168 @@
                 </div>
 
                 <div class="inner cover">
-
-                    <h1 class="cover-heading">Register A New Patient</h1>
-                    <br>
-
-
-                    <div class="col-4 col-centered">
-                        <a href="print.php">View Complete Chart</a>
+                <div class="form-horizontal border">
+                <form>
+                    <!-- load the visit -->
+                    <?php include "top.php"; ?>
+                    <!-- <div class="well"> -->
+                    <!-- Basic Info section !-->
+                    <div style="padding:1em; border-style: solid; border-width: 3px; border-color: white; border-radius: 15px; padding: 1em">
+                        <div class="row">
+                            <div class="form-group col-4">
+                                <label for="dispensery">Dispensery:</label>
+                                <select class="form-control" id="dispensery"></select>
+                            </div>
+                            <div class="form-group col-3">
+                                <label for="weight">Weight:</label>
+                                <input type="number" class="form-control" id="weight">
+                            </div>
+                            <div class="col-1"></div>
+                            <div class="form-group col-4">
+                                <label for="hr">HR:</label>
+                                <input type="text" class="form-control" id="hr">
+                            </div>
+                        </div>
+                        <!--             Next Form Row            !-->
+                        <div class="row">
+                            <div class="col-12"><br></div>  <!-- empty line for spacing !-->
+                        </div>
+                        <!--             Next Form Row            !-->
+                        <div class="row">
+                            <div class="form-group col-3">
+                                <label for="temp">Temp:</label>
+                                <input type="number" class="form-control" id="temp">
+                            </div>
+                            <div class="col-1"></div>
+                            <div class="form-group col-3">
+                                <label for="bp">BP:</label>
+                                <input type="number" class="form-control" id="bp">
+                            </div>
+                            <div class="col-1"></div>
+                            <div class="col-3 form-group">
+                                <label for="glucose">Glucose:</label>
+                                <input type="number" class="form-control" id="glucose">
+                            </div>
+                            <div class="col-1"></div>
+                        </div>
                     </div>
-                </div>
-                <br>
-                <div class="mastfoot">
-                    <div class="inner">
-                        <p>Digital Charts Sample for <a href="http://www.cacha.ca/">CACHA</a>, by A BUNCH OF AWESOME PEOPLE.</p>
+                    <div class="row">
+                        <div class="col-12"><br></div>  <!-- empty line for spacing !-->
                     </div>
+                    <!-- Family Info section !-->
+                    <div class="row">
+                        <div class="form-group col-12">
+                            <h3>Family Info</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12"><br></div>  <!-- empty line for spacing !-->
+                    </div>
+                    <div style="padding:1em; border-style: solid; border-width: 3px; border-color: white; border-radius: 15px;">
+                        
+                        <div class="row">
+                            <div class="form-group col-3">
+                                <label for="livingChildren">Living Children:</label>
+                                <input type="number" class="form-control" id="livingChildren">
+                            </div>
+                            <div class="form-group col-3">
+                                <label for="gravita">Gravida:</label>
+                                <input type="number" class="form-control" id="livingChildren">
+                            </div>
+                            <div class="form-group col-3">
+                                <label for="para">Para:</label>
+                                <input type="number" class="form-control" id="para">
+                            </div>
+                            <div class="form-group col-3">
+                                <label for="abortions">Abortions:</label>
+                                <input type="number" class="form-control" id="abortions">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-5">
+                            </div>
+                            <div class="form-group col-2">
+                                <label for="lnmp">LNMP:</label>
+                                <input type="number" class="form-control" id="lnmp">
+                            </div>
+                            <div class="form-group col-5">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12"><br></div>  <!-- empty line for spacing !-->
+                    </div>
+                    <!-- Chief Complaint section !-->
+                    <div class="row">
+                        <div class="form-group col-12">
+                            <h3>Chief Complaint</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12"><br></div>  <!-- empty line for spacing !-->
+                    </div>
+                    <div style="padding:1em; border-style: solid; border-width: 3px; border-color: white; border-radius: 15px;">
+                        <div class="row">
+                            <div class="form-group col-12">
+                                <label for="chiefComplaint">Chief Complaint:</label>
+                                <input type="textArea" class="form-control" id="chiefComplaint" style="height:10em;">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Stations section !-->
+                    <div class="row">
+                        <div class="form-group col-12">
+                            <h3>Stations</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12"><br></div>  <!-- empty line for spacing !-->
+                    </div>
+                    <div style="padding:1em; border-style: solid; border-width: 3px; border-color: white; border-radius: 15px;">
+                        <div class="row">
+                            <div class="col-2">
+                                <label class="checkbox-inline" for="test">
+                                    <input type="checkbox" name="checkboxes" id="test" value="">
+                                    Test
+                                </label>
+                            </div>
+                            <div class="col-2">
+                                <label class="checkbox-inline" for="med">
+                                <input type="checkbox" name="checkboxes" id="med" value="2" >
+                                    MED
+                                </label>
+                            </div>  
+                            <div class="col-2">
+                                <label class="checkbox-inline" for="gyn">
+                                <input type="checkbox" name="checkboxes" id="gyn" value="3" >
+                                    GYN
+                                </label>
+                            </div>
+                            <div class="col-2">
+                                <label class="checkbox-inline" for"opht">
+                                <input type="checkbox" name="checkboxes" id="opht" value="4" >
+                                    OPHT
+                                </label>
+                            </div>
+                            <div class="col-2">
+                                <label class="checkbox-inline" for="dent">
+                                <input type="checkbox" name="checkboxes" id="dent" value="5" >
+                                    DENT
+                                </label>
+                            </div>
+                            <div class="col-2">
+                                <label class="checkbox-inline" for="v">
+                                <input type="checkbox" name="checkboxes" id="v" value="6">
+                                    V
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                   <!--Submit Form-->
+                    <?php include "bottom.php"; ?>  
+                </form>
+                
+            </div>
                 </div>
 
             </div>
