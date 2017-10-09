@@ -46,7 +46,7 @@
                     
                     <div class="form-horizontal border">
                         <form>
-                            
+                            <?php include "top.php"; ?>
                          <!-- FORM STARTS -->
                             
                             <div class="row">
@@ -266,7 +266,8 @@
                             
                             
                             
-                            
+                        <!--Submit Form-->
+                        <?php include "bottom.php"; ?>    
                         <!-- FORM ENDS -->    
                         </form>
                     </div>
@@ -276,15 +277,12 @@
 
                 </div>
 
-                <div class="col-4 col-centered">
-                        <a href="print.php">View Complete Chart</a>
-                </div>
 
-                <div class="mastfoot">
-                    <div class="inner">
-                        <p>Digital Charts Sample for <a href="http://www.cacha.ca/">CACHA</a>, by A BUNCH OF AWESOME PEOPLE.</p>
-                    </div>
-                </div>
+
+
+               
+
+
 
             </div>
 
