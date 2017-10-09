@@ -3,7 +3,7 @@
     $display_block = "";
     //SQL statement * for full name trim(concat(tbl_patient.FirstName,' ',tbl_patient.LastName)) AS fullname
 	$sql = "SELECT tbl_patient.FirstName, tbl_patient.LastName, tbl_visit.VisitID, tbl_patient.Village FROM tbl_patient LEFT JOIN tbl_visit ON tbl_patient.PatientID=tbl_visit.PatientID ORDER BY tbl_patient.LastName;";
-	$result = @mysqli_query($connection, $sql) or die(mysqli_error($connection));
+	$result = @mysqli_query($connect, $sql) or die(mysqli_error($connect));
 	while ($row = mysqli_fetch_array($result)) {
         $id = $row['VisitID'];
         //$fullname = stripslashes($row['fullname']);
@@ -12,10 +12,10 @@
         $village = $row['Village'];
         
         $display_block .= "
-        <tr><td>$fname</td><td>$lname</td><td>$village</td><td><a href=\"print.php?id=$id\">$id</a></td></tr>
+        <tr><td><a href=\"print.php?id=$id\">$fname</a></td><td><a href=\"print.php?id=$id\">$lname</a></td><td><a href=\"print.php?id=$id\">$village</a></td><td><a href=\"print.php?id=$id\">$id</a></td></tr>
         ";
     }
-    mysqli_close($connection);
+    mysqli_close($connect);
 ?>
 
 <!DOCTYPE html>
