@@ -29,7 +29,7 @@
                     <div class="inner">
                         <h3 class="masthead-brand">CACHA</h3>
                         <nav class="nav nav-masthead">
-                            <a class="nav-link" href="index.php">Home</a>
+                            <a class="nav-link" href="index.html">Home</a>
                             <a class="nav-link" href="register.php">Register</a>
                             <a class="nav-link active" href="test.php">Test</a>
                             <a class="nav-link" href="clinic.php">Clinic</a>
