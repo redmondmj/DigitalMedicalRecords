@@ -163,7 +163,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <!-- Bootstrap core CSS -->
+    <link href="bin/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Printable Report Test</title>
   </head>
@@ -182,11 +183,11 @@
           </span><br>           
           
           Triage: &nbsp;
-          <? checkboxIf($triageMedical, "chkMed", "Med", "MED", "MED"); ?>&nbsp;
-          <? checkboxIf($triageGYN, "chkGyn", "Gyn", "GYN", "GYN"); ?>&nbsp;
-          <? checkboxIf($triageMedical, "chkOpht", "Opht", "OPHT", "OPHT"); ?>&nbsp;
-          <? checkboxIf($triageMedical, "chkDent", "Dent", "DENT", "DENT"); ?>&nbsp;
-          <? checkboxIf($triageMedical, "chkV", "V", "V", "V"); ?>
+          <?php checkboxIf($triageMedical, "chkMed", "Med", "MED", "MED"); ?>&nbsp;
+          <?php checkboxIf($triageGYN, "chkGyn", "Gyn", "GYN", "GYN"); ?>&nbsp;
+          <?php checkboxIf($triageMedical, "chkOpht", "Opht", "OPHT", "OPHT"); ?>&nbsp;
+          <?php checkboxIf($triageMedical, "chkDent", "Dent", "DENT", "DENT"); ?>&nbsp;
+          <?php checkboxIf($triageMedical, "chkV", "V", "V", "V"); ?>
         </div>
 
         <div class="col-5" style="border-style: solid;">
