@@ -7,12 +7,13 @@
     //Attempt to decode the incoming RAW post data from JSON.
     $decoded = json_decode($content, true);
 
-    $visitID = decoded[0]->visitID;
+    //$visitID = decoded[0]->visitID;
+    $visitID = 5;
     
     $sql = "SELECT * FROM tbl_patient INNER JOIN tbl_visit ON tbl_patient.PatientID = tbl_visit.PatientID WHERE tbl_visit.VisitID = $visitID";
 
     try{
-      $result - mysqli_query($connection, $sql);
+      $result = mysqli_query($connect, $sql) or die(mysqli_error($connect));
       $row = mysqli_fetch_assoc($result);
       
       $patientID = $row['PatientID'];
@@ -141,8 +142,8 @@
     } catch(Error $e){
         echo false;
     } finally {
-        mysqli_stmt_close();
-        mysqli_close();
+       // mysqli_stmt_close($connect);
+        mysqli_close($connect);
     }
 
     function checkboxIf($test, $id, $name, $value, $text){
@@ -153,6 +154,7 @@
       }
     }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
