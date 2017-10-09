@@ -3,7 +3,7 @@
     //header("Content-Type: application/json; charset=UTF-8");
 
     // the user, password, host, and name for the database
-    $mysql_user = "cacha";
+    $mysql_user = "cacha_web";
     $mysql_pass = "p2DaavTC03Vr";
     $mysql_host = "localhost:3306";
     $db_name = "cacha_medrec";
