@@ -609,17 +609,17 @@
           <hr style="border-width: 2px; margin: 0;">
 
           REFERRAL:
-          <?php if (preg_match('tb', $referral)) : ?>
+          <?php if (preg_match('/tb/', $referral)) : ?>
             <span style="padding-right: 20px; padding-left: 10px"><input type="checkbox" id="chkTB" name="TB" value="TB" disabled checked>TB</span>
           <?php else : ?>
             <span style="padding-right: 20px; padding-left: 10px"><input type="checkbox" id="chkTB" name="TB" value="TB" disabled>TB</span>
           <?php endif ?>
-          <?php if (preg_match('surgery', $referral)) : ?>
+          <?php if (preg_match('/surgery/', $referral)) : ?>
             <span style="padding-right: 20px;"><input type="checkbox" id="chkSurgery" name="SURGERY" value="SURGERY" disabled checked>SURGERY</span>
           <?php else : ?>
             <span style="padding-right: 20px;"><input type="checkbox" id="chkSurgery" name="SURGERY" value="SURGERY" disabled>SURGERY</span>
           <?php endif ?>
-          <?php if (preg_match('hospital', $referral)) : ?>
+          <?php if (preg_match('/hospital/', $referral)) : ?>
             <span style="padding-right: 200px;"><input type="checkbox" id="chkHospital" name="HOSPITAL" value="HOSPITAL" disabled checked>HOSPITAL</span>
           <?php else : ?>
           <span style="padding-right: 200px;"><input type="checkbox" id="chkHospital" name="HOSPITAL" value="HOSPITAL" disabled>HOSPITAL</span>
