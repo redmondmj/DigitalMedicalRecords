@@ -23,7 +23,8 @@
         }
     </script>
     <title>CACHA - Pharmacy</title>
-
+    <!-- load jQuery -->
+    <script src="bin/jquery-3.2.1.min.js"></script>
     <!-- Bootstrap core CSS -->
     <link href="bin/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
