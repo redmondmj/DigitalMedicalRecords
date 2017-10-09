@@ -1,14 +1,15 @@
 <?php
     require 'db.php';
+    //grab URL
+    $url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
     
-    //Receive the RAW post data.
-    $content = trim(file_get_contents("php://input"));
+    //parse string for id
+    $parts = parse_url($url);
+    parse_str($parts['query'], $query);
     
-    //Attempt to decode the incoming RAW post data from JSON.
-    $decoded = json_decode($content, true);
+    //assign visitID
+    $visitID = $query['id'];
 
-    //$visitID = decoded[0]->visitID;
-    $visitID = 5;
     
     $sql = "SELECT * FROM tbl_patient INNER JOIN tbl_visit ON tbl_patient.PatientID = tbl_visit.PatientID WHERE tbl_visit.VisitID = $visitID";
 
