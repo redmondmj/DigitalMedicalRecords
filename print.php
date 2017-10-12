@@ -261,7 +261,7 @@
       <div class="row">
 
         <div class="col-4" style="background:#F4BB38">
-          Chief Complaint:<br>
+          <span style="font-weight:bold">Chief Complaint:</span><br>
           <?php dropContent($chiefComplaint); ?>
         </div>
 
@@ -323,7 +323,7 @@
       <div class="row">
 
         <div class="col-8" style="background:#EAFFDE">
-          ASSESSMENT:<br>
+          <span style="font-weight:bold">ASSESSMENT:</span><br>
           <?php dropContent($assessment); ?>
         </div>
 
@@ -340,7 +340,7 @@
       <div class="row">
 
         <div class="col-7" style="background:#FEDEDE">
-          <div style="border-bottom:1px solid; margin-bottom:5px;">
+          <div style="border-bottom:1px solid; margin-bottom:5px;font-weight:bold">
             DX: (DON'T FORGET +, ++, or +++) AND NTR (No Treatment)
           </div>
           <div class="row">
@@ -517,7 +517,7 @@
 
         <div class="col-5" style="background:#D0F8B9">
           <div class="row">
-            <div class="col-4">ADMIN:</div>
+            <div class="col-4" style="font-weight:bold">ADMIN:</div>
             <div class="col-4"><?php checkboxIf($rx_Paracetamol, "chkParacetamol", "Paracetamol", "PARACET", "PARACETAMOL"); ?></div>
             <div class="col-4"><?php checkboxIf($rx_BenzPen, "chkBenz", "Benz", "BENZ", "BENZ-PEN-G 2.4 MIU"); ?></div>
           </div>
@@ -596,148 +596,125 @@
         </div>
       </div>
 
-
-     
-
-      <?/*
       <div class="row">
 
-        <div class="col-5" style="border-style: solid;">
-          
+        <div class="col-6" style="background:#AAD6FD">
+          <div style="padding-bottom:5px;">
+            <span style="font-weight:bold">FOLLOW-UP:</span><br>
+            <?php dropContent( $followUp); ?>
+          </div>
+          <div>
+            RETURN DURING MISSION: <?php checkboxIf($MISSING, "", "", "", "YES"); ?>
+            OR TO DISPENSARY> <?php dropContent( $MISSING); ?> DAYS
+          </div>
+        </div>
+        <div class="col-6">
 
-        <div class="col-7" style="border-style: solid;">
-
-
-
-
-          <table style="width:100%; font-size: 15px;">
+          <table style="width:100%">
             <!-- unsure about populating the rest -->
             <tr>
-              <th style="width: 24%; text-align: center"><input type="checkbox" id="chkStipt" name="Stipt" value="6" disabled>STI</th>
-              <th style="width: 7%">or</th>
-              <th style="width: 19%; text-align: center"><input type="checkbox" id="chkPidpt" name="Pidpt" value="Pidpt" disabled>PID</th>
-              <th style="width: 12.5%">#</th>
-              <th style="width: 12.5%"><input disabled type="text" id="txt#pt" name="pt#" value="15" style="width: 30px"></th>
-              <th style="width: 12.5%">200MG</th>
-              <th style="width: 12.5%">100MG</th>
-              <th style="width: 12.5%">250MG</th>
+              <th colspan="4">STI or PID</th>
+              <th colspan="2">#</th>
+              <th>200MG</th>
+              <th>100MG</th>
+              <th>250MG</th>
             </tr>
-
-          </table>
-
-          <table style="width:100%; font-size: 15px;">
-
             <tr>
-              <th style="width: 12%"></th>
-              <th style="width: 13.5%">INITIALS</th>
-              <th style="width: 12%">SEX</th>
-              <th style="width: 12.5%">PREG</th>
-              <th style="width: 12.5%">MTH</th>
-              <th style="width: 12.5%">B.F.</th>
-              <th style="width: 12.5%">MTZ</th>
-              <th style="width: 12.5%">DOXY</th>
-              <th style="width: 12.5%">AMOX</th>
+              <th></th>
+              <th>INITIALS</th>
+              <th>SEX</th>
+              <th>PREG</th>
+              <th>MTH</th>
+              <th>B.F.</th>
+              <th>MTZ</th>
+              <th>DOXY</th>
+              <th>AMOX</th>
             </tr>
-
             <tr>
-              <td style="width: 12%; text-align: center;">PT</td>
-              <td style="width: 13.5%; text-align: center;"><input disabled type="text" id="txtPtinit" name="Ptinit" value="RO" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtPtsex" name="Ptsex" value="M" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtPtpreg" name="PtPreg" value="Y" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtPtmth" name="Ptmth" value="9" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtPtbf" name="Ptbf" value="Y" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtPtmtz" name="Ptmtz" value="14" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtPtdoxy" name="Ptdoxy" value="15" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtPtAmox" name="Ptamox" value="16" style="width: 30px"></td>
+              <td>PT</td>
+              <td><?php dropContent( $MISSING); ?></td>
+              <td><?php dropContent( $MISSING); ?></td>
+              <td><?php dropContent( $MISSING); ?></td>
+              <td><?php dropContent( $MISSING); ?></td>
+              <td><?php dropContent( $MISSING); ?></td>
+              <td><?php dropContent( $MISSING); ?></td>
+              <td><?php dropContent( $MISSING); ?></td>
+              <td><?php dropContent( $MISSING); ?></td>
             </tr>
-
             <tr>
-              <td style="width: 12%; text-align: center;">P1</td>
-              <td style="width: 13.5%; text-align: center;"><input disabled type="text" id="txtP1init" name="P1init" value="RO" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP1sex" name="P1sex" value="M" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP1preg" name="P1Preg" value="Y" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP1mth" name="P1mth" value="9" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP1bf" name="P1bf" value="Y" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP1mtz" name="P1mtz" value="14" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP1doxy" name="P1doxy" value="15" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP1Amox" name="P1amox" value="16" style="width: 30px"></td>
+              <td>P1</td>
+              <td><?php dropContent( $MISSING); ?></td>
+              <td><?php dropContent( $MISSING); ?></td>
+              <td><?php dropContent( $MISSING); ?></td>
+              <td><?php dropContent( $MISSING); ?></td>
+              <td><?php dropContent( $MISSING); ?></td>
+              <td><?php dropContent( $MISSING); ?></td>
+              <td><?php dropContent( $MISSING); ?></td>
+              <td><?php dropContent( $MISSING); ?></td>
             </tr>
-
             <tr>
-              <td style="width: 12%; text-align: center;">P2</td>
-              <td style="width: 13.5%; text-align: center;"><input disabled type="text" id="txtP2init" name="P2init" value="RO" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP2sex" name="P2sex" value="M" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP2preg" name="P2Preg" value="Y" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP2mth" name="P2mth" value="9" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP2bf" name="P2bf" value="Y" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP2mtz" name="P2mtz" value="14" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP2doxy" name="P2doxy" value="15" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP2Amox" name="P2amox" value="16" style="width: 30px"></td>
+              <td>P2</td>
+              <td><?php dropContent( $MISSING); ?></td>
+              <td><?php dropContent( $MISSING); ?></td>
+              <td><?php dropContent( $MISSING); ?></td>
+              <td><?php dropContent( $MISSING); ?></td>
+              <td><?php dropContent( $MISSING); ?></td>
+              <td><?php dropContent( $MISSING); ?></td>
+              <td><?php dropContent( $MISSING); ?></td>
+              <td><?php dropContent( $MISSING); ?></td>
             </tr>
-
             <tr>
-              <td style="width: 12%; text-align: center;">P3</td>
-              <td style="width: 13.5%; text-align: center;"><input disabled type="text" id="txtP3init" name="P3init" value="RO" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP3sex" name="P3sex" value="M" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP3preg" name="P3Preg" value="Y" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP3mth" name="P3mth" value="9" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP3bf" name="P3bf" value="Y" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP3mtz" name="P3mtz" value="14" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP3doxy" name="P3doxy" value="15" style="width: 30px"></td>
-              <td style="width: 12.5%; text-align: center;"><input disabled type="text" id="txtP3Amox" name="P3amox" value="16" style="width: 30px"></td>
+              <td>P3</td>
+              <td><?php dropContent( $MISSING); ?></td>
+              <td><?php dropContent( $MISSING); ?></td>
+              <td><?php dropContent( $MISSING); ?></td>
+              <td><?php dropContent( $MISSING); ?></td>
+              <td><?php dropContent( $MISSING); ?></td>
+              <td><?php dropContent( $MISSING); ?></td>
+              <td><?php dropContent( $MISSING); ?></td>
+              <td><?php dropContent( $MISSING); ?></td>
             </tr>
-
           </table>
 
         </div>
-
-      </div>
-
-      <div class="row" id="lastPage">
-
-        <div class="col-12" style="border-style: solid;">
-          FOLLOW-UP:<br>
-          <textarea disabled id="txtFollowup" name="Followup" wrap="soft"><?php echo $followUp; ?></textarea><br>
-          <br>
-          <span style="padding-right: 10px;">RETURN DURING MISSION:</span><input type="checkbox" id="chkReturnmission" name="ReturnDuringMission" value="RETURNMISSION" disabled>YES OR TO DISPENSARY> <input disabled type="text" id="txtReturnmission" name="Returnmission" value="80" style="width: 30px">DAYS
-        </div>
-
       </div>
 
       <div class="row">
+        <div class="col-12" style="background:#FFD4AB">
+          <span style="font-weight:bold">EDUCATION:</span><br>
+          <?php dropContent($education); ?>
+        </div>
+      </div>
 
-        <div class="col-12" style="border-style: solid;">
-          EDUCATION:<br>
-          <textarea  disabled id="txtEducation" name="Education" wrap="soft"><?php echo $education; ?></textarea><br>
-          <br>
-          PRACTITIONERS:<br>
-          <textarea  id="txtPractitioners" name="Practitioners" wrap="soft"><?php echo $practitioners; ?></textarea><br>
-          <br>
+      <div class="row">
+        <div class="col-12">
+          <span style="font-weight:bold">PRACTITIONERS:</span><br>
+          <?php dropContent($practitioners); ?>
+        </div>
+      </div>
 
-          <hr style="border-width: 2px; margin: 0;">
-
-          REFERRAL:
+      <div class="row">
+        <div class="col-12">
+          <span style="font-weight:bold">REFERRAL:</span>
           <?php if (preg_match('/tb/', $referral)) : ?>
-            <span style="padding-right: 20px; padding-left: 10px"><input type="checkbox" id="chkTB" name="TB" value="TB" disabled checked>TB</span>
+            <?php checkboxIf("yes", "", "", "", "TB"); ?>
           <?php else : ?>
-            <span style="padding-right: 20px; padding-left: 10px"><input type="checkbox" id="chkTB" name="TB" value="TB" disabled>TB</span>
+            <?php checkboxIf("no", "", "", "", "TB"); ?>
           <?php endif ?>
+
           <?php if (preg_match('/surgery/', $referral)) : ?>
-            <span style="padding-right: 20px;"><input type="checkbox" id="chkSurgery" name="SURGERY" value="SURGERY" disabled checked>SURGERY</span>
+            <?php checkboxIf("yes", "", "", "", "SURGERY"); ?>
           <?php else : ?>
-            <span style="padding-right: 20px;"><input type="checkbox" id="chkSurgery" name="SURGERY" value="SURGERY" disabled>SURGERY</span>
+            <?php checkboxIf("no", "", "", "", "SURGERY"); ?>
           <?php endif ?>
           <?php if (preg_match('/hospital/', $referral)) : ?>
-            <span style="padding-right: 200px;"><input type="checkbox" id="chkHospital" name="HOSPITAL" value="HOSPITAL" disabled checked>HOSPITAL</span>
+            <?php checkboxIf("yes", "", "", "", "TB"); ?>
           <?php else : ?>
-          <span style="padding-right: 200px;"><input type="checkbox" id="chkHospital" name="HOSPITAL" value="HOSPITAL" disabled>HOSPITAL</span>
+            <?php checkboxIf("no", "", "", "", "TB"); ?>
           <?php endif ?>
-          RX #: <input disabled type="text" id="txtRX" name="RX" value="<?php echo $rxNum; ?>" style="width: 30px">
+          <span style="font-weight:bold">RX #:</span> <?php dropContent($rxNum); ?>
         </div>
-
       </div>
-      */?>
-
     </div>
 
     <!-- Bootstrap core JavaScript
