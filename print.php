@@ -159,9 +159,9 @@
 
     function checkboxIf($test, $id, $name, $value, $text){
       if($test != "no"){
-        echo "<i class='fa fa-check-square-o fa-lg' style='color:#888888' aria-hidden='true'></i> <span style='padding-right:10px'>$text</span>";                  
+        echo "<i class='fa fa-check-square-o fa-lg' style='color:#000000' aria-hidden='true'></i> <span style='padding-right:10px;font-size:10px'>$text</span>";                  
       } else {
-        echo "<i class='fa fa-square-o fa-lg' style='color:#888888' aria-hidden='true'></i> <span style='padding-right:10px'>$text</span>";
+        echo "<i class='fa fa-square-o fa-lg' style='color:#000000' aria-hidden='true'></i> <span style='padding-right:10px;font-size:10px'>$text</span>";
       }
     }
 
@@ -169,7 +169,7 @@
       if ($text == "") {
         $text = "?";
       }
-      echo "<span style='color:#888888;padding-right:10px'>$text</span>";
+      echo "<span style='color:#000000;padding-right:10px'>$text</span>";
     }
 
 ?>
@@ -184,7 +184,7 @@
     <!-- Bootstrap core CSS -->
     <link href="bin/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/reportStyles.css">
     <title>CACHA : Patient Report</title>
   </head>
   <body>
@@ -193,7 +193,7 @@
 
       <div class="row">
 
-        <div class="col-7" style="border-style: solid;">
+        <div class="col-7">
           <h4>Canada-Africa Community Health Alliance</h4>
           <div>Alliance de Sante Communitaire Canada-Afrique</div>
           Triage: <?php dropContent("Sample Text"); ?>
@@ -209,7 +209,7 @@
           </div>
         </div>
 
-        <div class="col-5" style="border-style: solid;">
+        <div class="col-5" style="background:#EAFFDE">
           CHART#: <?php dropContent($visitID); ?><br>
           DISPENSARY: <?php dropContent($visitedDispensary); ?><br>
           TIME: <?php dropContent($visitTime); ?><br>
@@ -220,7 +220,7 @@
 
       <div class="row">
 
-        <div class ="col-6" style="border-style: solid;">
+        <div class ="col-6" style="background:#FEDEDE">
           Name: <?php dropContent($firstName . " " . $lastName); ?><br>
           Village: <?php dropContent($village); ?><br>
           <div>
@@ -234,7 +234,7 @@
           </div>
         </div>
 
-        <div class ="col-6" style="border-style: solid;">
+        <div class ="col-6" style="background:#E6A9A9">
           <div>
             <? if ($sex == "male") : ?>
               <?php checkboxIf("yes", "", "", "", "M"); ?>
@@ -260,12 +260,12 @@
 
       <div class="row">
 
-        <div class="col-4" style="border-style: solid;">
+        <div class="col-4" style="background:#F4BB38">
           Chief Complaint:<br>
           <?php dropContent($chiefComplaint); ?>
         </div>
 
-        <div class="col-8" style="border-style: solid;">
+        <div class="col-8" style="background:#FFF5DC">
 
           <div class="row">
             <div class="col-12">
@@ -322,12 +322,12 @@
       
       <div class="row">
 
-        <div class="col-7" style="border-style: solid;">
+        <div class="col-8" style="background:#EAFFDE">
           ASSESSMENT:<br>
           <?php dropContent($assessment); ?>
         </div>
 
-        <div class="col-5" style="border-style: solid;">
+        <div class="col-4" style="background:#EAFFDE">
           LAST HIV TEST? <?php dropContent( $lastHIVTest); ?><br>
           LAST PZQ TX? <?php dropContent( $lastPZQTx); ?><br>
           LAST WORM TX? <?php dropContent( $lastWormTx); ?><br>
@@ -337,173 +337,273 @@
 
       </div>
 
-      <div class="row"  id="secondPage">
+      <div class="row">
 
-        <div class="col-6" style="border-style: solid;">
-          DX:<br>
-          (DON'T FORGET +, ++, or +++)<br>
-          AND NTR (No Treatment)
+        <div class="col-7" style="background:#FEDEDE">
+          <div style="border-bottom:1px solid; margin-bottom:5px;">
+            DX: (DON'T FORGET +, ++, or +++) AND NTR (No Treatment)
+          </div>
+          <div class="row">
+            <div class="col-3">
+              <?php checkboxIf($dx_Healthy, "", "", "", "HEALTHY"); ?>
+            </div>
+            <div class="col-3">
+              <?php checkboxIf($MISSING, "", "", "", "NTR"); ?>
+            </div>
+            <div class="col-3">
+              <?php checkboxIf($MISSING, "", "", "", "MSK"); ?>
+            </div>
+            <div class="col-3">
+              <?php checkboxIf($MISSING, "", "", "", "+"); ?>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3">
+              <?php checkboxIf($MISSING, "", "", "", "++"); ?>
+              </div>
+            <div class="col-3">
+              <?php checkboxIf($MISSING, "", "", "", "+++"); ?>
+            </div>
+            <div class="col-3">
+              <?php checkboxIf($dx_Worms, "", "", "", "WORMS"); ?>
+            </div>
+            <div class="col-3">
+              <?php checkboxIf($dx_Asthma, "", "", "", "ASTHMA"); ?>
+            </div>
+          </div>
+          <div class="row">
+             <div class="col-3">
+              <?php checkboxIf($dx_Bronchitis, "", "", "", "BRONCHITUS"); ?>
+            </div>
+            <div class="col-3">
+              <?php checkboxIf($dx_Pneumonia, "", "", "", "PNEUMONIA"); ?>
+            </div>
+            <div class="col-3">              
+              <?php checkboxIf($dx_Cough, "", "", "", "COUGH"); ?>
+            </div>
+            <div class="col-3">
+              <?php checkboxIf($dx_Malaria, "", "", "", "MALARIA"); ?>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3">
+              <?php checkboxIf($dx_Schisto, "", "", "", "SCHISTO"); ?>
+            </div>
+            <div class="col-3">
+              <?php checkboxIf($dx_Typhoid, "", "", "", "TYPHOD"); ?>
+            </div>
+            <div class="col-3">
+              <?php checkboxIf($dx_Gerd, "", "", "", "GERD"); ?>
+            </div>
+            <div class="col-3">
+              <?php checkboxIf($dx_PUD, "", "", "", "PUD"); ?>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3">
+              <?php checkboxIf($dx_Constipation, "", "", "", "CONSTIPATION"); ?>
+            </div>
+            <div class="col-3">
+              <?php checkboxIf($dx_Diarrhea, "", "", "", "DIARRHEA"); ?>
+            </div>
+            <div class="col-3">
+              <?php checkboxIf($dx_Hypertension, "", "", "", "HYPERTENSION"); ?>
+            </div>
+            <div class="col-3">
+              <?php checkboxIf($dx_Diabetes, "", "", "", "DIABETES"); ?>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3">
+              <?php checkboxIf($dx_PID, "", "", "", "PID"); ?>
+            </div>
+            <div class="col-3">              
+              <?php checkboxIf($dx_STI, "", "", "", "STI"); ?>
+            </div>
+            <div class="col-3">
+              <?php checkboxIf($dx_Syphilis, "", "", "", "SYPHILIS"); ?>
+            </div>
+            <div class="col-3">
+              <?php checkboxIf($MISSING, "", "", "", "EYES"); ?>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3">
+              <?php checkboxIf($MISSING, "", "", "", "VITAMINS"); ?>
+            </div>
+            <div class="col-3">
+              <?php checkboxIf($dx_Topical, "", "", "", "TOPICAL"); ?> <?php dropContent($dx_TopicalDescrip); ?>
+            </div>
+            <div class="col-3">
+              <?php checkboxIf($dx_Other, "", "", "", "OTHER"); ?> <?php dropContent($dx_OtherDescrip); ?>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-4">
+              PREGNANT: <?php dropContent($MISSING) ?> WEEKS
+            </div>
+            <div class="col-8">
+              REGULAR ANC: 
+              <? if ($regANC == "yes") : ?>
+                <?php checkboxIf("yes","","","","YES"); ?>
+                <?php checkboxIf("no","","","","NO"); ?>
+              <? else : ?>
+                <?php checkboxIf("no","","","","YES"); ?>
+                <?php checkboxIf("yes","","","","NO"); ?>
+              <? endif ?>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              PREVIOUS IPTp:
+              <?php if($prevIPTpYes == "1") : ?>
+                <?php checkboxIf("yes","","","","YES"); ?>
+                <?php checkboxIf("no","","","","NO"); ?>
+              <?php else : ?>
+                <?php checkboxIf("no","","","","YES"); ?>
+                <?php checkboxIf("yes","","","","NO"); ?>
+              <?php endif ?>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              LAST  IPTp: >1 MONTH AGO 
+              <?php if ($lastIPTpG1MonYes == "0") : ?>
+                <?php checkboxIf("yes","","","","YES"); ?>
+                <?php checkboxIf("no","","","","NO"); ?>
+              <?php else : ?>
+                <?php checkboxIf("no","","","","YES"); ?>
+                <?php checkboxIf("yes","","","","NO"); ?>
+              <?php endif ?>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              CLINICAL ANEMIA 
+              <?php if ($clinicalAnemia == "yes") : ?>
+                <?php checkboxIf("yes","","","","YES"); ?>
+                <?php checkboxIf("no","","","","NO"); ?>
+              <?php else : ?>
+                <?php checkboxIf("no","","","","YES"); ?>
+                <?php checkboxIf("yes","","","","NO"); ?>
+              <?php endif ?>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              SULFAAR SP500/25: TABS 
+              <?php if ($sulfadar == "3") : ?>
+                <?php checkboxIf("yes","","","","3"); ?>
+                <?php checkboxIf("no","","","","6"); ?>
+                <?php checkboxIf("no","","","","9"); ?>
+              <?php elseif($sulfadar == "6") : ?>
+                <?php checkboxIf("no","","","","3"); ?>
+                <?php checkboxIf("yes","","","","6"); ?>
+                <?php checkboxIf("no","","","","9"); ?>
+              <?php elseif($sulfadar == "9") : ?>
+                <?php checkboxIf("no","","","","3"); ?>
+                <?php checkboxIf("no","","","","6"); ?>
+                <?php checkboxIf("yes","","","","9"); ?>
+              <?php else : ?>
+                <?php checkboxIf("no","","","","3"); ?>
+                <?php checkboxIf("no","","","","6"); ?>
+                <?php checkboxIf("no","","","","9"); ?>
+              <?php endif ?>
+            </div>
+          </div>
         </div>
 
-        <div class="col-6" style="border-style: solid;">
-          ADMIN: <span style="font-size: 12px">
-            <?php checkboxIf($rx_Paracetamol, "chkParacetamol", "Paracetamol", "PARACET", "PARACETAMOL"); ?><br>
-            <?php checkboxIf($rx_BenzPen, "chkBenz", "Benz", "BENZ", "BENZ-PEN-G 2.4 MIU"); ?><br>
-            <?php checkboxIf($rx_Ceftriaxone, "chkCerftriaxone", "Ceftriaxone", "CEFTRIAXONE", "CEFTRIAXONE 250MG"); ?>
-          </span>
-        </div>
+        <div class="col-5" style="background:#D0F8B9">
+          <div class="row">
+            <div class="col-4">ADMIN:</div>
+            <div class="col-4"><?php checkboxIf($rx_Paracetamol, "chkParacetamol", "Paracetamol", "PARACET", "PARACETAMOL"); ?></div>
+            <div class="col-4"><?php checkboxIf($rx_BenzPen, "chkBenz", "Benz", "BENZ", "BENZ-PEN-G 2.4 MIU"); ?></div>
+          </div>
+          <div class="row" style="border-bottom:1px solid">
+            <div class="col-8 ml-auto"><?php checkboxIf($rx_Ceftriaxone, "chkCerftriaxone", "Ceftriaxone", "CEFTRIAXONE", "CEFTRIAXONE 250MG"); ?></div>
+          </div>
+          <div>
+            <div class="row">
+            <div class="col-2">KIT:</div>
+            <div class="col-5"><?php checkboxIf($MISSING, "", "", "", "(PCM-ALB/MEB)"); ?></div>
+            <div class="col-5"><?php checkboxIf($MISSING, "", "", "", "PREGNANCY KIT(VITS+FE)"); ?></div>
+            </div>
+            <div class="row">
+            <div class="col-4"><?php checkboxIf($MISSING, "", "", "", "ALU 3/7"); ?></div>
+            <div class="col-2"><?php checkboxIf($MISSING, "", "", "", "1x2"); ?></div>
+            <div class="col-2"><?php checkboxIf($MISSING, "", "", "", "2x2"); ?></div>
+            <div class="col-2"><?php checkboxIf($MISSING, "", "", "", "3x2"); ?></div>
+            <div class="col-2"><?php checkboxIf($MISSING, "", "", "", "4x2"); ?></div>
+            </div>
+            <div class="row">
+            <div class="col-12"><?php checkboxIf($MISSING, "", "", "", "PUD: 7/7 AMOX250 3X2 + OMEP20 1X2+ MTZ200MG 3X2"); ?></div>
+            </div>
+            <div class="row">
+            <div class="col-4"><?php checkboxIf($MISSING, "", "", "", "PZQ600mg"); ?></div>
+            <div class="col-8">#TABS STAT: <?php dropContent( $MISSING); ?></div>
+            </div>
+          </div>
 
+          <div>
+              <!-- THIS IS GREASY INDEED!!!! -->
+              <table>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>
+                        <p style="font-size:5em">V</p>
+                    </td>
+                    <td>
+                        <table>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td>val 1</td></tr>
+                            <tr>
+                                <td>
+                                    <input type="text" id="val1" value="<?php echo $eyeVal1; ?>" style="width: 60px">
+                                </td>
+                            </tr>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr>
+                              <td style="text-align: center; width: 300px;">
+                                val 3
+                                <br>
+                                <input type="text" id="val3" value="<?php echo $eyeVal3; ?>" style="width: 60px">
+                              </td>
+                            </tr>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td>val 2</td></tr>
+                            <tr>
+                                <td>
+                                    <input type="text" id="val2" value="<?php echo $eyeVal2; ?>" style="width: 60px">
+                                </td>
+                            </tr>
+                            <tr><td>&nbsp;</td></tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <!-- THIS IS GREASY INDEED!!!! -->
+          </div>
+
+        </div>
       </div>
+
+
+     
 
       <?/*
-      <div class="row" id="kitChklist">
-
-        <div class="col-6" style="border-style: solid;">
-          <input type="checkbox" id="chkHealthy" name="Healthy" value="HEALTHY" disabled>HEALTHY
-          <input type="checkbox" id="chkNtr" name="Ntr" value="NTR" disabled>NTR
-          <input type="checkbox" id="chkMsk" name="Msk" value="MSK" disabled>MSK<br>
-          <input type="checkbox" id="chkPlus" name="+" value="+" disabled>+
-          <input type="checkbox" id="chkPlus2" name="++" value="++" disabled>++
-          <input type="checkbox" id="chkPlus3" name="+++" value="+++" disabled>+++
-          <input type="checkbox" id="chkWorms" name="Worms" value="WORMS" disabled>WORMS<br>
-          <input type="checkbox" id="chkAsthma" name="Asthma" value="ASTHMA" disabled>ASTHMA
-          <input type="checkbox" id="chkBronchitus" name="Bronchitus" value="BRONCHITUS" disabled>BRONCHITUS<br>
-          <input type="checkbox" id="chkPneumonia" name="Pneumonia" value="PNEUMONIA" disabled>PNEUMONIA
-          <input type="checkbox" id="chkCough" name="Cough" value="COUGH" disabled>COUGH<br>
-          <input type="checkbox" id="chkMalariadx" name="Malaria" value="MALARIA" disabled>MALARIA
-          <input type="checkbox" id="chkSchisto" name="Schisto" value="SCHISTO" disabled>SCHISTO
-          <input type="checkbox" id="chkTyphod" name="Typhod" value="TYPHOD" disabled>TYPHOD<br>
-          <input type="checkbox" id="chkGerd" name="Gerd" value="GERD" disabled>GERD
-          <input type="checkbox" id="chkPud" name="Pud" value="PUD" disabled>PUD
-          <input type="checkbox" id="chkConstipation" name="Constipation" value="CONSTIPATION" disabled>CONSTIPATION<br>
-          <input type="checkbox" id="chkDiarrhea" name="Diarrhea" value="DIARRHEA" disabled>DIARRHEA
-          <input type="checkbox" id="chkHypertension" name="Hypertension" value="HYPERTENSION" disabled>HYPERTENSION<br>
-          <input type="checkbox" id="chkDiabetes" name="Diabetes" value="DIABETES" disabled>DIABETES
-          <input type="checkbox" id="chkPid" name="Pid" value="PID" disabled>PID
-          <input type="checkbox" id="chkSti" name="Sti" value="STI" disabled>STI
-          <input type="checkbox" id="chkSyphilisdx" name="Syphilis" value="SYPHILIS" disabled>SYPHILIS<br>
-          <input type="checkbox" id="chkTopical" name="Topical" value="TOPICAL" disabled>TOPICAL:<br>
-          <textarea disabled id="txtTopical" name="Followup" wrap="soft">
-            <?php echo $followUp; ?>
-          </textarea>
-        </div>
-
-        <div class="col-6" style="border-style: solid;">
-          KIT: <span style="font-size: 12px;"><input type="checkbox" id="chkPcm" name="Pcm" value="PCM" disabled>(PCM-ALB/MEB)
-          <input type="checkbox" id="chkPkit" name="Pkit" value="PREGKIT" disabled>PREGNANCY KIT(VITS+FE)</span><br>
-          <input type="checkbox" id="chkAlu" name="Alu" value="ALU" disabled>ALU
-          <input type="checkbox" id="chk3/7" name="3/7" value="3/7" disabled>3/7
-          <input type="checkbox" id="chk1x2" name="1x2" value="1x2" disabled>1x2
-          <input type="checkbox" id="chk2x2" name="2x2" value="2x2" disabled>2x2
-          <input type="checkbox" id="chk3x2" name="3x2" value="3x2" disabled>3x2
-          <input type="checkbox" id="chk4x2" name="4x2" value="4x2" disabled>4x2<br>
-          <span style="font-size: 12px;"><input type="checkbox" id="chkPudkit" name="Pudkit" value="PUD" disabled>PUD: 7/7 AMOX250 3X2 + OMEP20 1X2+ MTZ200MG 3X2</span><br>
-          <input type="checkbox" name="PZQ" value="PZQ" disabled>PZQ600mg #TABS STAT: <input disabled type="text" id="txtPzqtab" name="PzqTab" value="15" style="width: 30px"><br>
-
-          <!-- This is greeeasy! :S -->
-              <table>
-                  <tr>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>
-                          <p style="font-size:5em">V</p>
-                      </td>
-                      <td>
-                          <table>
-                              <tr><td>&nbsp;</td></tr>
-                              <tr><td>val 1</td></tr>
-                              <tr>
-                                  <td>
-                                      <input type="text" id="val1" value="<?php echo $eyeVal1; ?>" style="width: 60px">
-                                  </td>
-                              </tr>
-                              <tr><td>&nbsp;</td></tr>
-                              <tr>
-                                <td style="text-align: center; width: 300px;">
-                                  val 3
-                                  <br>
-                                  <input type="text" id="val3" value="<?php echo $eyeVal3; ?>" style="width: 60px">
-                                </td>
-                              </tr>
-                              <tr><td>&nbsp;</td></tr>
-                              <tr><td>val 2</td></tr>
-                              <tr>
-                                  <td>
-                                      <input type="text" id="val2" value="<?php echo $eyeVal2; ?>" style="width: 60px">
-                                  </td>
-                              </tr>
-                              <tr><td>&nbsp;</td></tr>
-                          </table>
-                      </td>
-                  </tr>
-              </table>
-        </div>
-
-      </div>
-
       <div class="row">
 
         <div class="col-5" style="border-style: solid;">
-          PREGNANT: <input disabled type="text" id="txtPregnant" name="Pregweeks" value="25" style="width: 30px">WEEKS<br><!-- Not sure which entry is weeks of pregnancy -->
-          REGULAR ANC: 
-          <?php if ($regANC == "yes") : ?>
-            <input type="checkbox" id="chkYanc" name="Yanc" value="ANCY" disabled checked>YES
-            <input type="checkbox" id="chkNanc" name="Nanc" value="NANC" disabled>NO<br>
-          <?php else : ?>
-            <input type="checkbox" id="chkYanc" name="Yanc" value="ANCY" disabled>YES
-            <input type="checkbox" id="chkNanc" name="Nanc" value="NANC" disabled checked>NO<br>
-          <?php endif ?>
-          PREVIOUS IPTp:<br>
-          <?php if($prevIPTpYes == "1") : ?>
-            <input type="checkbox" id="chkYpiptp" name="YPiptp" value="YPIPTP" disabled checked>YES
-            <input type="checkbox" id="chkNpiptp" name="Npiptp" value="NPIPTP" disabled>NEVER<br>
-          <?php else : ?>
-            <input type="checkbox" id="chkYpiptp" name="YPiptp" value="YPIPTP" disabled>YES
-            <input type="checkbox" id="chkNpiptp" name="Npiptp" value="NPIPTP" disabled checked>NEVER<br>
-          <?php endif ?>
-          LAST  IPTp:<br>
-          >1 MONTH AGO 
-          <?php if ($lastIPTpG1MonYes == "0") : ?>
-            <input type="checkbox" id="chkYliptp" name="YLiptp" value="YLIPTP" disabled checked>YES
-            <input type="checkbox" id="chkNliptp" name="Nliptp" value="NLIPTP" disabled>NO<br>
-          <?php else : ?>
-            <input type="checkbox" id="chkYliptp" name="YLiptp" value="YLIPTP" disabled>YES
-            <input type="checkbox" id="chkNliptp" name="Nliptp" value="NLIPTP" disabled checked>NO<br>
-          <?php endif ?>
-          CLINICAL ANEMIA 
-          <?php if ($clinicalAnemia == "yes") : ?>
-            <input type="checkbox" id="Yanemia" name="YClinicalAnemia" value="YCANEMIA" disabled checked>YES
-            <input type="checkbox" id="chkNanemia" name="NClinicalAnemia" value="NCANEMIA" disabled>NO<br>
-          <?php else : ?>
-            <input type="checkbox" id="Yanemia" name="YClinicalAnemia" value="YCANEMIA" disabled>YES
-            <input type="checkbox" id="chkNanemia" name="NClinicalAnemia" value="NCANEMIA" disabled checked>NO<br>
-          <? endif ?>
-          SULFAAR SP500/25:<br>
-          TABS 
-          <?php if ($sulfadar == "3") : ?>
-            <input type="checkbox" id="chk3" name="3" value="3" disabled checked>3
-            <input type="checkbox" id="chk6" name="6" value="6" disabled>6
-            <input type="checkbox" id="chk9" name="9" value="9" disabled>9
-          <?php elseif($sulfadar == "6") : ?>
-            <input type="checkbox" id="chk3" name="3" value="3" disabled>3
-            <input type="checkbox" id="chk6" name="6" value="6" disabled checked>6
-            <input type="checkbox" id="chk9" name="9" value="9" disabled>9
-          <?php elseif($sulfadar == "9") : ?>
-            <input type="checkbox" id="chk3" name="3" value="3" disabled>3
-            <input type="checkbox" id="chk6" name="6" value="6" disabled>6
-            <input type="checkbox" id="chk9" name="9" value="9" disabled checked>9
-          <?php else : ?>
-            <input type="checkbox" id="chk3" name="3" value="3" disabled>3
-            <input type="checkbox" id="chk6" name="6" value="6" disabled>6
-            <input type="checkbox" id="chk9" name="9" value="9" disabled>9
-          <?php endif ?>
-        </div>
+          
 
         <div class="col-7" style="border-style: solid;">
 
