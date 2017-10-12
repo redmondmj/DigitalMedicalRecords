@@ -159,10 +159,17 @@
 
     function checkboxIf($test, $id, $name, $value, $text){
       if($test != "no"){
-        echo "<i class='fa fa-check-square-o fa-lg' style='color:#888888' aria-hidden='true'></i> $text";                  
+        echo "<i class='fa fa-check-square-o fa-lg' style='color:#888888' aria-hidden='true'></i> <span style='padding-right:10px'>$text</span>";                  
       } else {
-        echo "<i class='fa fa-square-o fa-lg' style='color:#888888' aria-hidden='true'></i> $text";
+        echo "<i class='fa fa-square-o fa-lg' style='color:#888888' aria-hidden='true'></i> <span style='padding-right:10px'>$text</span>";
       }
+    }
+
+    function dropContent($text) {
+      if ($text == "") {
+        $text = "?";
+      }
+      echo "<span style='color:#888888;padding-right:10px'>$text</span>";
     }
 
 ?>
@@ -189,24 +196,24 @@
         <div class="col-7" style="border-style: solid;">
           <h4>Canada-Africa Community Health Alliance</h4>
           <div>Alliance de Sante Communitaire Canada-Afrique</div>
-          Triage: <input disabled type="text" id="txtTriage" name="Triage" value="Sample Text" >
+          Triage: <?php dropContent("Sample Text"); ?>
 
           <?php checkboxIf($triageTesting, "chkTesting", "Testing", "TEST", "TESTING"); ?>
           <div>
             Triage:
-            <?php checkboxIf($triageMedical, "chkMed", "Med", "MED", "MED"); ?>&nbsp;
-            <?php checkboxIf($triageGYN, "chkGyn", "Gyn", "GYN", "GYN"); ?>&nbsp;
-            <?php checkboxIf($triageMedical, "chkOpht", "Opht", "OPHT", "OPHT"); ?>&nbsp;
-            <?php checkboxIf($triageMedical, "chkDent", "Dent", "DENT", "DENT"); ?>&nbsp;
+            <?php checkboxIf($triageMedical, "chkMed", "Med", "MED", "MED"); ?>
+            <?php checkboxIf($triageGYN, "chkGyn", "Gyn", "GYN", "GYN"); ?>
+            <?php checkboxIf($triageMedical, "chkOpht", "Opht", "OPHT", "OPHT"); ?>
+            <?php checkboxIf($triageMedical, "chkDent", "Dent", "DENT", "DENT"); ?>
             <?php checkboxIf($triageMedical, "chkV", "V", "V", "V"); ?>
           </div>
         </div>
 
         <div class="col-5" style="border-style: solid;">
-          CHART#: <?php echo $visitID; ?><br>
-          DISPENSARY: <?php echo $visitedDispensary; ?><br>
-          TIME: <?php echo $visitTime; ?><br>
-          DATE: <?php echo $visitDate; ?><br>
+          CHART#: <?php dropContent($visitID); ?><br>
+          DISPENSARY: <?php dropContent($visitedDispensary); ?><br>
+          TIME: <?php dropContent($visitTime); ?><br>
+          DATE: <?php dropContent($visitDate); ?><br>
         </div>
 
       </div>
@@ -214,134 +221,118 @@
       <div class="row">
 
         <div class ="col-6" style="border-style: solid;">
-          Name: <?php echo $firstName . " " . $lastName; ?><br>
-          Village: <?php echo $village; ?><br>
+          Name: <?php dropContent($firstName . " " . $lastName); ?><br>
+          Village: <?php dropContent($village); ?><br>
           <div>
-            G: <?php echo $numLiveBirth; ?>
-            P: <?php echo $numOfPreg; ?>
-            A: <?php echo $numAbortions; ?>
+            G: <?php dropContent( $numLiveBirth); ?>
+            P: <?php dropContent( $numOfPreg); ?>
+            A: <?php dropContent( $numAbortions); ?>
           </div>
           <div>
-            #Living Children: <?php echo $numLivingChildren; ?>
-            LNMP: <?php echo $lastPeriod; ?>
+            #Living Children: <?php dropContent( $numLivingChildren); ?>
+            LNMP: <?php dropContent( $lastPeriod); ?>
           </div>
         </div>
 
         <div class ="col-6" style="border-style: solid;">
-          <? if ($sex == "male") : ?>
-            <span style="padding-right: 5px;"><input type="checkbox" id="chkMale" name="Male" value="MALE" disabled checked>M</span>
-            <span style="padding-right: 5px;"><input type="checkbox" id="chkFemale" name="Female" value="FEMALE" disabled>F</span>
-          <? else : ?>
-            <span style="padding-right: 5px;"><input type="checkbox" id="chkMale" name="Male" value="MALE" disabled>M</span>
-            <span style="padding-right: 5px;"><input type="checkbox" id="chkFemale" name="Female" value="FEMALE" disabled checked>F</span>
-          <? endif ?>
-          <span style="padding-right: 20px;">AGE: <input disabled type="text" id="txtAge" name="Age" value="<?php echo $birthday; ?>" style="width: 30px"></span>
-          <span style="padding-right: 5px;">WEIGHT: <input disabled type="text" id="txtWeight" name="Weight" value="<?php echo $weight; ?>" style="width: 50px"></span>KG<br>
-          <span style="padding-right: 50px;">TEMP: <input disabled type="text" id="txtTemp" name="Temp" value="<?php echo $temperature; ?>" style="width: 50px">&#8457;</span>
-          BP: <input disabled type="text" id="txtBP" name="BP" value="<?php echo $bloodPressure; ?>" style="width: 70px"><br><br>
-          <span style="padding-right: 50px;">GLUCOSE: <input disabled type="text" id="txtGlucose" name="Glucose" value="<?php echo $glucose; ?>" style="width: 50px"></span>
-          HR: <input disabled type="text" id="txtHr" name="HR" value="<?php echo $heartRate; ?>" style="width: 50px">
+          <div>
+            <? if ($sex == "male") : ?>
+              <?php checkboxIf("yes", "", "", "", "M"); ?>
+              <?php checkboxIf("no", "", "", "", "F"); ?>
+            <? else : ?>
+              <?php checkboxIf("no", "", "", "", "M"); ?>
+              <?php checkboxIf("yes", "", "", "", "F"); ?>
+            <? endif ?>          
+            AGE: <?php dropContent( $birthday); ?>
+            WEIGHT: <?php dropContent( $weight); ?>KG
+          </div>
+          <div>
+            TEMP: <?php dropContent($temperature); ?>
+            BP: <?php dropContent($bloodPressure); ?>
+          </div>
+          <div>
+            GLUCOSE: <?php dropContent($glucose); ?>
+            HR: <?php dropContent($heartRate); ?>
+          </div>
         </div>
 
       </div>
 
       <div class="row">
 
-        <div class="col-6" style="border-style: solid; height: 300px;">
+        <div class="col-4" style="border-style: solid;">
           Chief Complaint:<br>
-          <textarea disabled id="txtComplaint" name="Complaint" wrap="soft"><?php echo $chiefComplaint; ?></textarea>
+          <?php dropContent($chiefComplaint); ?>
         </div>
 
-        <div class="col-6" style="border-style: solid;">
+        <div class="col-8" style="border-style: solid;">
 
           <div class="row">
-
-            <div class="col-6" style="text-align: center;">
-              <span style="padding-right: 50px;">
+            <div class="col-12">
                 <?php checkboxIf($pregnant, "chkPregnant", "YPreg", "PREGNANT", "Pregnant");  ?>
-              </span>
-            </div>
-
-            <div class="col-6" style="text-align: center;">
-              <span style="padding-right: 5px;">
                 <?php checkboxIf($breastfeed, "chkBreastfeeding", "Breastfeeding", "BREASTFEEDING", "Breastfeeding"); ?>
-              </span><br>
             </div>
-
           </div>
 
-          <hr style="border-width: 2px; margin: 0;">
-
-          <div class="row">
-
-            <div class="col-4" style="text-align: center;">
-              <?php checkboxIf($vTest, "chkVresult", "Vresult1", "VRESULT", "V"); ?>
-              <input disabled type="text" id="txtVresult" name="Vresuult2" value="<?php echo $vTest; ?>" style="width: 80px">
+          <div class="row" style="padding-top:10px">
+            <div class="col-2">
+              <?php checkboxIf($vTest, "chkVresult", "Vresult1", "VRESULT", "V"); ?><br>
+              <?php dropContent( $vTest); ?>
             </div>
 
-            <div class="col-4" style="text-align: center;">
+            <div class="col-2">
               <?php checkboxIf($malariaTest, "chkMalaria", "Malaria1", "MALARIA", "MALARIA"); ?><br>
-              <input disabled type="text" id="txtMalaria" name="Malria2" value="<?php echo $malariaTest; ?>" style="width: 80px">
+              <?php dropContent( $malariaTest); ?>
             </div>
 
-            <div class="col-4" style="text-align: center;">
+            <div class="col-2">
               <?php checkboxIf($syphilisTest, "chkSyphilis", "Syphilis1", "SYPHILIS", "SYPHILIS"); ?><br>
-              <input disabled type="text" id="txtSyphilis" name="Syphilis2" value="<?php echo $syphilisTest; ?>" style="width: 80px">
+              <?php dropContent( $syphilisTest); ?>
             </div>
 
-          </div>
-
-          <div class="row">
-
-            <div class="col-6" style="text-align: center;">
+            <div class="col-2">
               <?php checkboxIf($typhTest, "chkTyph", "TYPH1", "TYPH", "TYPH"); ?><br>
-              <input disabled type="text" id="txtTyph" name="Typh2" value="<?php echo $typhTest; ?>" style="width: 80px">
+              <?php dropContent( $typhTest); ?>
             </div>
 
-            <div class="col-6" style="text-align: center;">
+            <div class="col-2">
               <?php checkboxIf($pregnancyTest, "chkPregnancy", "Pregnancy1", "PREGNANCY", "PREGNANCY"); ?><br>
-              <input disabled type="text" id="txtPregnancy" name="Pregnancy2" value="<?php echo $pregnancyTest; ?>" style="width: 80px">
+              <?php dropContent( $pregnancyTest); ?>
             </div>
 
+            <div class="col-2">
+              <?php checkboxIf($urineTest, "chkUrine", "URINE", "URINE", "URINE"); ?><br>
+              <?php dropContent( "MISSING VAR"); ?>
+            </div>
           </div>
 
-          <div class="row">
-
-            <div class="col-12" style="text-align: center;">
-              <?php checkboxIf($urineTest, "chkUrine", "URINE", "URINE", "URINE"); ?><br> <!-- TODO: MAKE VARIABLE FOR URINE TEST-->
+          <div class="row" style="padding-top:10px">
+            <div class="col-12">
+              LEUC: <?php dropContent( $urineLeucTest); ?>
+              RBC: <?php dropContent( $urineRBCTest); ?>
+              GLUCLOSE: <?php dropContent( $urineGlucoseTest); ?>
+              NITRITES: <?php dropContent( $urineNitritesTest); ?>
             </div>
-
-          </div>
-
-          <div class="row">
-
-            <div class="col-12" style="text-align: center; font-size: 16px;">
-              LEUC: <input disabled type="text" id="txtLeuc" name="Leuc" value="<?php echo $urineLeucTest; ?>" style="width: 65px">
-              RBC: <input disabled type="text" id="txtRBC" name="RBC" value="<?php echo $urineRBCTest; ?>" style="width: 65px"><br>
-              GLUCLOSE: <input disabled type="text" id="txtUrineglucose" name="Urineglucose" value="<?php echo $urineGlucoseTest; ?>" style="width: 65px">
-              NITRITES: <input disabled type="text" id="txtNitrites" name="Nitrites" value="<?php echo $urineNitritesTest; ?>" style="width: 65px">
-            </div>
-
           </div>
 
         </div>
 
       </div>
 
-      <div class="row" style="height: 330px">
+      
+      <div class="row">
 
         <div class="col-7" style="border-style: solid;">
           ASSESSMENT:<br>
-          <textarea disabled id="txtAssessment" name="Assessment" wrap="soft"><?php echo $assessment; ?></textarea>
+          <?php dropContent($assessment); ?>
         </div>
 
-        <div class="col-5" style="border-style: solid; font-size: 17px;">
-          LAST HIV TEST? <input disabled type="text" id="txtLasthiv" name="Lasthiv" value="<?php echo $lastHIVTest; ?>" style="width: 130px"><br>
-          LAST PZQ TX? <input disabled type="text" id="txtLastpzq" name="Lastpzq" value="<?php echo $lastPZQTx; ?>" style="width: 130px"><br>
-          LAST WORM TX? <input disabled type="text" id="txtLastworm" name="Lastworm" value="<?php echo $lastWormTx; ?>" style="width: 130px"><br>
-          LAST VIT A? <input disabled type="text" id="txtLastvita" name="Lastvita" value="<?php echo $lastVitA; ?>" style="width: 130px"><br>
-          PREV MEDS?<br>
-          <textarea disabled id="txtPrevmeds" name="Prevmeds" wrap="soft"><?php echo $prevMeds; ?></textarea>
+        <div class="col-5" style="border-style: solid;">
+          LAST HIV TEST? <?php dropContent( $lastHIVTest); ?><br>
+          LAST PZQ TX? <?php dropContent( $lastPZQTx); ?><br>
+          LAST WORM TX? <?php dropContent( $lastWormTx); ?><br>
+          LAST VIT A? <?php dropContent( $lastVitA); ?><br>
+          PREV MEDS? <?php dropContent( $prevMeds); ?>
         </div>
 
       </div>
@@ -364,7 +355,8 @@
 
       </div>
 
-      <div class="row" id="kitChklist" style="height: 550px">
+      <?/*
+      <div class="row" id="kitChklist">
 
         <div class="col-6" style="border-style: solid;">
           <input type="checkbox" id="chkHealthy" name="Healthy" value="HEALTHY" disabled>HEALTHY
@@ -603,7 +595,7 @@
 
       <div class="row" id="lastPage">
 
-        <div class="col-12" style="border-style: solid; height: 280px;">
+        <div class="col-12" style="border-style: solid;">
           FOLLOW-UP:<br>
           <textarea disabled id="txtFollowup" name="Followup" wrap="soft"><?php echo $followUp; ?></textarea><br>
           <br>
@@ -614,7 +606,7 @@
 
       <div class="row">
 
-        <div class="col-12" style="border-style: solid; height: 500px;">
+        <div class="col-12" style="border-style: solid;">
           EDUCATION:<br>
           <textarea  disabled id="txtEducation" name="Education" wrap="soft"><?php echo $education; ?></textarea><br>
           <br>
@@ -644,6 +636,7 @@
         </div>
 
       </div>
+      */?>
 
     </div>
 
