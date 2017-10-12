@@ -68,6 +68,18 @@ textarea {
 /* MEDIA STUFF */
 
 @media print {
+  @page {                
+    size: A4;
+    margin: 15mm;
+  }
+
+  html, body {
+    width: 1024px;
+  }
+
+  body {
+    margin: 0 auto;
+  }
 
   div {
     color: Black;
