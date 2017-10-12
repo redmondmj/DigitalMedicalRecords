@@ -147,13 +147,24 @@
         mysqli_close($connect);
     }
 
+    /*
     function checkboxIf($test, $id, $name, $value, $text){
       if($test != "no"){
-        echo "<input type='checkbox' id='$id' name='$name' value='$value' disabled checked><span style='color:'red';'>$text</span>";
+        echo "<input type='checkbox' id='$id' name='$name' value='$value' disabled checked><span style='color:'red'>$text</span>";
       } else {
         echo "<input type='checkbox' id='$id' name='$name' value='$value' disabled>$text";
       }
     }
+    */
+
+    function checkboxIf($test, $id, $name, $value, $text){
+      if($test != "no"){
+        echo "<i class='fa fa-check-square-o fa-lg' style='color:#888888' aria-hidden='true'></i> $text";                  
+      } else {
+        echo "<i class='fa fa-square-o fa-lg' style='color:#888888' aria-hidden='true'></i> $text";
+      }
+    }
+
 ?>
 
 
@@ -165,37 +176,37 @@
     <!-- Latest compiled and minified CSS -->
     <!-- Bootstrap core CSS -->
     <link href="bin/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Printable Report Test</title>
+    <title>CACHA : Patient Report</title>
   </head>
   <body>
 
-    <div id="container">
+    <div id="container" class="small">
 
       <div class="row">
 
         <div class="col-7" style="border-style: solid;">
-          <span style="font-size: 18.5px;">Canada-Africa Community Health Alliance</span><br>
-          <span style="font-size: 18px;">Alliance de Sante Communitaire Canada-Afrique</span><br>
-          Triage: <input disabled type="text" id="txtTriage" name="Triage" value="Sample Text" style="width: 200px">
-          <span style="padding-left: 10px;">
-            <?php checkboxIf($triageTesting, "chkTesting", "Testing", "TEST", "TESTING"); ?>
-          </span><br>           
-          
-          Triage: &nbsp;
-          <?php checkboxIf($triageMedical, "chkMed", "Med", "MED", "MED"); ?>&nbsp;
-          <?php checkboxIf($triageGYN, "chkGyn", "Gyn", "GYN", "GYN"); ?>&nbsp;
-          <?php checkboxIf($triageMedical, "chkOpht", "Opht", "OPHT", "OPHT"); ?>&nbsp;
-          <?php checkboxIf($triageMedical, "chkDent", "Dent", "DENT", "DENT"); ?>&nbsp;
-          <?php checkboxIf($triageMedical, "chkV", "V", "V", "V"); ?>
+          <h4>Canada-Africa Community Health Alliance</h4>
+          <div>Alliance de Sante Communitaire Canada-Afrique</div>
+          Triage: <input disabled type="text" id="txtTriage" name="Triage" value="Sample Text" >
+
+          <?php checkboxIf($triageTesting, "chkTesting", "Testing", "TEST", "TESTING"); ?>
+          <div>
+            Triage:
+            <?php checkboxIf($triageMedical, "chkMed", "Med", "MED", "MED"); ?>&nbsp;
+            <?php checkboxIf($triageGYN, "chkGyn", "Gyn", "GYN", "GYN"); ?>&nbsp;
+            <?php checkboxIf($triageMedical, "chkOpht", "Opht", "OPHT", "OPHT"); ?>&nbsp;
+            <?php checkboxIf($triageMedical, "chkDent", "Dent", "DENT", "DENT"); ?>&nbsp;
+            <?php checkboxIf($triageMedical, "chkV", "V", "V", "V"); ?>
+          </div>
         </div>
 
         <div class="col-5" style="border-style: solid;">
-          CHART#: <input disabled type="text" id="txtChart" name="Chart" value="<?php echo $visitID; ?>" style="width: 50px"><br>
-          DISPENSARY: <input disabled type="text" id="txtDispensary" name="Dispensary" value="<?php echo $visitedDispensary; ?>" style="width: 150px"><br>
-          <br>
-          <span style="font-size: 18.5px;">TIME:<input disabled type="text" id="txtTime" name="Time" value="<?php echo $visitTime; ?>" style="width: 75px">
-          DATE: <input disabled type="text" id="txtDate" name="Date" value="<?php echo $visitDate; ?>" style="width: 85px"></span>
+          CHART#: <?php echo $visitID; ?><br>
+          DISPENSARY: <?php echo $visitedDispensary; ?><br>
+          TIME: <?php echo $visitTime; ?><br>
+          DATE: <?php echo $visitDate; ?><br>
         </div>
 
       </div>
@@ -203,13 +214,17 @@
       <div class="row">
 
         <div class ="col-6" style="border-style: solid;">
-          Name: <input disabled type="text" id="txtName" name="Name" value="<?php echo $firstName . " " . $lastName; ?>" style="width: 200px"><br>
-          Village: <input disabled type="text" id="txtVillage" name="Village" value="<?php echo $village; ?>" style="width: 200px"><br>
-          <span style="padding-right: 65px;">G: <input disabled type="text" id="txtG" name="G" value="<?php echo $numLiveBirth; ?>" style="width: 30px"></span>
-          <span style="padding-right: 65px;">P: <input disabled type="text" id="txtP" name="P" value="<?php echo $numOfPreg; ?>" style="width: 30px"></span>
-          <span style="padding-right: 65x;">A: <input disabled type="text" id="txtA" name="A" value="<?php echo $numAbortions; ?>" style="width: 30px"></span><br>
-          <span style="padding-right: 5px;">#Living Children: <input disabled type="text" id="txtLiving" name="Living" value="<?php echo $numLivingChildren; ?>" style="width: 30px"></span>
-          LNMP: <input disabled type="text" id="txtLnmp" name="Lnmp" value="<?php echo $lastPeriod; ?>" style="width: 50px">
+          Name: <?php echo $firstName . " " . $lastName; ?><br>
+          Village: <?php echo $village; ?><br>
+          <div>
+            G: <?php echo $numLiveBirth; ?>
+            P: <?php echo $numOfPreg; ?>
+            A: <?php echo $numAbortions; ?>
+          </div>
+          <div>
+            #Living Children: <?php echo $numLivingChildren; ?>
+            LNMP: <?php echo $lastPeriod; ?>
+          </div>
         </div>
 
         <div class ="col-6" style="border-style: solid;">
